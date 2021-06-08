@@ -7,6 +7,7 @@ export default function Navbar() {
       <p>Home</p>
       <div>
         <p>Contact Us</p>
+        <p>About Us</p>
         <p>Login</p>
       </div>
     </StyledNavbar>
