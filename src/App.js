@@ -4,7 +4,7 @@ import MensHairCutAndGrooming from "./Page/SalonForMen/MensHairCutAndGrooming";
 function App() {
   return (
     <div>
-      {/* <Routes /> */}
+      <Routes />
       <MensHairCutAndGrooming />
     </div>
   );

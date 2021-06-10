@@ -21,15 +21,24 @@ const Heading = styled.div`
 `;
 
 const Container = styled.div`
-  width: 100vw;
+  width: 100%;
   margin-top: 75px;
   max-height: 90vh;
-  display: grid;
-  grid-template-columns: 29vw 35vw 34vw;
+  position: fixed;
+  /* display: grid;
+  grid-template-columns: 29vw 35vw 34vw; */
+  display: flex;
+  justify-content: space-around;
+  /* align-items: center; */
 `;
 const MENU = styled.div`
-  margin-top: 30px;
+  width: 29%;
+
   border-right: 1px solid #dbdbdb;
+
+  button:nth-child(1) {
+    margin-top: 30px;
+  }
   button {
     display: flex;
     flex-direction: column;
@@ -43,15 +52,19 @@ const MENU = styled.div`
   }
 `;
 const PackageDetails = styled.div`
-  width: 82%;
+  width: 35%;
   margin: auto;
-  /* overflow-y: scroll; */
+  border-right: 1px solid #dbdbdb;
+  overflow-y: scroll;
+  height: 90vh;
   h1 {
     font-size: 36px;
+    margin: 10px 7%;
   }
 
   .safetyMessage {
-    width: 400px;
+    width: 77.5%;
+    margin: auto 7%;
     height: auto;
     padding: 20px;
     background: #6598ff;
@@ -70,13 +83,13 @@ const PackageDetails = styled.div`
 
   .menuData {
     border: 1px solid #dbdbdb;
-    margin: 20px auto;
+    margin: 20px 7%;
   }
 
   .menuData video {
-    width: 370px;
+    width: 85%;
     height: 200px;
-    margin: auto 7.5%;
+    margin: 20px 7.5% auto 7.5%;
   }
 
   .menuDataShortDetails {
@@ -88,7 +101,7 @@ const PackageDetails = styled.div`
     margin: auto 7.5%;
   }
 
-  .menuDataShortDetails > div > button {
+  .addToCartItem {
     color: #6598ff;
     border: 1px solid #6598ff;
     outline: #6598ff;
@@ -116,7 +129,52 @@ const PackageDetails = styled.div`
     margin: 10px auto 30px auto;
   }
 `;
-const ViewDetails = styled.div``;
+const ViewDetails = styled.div`
+  width: 35%;
+  margin: auto;
+  border-right: 1px solid #dbdbdb;
+  overflow-y: scroll;
+  height: 90vh;
+
+  video {
+    width: 85%;
+    height: 50vh;
+    margin: 5vh 7.5%;
+  }
+
+  .menuDataShortDetails {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 85%;
+    margin: auto 7.5%;
+  }
+
+  .addToCartItem {
+    color: #6598ff;
+    border: 1px solid #6598ff;
+    outline: #6598ff;
+    padding: 5px 10px;
+    font-size: 18px;
+    border-radius: 2px;
+    background: transparent;
+  }
+
+  .servicesIncluded {
+    width: 84%;
+    margin: auto 7%;
+    height: auto;
+    padding: 5px;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+  }
+  .servicesIncluded > img {
+    width: 100px;
+    height: 100px;
+    border-radius: 3px;
+  }
+`;
 
 export default function MensHairCutAndGrooming() {
   return (
@@ -140,16 +198,16 @@ export default function MensHairCutAndGrooming() {
             </div>
           </div>
           <div className="menuData">
-            <h3
+            <span
               style={{
-                marginTop: "-10px",
+                marginTop: "5px",
                 color: "#ffffff",
                 padding: "5px",
                 background: "#1c8e1c",
               }}
             >
               BESTSELLER
-            </h3>
+            </span>
 
             <video preload="auto" controls="play/stop" autoplay>
               <source
@@ -170,7 +228,7 @@ export default function MensHairCutAndGrooming() {
                 <p>30 min</p>
               </div>
               <div>
-                <button>
+                <button className="addToCartItem">
                   ADD
                   <strong
                     style={{
@@ -195,14 +253,66 @@ export default function MensHairCutAndGrooming() {
               </li>
             </div>
             <button className="EditThisPackageButton">
-              assdda <span>❯</span>
+              SAMPLE <span>❯</span>
             </button>
             <div className="viewDetailsModel">
               View details <span>❯</span>
             </div>
           </div>
         </PackageDetails>
-        <ViewDetails></ViewDetails>
+        <ViewDetails>
+          <video preload="auto" controls="play/stop" autoplay>
+            <source
+              src="blob:https://www.urbancompany.com/a615022d-de87-4e2c-9407-f929b35ff885"
+              video="web/mp4"
+            />
+          </video>
+          <img src="" alt="" />
+          <div className="menuDataShortDetails">
+            <div>
+              <h3>Hair Cut</h3>
+              <p>
+                <span style={{ color: "#1C8E1C", fontWeight: "bolder" }}>
+                  ★ 4.76
+                </span>{" "}
+                573k ratings
+              </p>
+              <p>₹249</p>
+              <p>30 min</p>
+            </div>
+            <div>
+              <button className="addToCartItem">
+                ADD
+                <strong
+                  style={{
+                    width: "20px",
+                    background: "#EFF1FF",
+                    marginLeft: "10px",
+                  }}
+                >
+                  +
+                </strong>
+              </button>
+            </div>
+          </div>
+          <div>
+            <h2 style={{ marginLeft: "7.5%" }}>
+              What does this service include?
+            </h2>
+            <div className="servicesIncluded">
+              <img
+                src="https://res.cloudinary.com/urbanclap/image/upload/t_medium_res_template,q_auto:low,f_auto/images/growth/home-screen/1621322855950-9b5a1d.jpeg"
+                alt=""
+              />
+              <div>
+                <p style={{ fontWeight: "600" }}>
+                  Haircut in the Safety of your Home
+                </p>
+                <p>Disposable towel, cape, and single-use peoducts</p>
+              </div>
+            </div>
+          </div>
+        </ViewDetails>
       </Container>
     </>
   );
