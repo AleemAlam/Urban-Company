@@ -25,7 +25,7 @@ margin: 0%;
 
 export const StyleNavigationBarCont = styled.div`
 
-width: 58%;
+width: 54%;
 height: 75px;
 background-color: #ffffff;
 padding: 0px 30px;
@@ -35,6 +35,8 @@ position: -webkit-sticky;
 top: 0;
 display: flex;
 z-index: 5;
+box-shadow: 0 4px 12px 0 #ddd;
+margin-left: 65px;
 `
 
 export const StyleHowItWorksCont = styled(StyleNavigationBarCont)`
@@ -42,6 +44,7 @@ height: 95px;
 margin: 0 32px;
 z-index: 1;
 margin-top: 20px;
+margin-left: 65px;
 `
 export const StyleHIWMainCont = styled(StyleHowItWorksCont)`
 height: 323px;
