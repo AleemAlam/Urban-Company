@@ -47,8 +47,12 @@ margin-top: 20px;
 margin-left: 65px;
 `
 export const StyleHIWMainCont = styled(StyleHowItWorksCont)`
-height: 323px;
+height: auto;
 margin-top: 0.2%;
+padding-top: 20px;
+padding-bottom: 20px;
+display:flex;
+flex-direction: column;
 `
 export const StyleAcServiceInCont = styled(StyleHowItWorksCont)`
 
@@ -62,7 +66,7 @@ border-bottom: 3.3px solid black;
 height: 33px;
 margin: 0px 12px 0px 20px;
 display: inline-block;
-font-size: 18px;
+font-size: 16.5px;
 text-align: left;
 color: #616161;
 cursor: pointer;
@@ -71,9 +75,69 @@ font-family: axiforma-regular,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,H
 `
 export const HIWHeaderHeading = styled.h2`
 display: block;
-font-size: 25px;
-padding: 28px 24px;
+font-size: 22px;
+padding: 31px 24px;
 margin: 0;
-font-weight: 600;
+font-weight: 700;
+font-family: axiforma-regular,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
 
+`
+export const StyleHIWTextCont = styled(StyleHowItWorksCont)`
+width: 90%;
+height: 50px;
+margin: 0px;
+margin-left: 25px;
+box-shadow: none;
+padding: 0;
+display: flex;
+flex-direction: row;
+margin-top: 1.5%;
+`
+export const StyleHIWLogoCont = styled(StyleHIWTextCont)`
+width: 7%;
+background-color: none;
+height: 43px;
+border-radius: 50%;
+margin: 0;
+`
+export const StyleHIWTextContHeading = styled.h4`
+
+font-size: 16px;
+font-weight: 700;
+line-height: 1.43;
+color: #000;
+padding: 0px;
+margin: 0px;
+text-align: left;
+`
+
+export const StyleHIWTextContParagraph = styled.p`
+
+font-size: 15px;
+font-weight: 400;
+line-height: 1.5;
+letter-spacing: normal;
+color: #757575;
+padding: 0px;
+margin: 0px;
+text-align: left;
+
+`
+
+export const StyleHIWTextContH4AndPBox = styled.div`
+width: 86%;
+margin: 0px 0px 0px 33px;
+padding: 0;
+`
+export const HIWTextContLogo = styled.img`
+
+width: 100%;
+height: 100%;
+`
+
+export const StyleHIWTextContBorderLine = styled.div`
+height: 27px;
+width: 0.3%;
+background-color: #e2e2e2;
+margin-left: 6.3%;
 `
