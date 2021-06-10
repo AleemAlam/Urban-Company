@@ -2,7 +2,7 @@ import React from "react";
 import { Route, Switch } from "react-router";
 import Navbar from "../Components/Navbar";
 import HomePage from "./HomePage";
-import {ServicePage} from "./ServicePage"
+import AcServiceAndRepair from "./All Service Pages/AcServiceAndRepair.jsx"
 
 export default function Routes() {
   return (
@@ -15,8 +15,8 @@ export default function Routes() {
      <HomePage/>
    </Route>
 
-   <Route exact path="/service">
-     <ServicePage/>
+   <Route exact path="/ac-service-repair">
+     <AcServiceAndRepair/>
    </Route>
 
     </Switch>
