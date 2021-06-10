@@ -1,12 +1,13 @@
-// import logo from './logo.svg';
-import './App.css';
-import Routes from "./Page/Routes.jsx"
+
+import Routes from "./Page/Routes.jsx";
+import MensHairCutAndGrooming from "./Page/SalonForMen/MensHairCutAndGrooming";
+
 
 function App() {
   return (
-  
-    <div className="App">
-     <Routes />
+    <div>
+      <Routes />
+      <MensHairCutAndGrooming />
     </div>
   );
 }
