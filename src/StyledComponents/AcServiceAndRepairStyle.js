@@ -163,3 +163,10 @@ font-weight: 600;
 font-size: 18.5px;
 font-family: axiforma-regular,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
 `
+export const StyleBackImgH1Subheading = styled(StyleBackgroundImageTopNav)`
+line-height: 46px;
+margin-top: 175px;
+color: #b4b2a9;
+font-size: 17px;
+margin-left: 46px;
+`
