@@ -11,6 +11,7 @@ width: 100%;
 height: 458px;
 margin: 0%;
 padding: 0%;
+position: relative;
 `
 
 export const StyleBackgroundImage = styled.img`
@@ -140,4 +141,40 @@ height: 27px;
 width: 0.3%;
 background-color: #e2e2e2;
 margin-left: 6.3%;
+`
+export const StyleBackgroundImageTopNav = styled(StyleNavigationBarCont)`
+background-color: transparent;
+box-shadow: none;
+position: absolute;
+margin: 11px 50px 30px 70px;
+padding: 0;
+display: flex;
+column-gap: 10px;
+flex-direction: row;
+font-size: 15.2px;
+`
+export const StyleWhiteColorDiv = styled.div`
+color: #DDDDDD;
+`
+export const StyleBackgroundImageheadingH1 = styled(StyleBackgroundImageTopNav)`
+margin-top: 90px;
+color: white;
+font-weight: 600;
+font-size: 18.5px;
+font-family: axiforma-regular,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+`
+export const StyleBackImgH1Subheading = styled(StyleBackgroundImageTopNav)`
+line-height: 46px;
+margin-top: 175px;
+color: #b4b2a9;
+font-size: 17px;
+margin-left: 46px;
+`
+export const StyleServiceCard = styled(StyleBackgroundImageTopNav)`
+
+position: fixed;
+margin: 165px 835px 100px;
+width: 100px;
+height: 100px;
+background-color: blue;
 `
