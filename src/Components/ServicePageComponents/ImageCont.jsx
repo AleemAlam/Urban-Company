@@ -7,7 +7,7 @@ import {
 import { BackgroundImgTopNav } from "./BackgroundImgTopNav.jsx"
 import { BackgroundImgHeadingH1 } from "./BackgroundImgHeadingH1.jsx"
 import { BackImgH1Subheading } from "./BackImgH1Subheading.jsx"
-import { ServiceCard } from "./ServiceCard.jsx"
+import { ServiceCard } from "./ServiceCard"
 
 
 export const ImageCont = (props) => {
