@@ -1,7 +1,14 @@
-import { StyleServiceCard } from "../../StyledComponents/AcServiceAndRepairStyle"
+import { StyleServiceCard,StyleServiceCardH2 } from "../../StyledComponents/AcServiceAndRepairStyle"
+import {ServiceCardButton} from "./ServiceCardButton"
 
 export const ServiceCard = () => {
     return (
-        <StyleServiceCard></StyleServiceCard>
+        <StyleServiceCard>
+            <StyleServiceCardH2>Need an AC Expert for:</StyleServiceCardH2>
+
+            <ServiceCardButton />
+       
+            
+        </StyleServiceCard>
     )
 }

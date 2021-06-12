@@ -173,8 +173,31 @@ margin-left: 46px;
 export const StyleServiceCard = styled(StyleBackgroundImageTopNav)`
 
 position: fixed;
-margin: 165px 835px 100px;
-width: 100px;
-height: 100px;
-background-color: blue;
+width: 25%;
+margin: 165px 835px 70px;
+background-image: linear-gradient(130deg,#642b73,#c6426e);
+border-top-left-radius: 4px;
+border-top-right-radius: 4px;
+text-align: center;
+padding: 20px 24px 26px;
+
+`
+export const StyleServiceCardH2 = styled(HIWHeaderHeading)`
+font-size: 23px;
+color: white;
+text-align: left;
+padding: 0px;
+`
+
+export const StyleServicecardButton = styled.button`
+width:  310px;
+height: 48px;
+padding: 16px;
+border-radius: 4px;
+display: flex;
+align-items: center;
+border: none;
+margin-top: 47px;
+position: absolute;
+
 `
