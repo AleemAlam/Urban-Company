@@ -1,5 +1,5 @@
 import React from "react";
 
-export default function SubHeading({ text }) {
-  return <p>{text}</p>;
+export default function SubHeading({ text, style }) {
+  return <p style={style}>{text}</p>;
 }

@@ -152,7 +152,7 @@ export const Separator = styled.div`
   height: 20px;
   width: 100%;
   background-color: #f2f5f7;
-  margin: ${(props) => (!props.margin ? "30px 0" : "0")};
+  margin: ${(props) => (props.margin ? "30px 0" : "0")};
 `;
 
 export const StyledBigCard = styled.img`
@@ -191,4 +191,101 @@ export const OfferContainer = styled.div`
   display: flex;
   margin: auto;
   justify-content: space-evenly;
+`;
+
+export const TwoContainer = styled.div`
+  width: 62%;
+  margin: auto;
+
+  display: flex;
+  justify-content: space-between;
+  & .form {
+    display: flex;
+    box-shadow: 0 4px 16px 0 #e8ebe9;
+    padding: 10px;
+    border: 1px solid #e8ebe9;
+    border-radius: 2px;
+    justify-content: space-between;
+  }
+  & img {
+    width: 100%;
+  }
+  & input {
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-size: 20px;
+  }
+  & label {
+    font-size: 20px;
+  }
+  & .imgContainer {
+    width: 440px;
+    height: 380px;
+
+    align-items: center;
+    overflow: hidden;
+  }
+  & .innerContainer {
+    margin: 0;
+  }
+  & button {
+    padding: 15px 30px;
+    background-color: black;
+    color: white;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    font-weight: bold;
+  }
+`;
+
+export const StyledFooter = styled.div`
+  background-color: black;
+  margin: 0;
+  color: #999;
+  & .linkMenu {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  & .link {
+    font-size: 15px;
+  }
+  & .container {
+    width: 62%;
+    margin: auto;
+  }
+  & .country {
+    color: white;
+    font-size: 13px;
+  }
+  & .city {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 13px;
+  }
+  & .city > span {
+    margin: 5px 0;
+
+    margin-right: 10px;
+  }
+  & .copyRightContainer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  & img {
+    width: 310px;
+    height: 39px;
+  }
+  & span {
+    position: relative;
+    top: -12px;
+    margin-left: 10px;
+  }
+  & .iconContainer > * {
+    margin: 0px 10px;
+  }
 `;

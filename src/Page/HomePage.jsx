@@ -11,6 +11,8 @@ import {
 import BigCard from "../Components/BigCard";
 import BigText from "../Components/BigText";
 import OfferSection from "../Components/OfferSection";
+import TwoCard from "../Components/TwoCard";
+import MyFooter from "../Components/MyFooter";
 
 const services = [
   {
@@ -202,27 +204,27 @@ export default function HomePage() {
           ))}
         </Carousel>
       </ImgCardContainer>
-      <Separator />
+      <Separator margin={true} />
       <BigCard img="https://res.cloudinary.com/urbanclap/image/upload/q_auto,f_auto,fl_progressive:steep,w_2880/t_high_res_template/images/growth/home-screen/1618376960342-f0afcb.jpeg" />
-      <Separator />
+      <Separator style={{ marginBottom: 30 }} />
       <OfferSection
         text="Best Offers"
         subHeading={"Hygienic &single-usproducts | low-contact services"}
         cardDetails={offers}
       />
-      <Separator />
+      <Separator margin={true} />
       <OfferSection
         text="Cleaning & Pest Control"
         subHeading={"Removes hard stains & more"}
         cardDetails={cleaning}
       />
-      <Separator />
+      <Separator margin={true} />
       <OfferSection
         text="Appliances"
         subHeading={"Service, Repaire, Installation & Uninstallation"}
         cardDetails={appliances}
       />
-      <Separator />
+      <Separator margin={true} />
       <OfferSection
         text="Gift an Experience"
         subHeading={
@@ -230,19 +232,22 @@ export default function HomePage() {
         }
         cardDetails={giftImg}
       />
-      <Separator />
+      <Separator margin={true} />
       <OfferSection
         text="Customer Safety is our priority"
         subHeading={"What customer are saying about our safety standards    "}
         cardDetails={tweets}
       />
-      <Separator style={{ margin: 0 }} />
+      <Separator style={{ marginTop: 30 }} />
       <BigCard img="https://res.cloudinary.com/urbanclap/image/upload/q_auto,f_auto,fl_progressive:steep,w_2159/t_high_res_template/images/growth/luminosity/1614591609525-df202d.jpeg" />
       <Separator />
       <BigCard img="https://res.cloudinary.com/urbanclap/image/upload/q_auto,f_auto,fl_progressive:steep,w_2159/t_high_res_template/categories/category_v2/category_a4e46fa0.png" />
 
       <Separator />
       <BigCard img="https://res.cloudinary.com/urbanclap/image/upload/q_auto,f_auto,fl_progressive:steep,w_2159/t_high_res_template/categories/category_v2/category_3cffdf20.png" />
+      <Separator style={{ marginBottom: 30 }} />
+      <TwoCard />
+      <MyFooter />
     </div>
   );
 }
