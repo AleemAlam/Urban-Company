@@ -170,3 +170,11 @@ color: #b4b2a9;
 font-size: 17px;
 margin-left: 46px;
 `
+export const StyleServiceCard = styled(StyleBackgroundImageTopNav)`
+
+position: fixed;
+margin: 165px 835px 100px;
+width: 100px;
+height: 100px;
+background-color: blue;
+`
