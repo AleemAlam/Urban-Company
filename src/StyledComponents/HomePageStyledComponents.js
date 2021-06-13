@@ -50,6 +50,13 @@ export const StyledCarousel = styled.div`
     font-weight: 500;
     font-size: 50px;
   }
+  & .locationInput {
+    width: 100px;
+    display: inline-block;
+    margin-right: 10px;
+    padding: 2px 40px 2px 50px;
+    cursor: pointer;
+  }
   & input {
     width: 600px;
     height: 50px;
@@ -74,10 +81,11 @@ export const StyledCarousel = styled.div`
 `;
 
 export const StyledInput = styled.div`
+  display: flex !important;
   position: relative;
   top: 35%;
-  left: 34%;
-  width: 600px;
+  left: 30%;
+  width: 800px;
   display: block;
   & svg {
     position: absolute;
@@ -85,6 +93,9 @@ export const StyledInput = styled.div`
     font-size: 30px;
     left: 10px;
     top: 12px;
+  }
+  & .arrow {
+    left: 160px;
   }
 `;
 
@@ -287,5 +298,49 @@ export const StyledFooter = styled.div`
   }
   & .iconContainer > * {
     margin: 0px 10px;
+  }
+`;
+
+export const ShowLocation = styled.div`
+  background-color: white;
+  position: absolute;
+  width: 280px;
+  margin: 10px 0;
+  padding: 20px;
+  color: black;
+  border-radius: 4px;
+  & .head {
+    display: flex;
+    justify-content: space-between;
+  }
+  & .head > label {
+    margin-left: 10px;
+    margin-top: 1px;
+    font-size: 14px;
+  }
+  & .head > * {
+    margin: 0;
+  }
+  & svg {
+    font-size: 18px;
+    top: 22px;
+  }
+  & p {
+    color: blue;
+    cursor: pointer;
+    margin: 8px 0 0 0;
+    color: black;
+    font-size: 15px;
+    font-weight: 500;
+  }
+  & .blueText {
+    color: blue;
+  }
+  & .clear {
+    position: absolute;
+    top: 5px;
+    left: 300px;
+    color: black;
+    cursor: pointer;
   }
 `;
