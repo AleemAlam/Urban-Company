@@ -6,7 +6,7 @@ import {
 export const BackgroundImgHeadingH1 = () => {
     return (
         <StyleBackgroundImageheadingH1>
-            <h1>AC Service & Repair in New Delhi</h1>
+            <h1 style={{fontWeight: "500"}}>AC Service & Repair in New Delhi</h1>
         </StyleBackgroundImageheadingH1>
 
     )
