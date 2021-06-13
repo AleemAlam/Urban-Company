@@ -154,14 +154,14 @@ flex-direction: row;
 font-size: 15.2px;
 `
 export const StyleWhiteColorDiv = styled.div`
-color: #DDDDDD;
+color: #ddd;
 `
 export const StyleBackgroundImageheadingH1 = styled(StyleBackgroundImageTopNav)`
 margin-top: 90px;
-color: white;
-font-weight: 600;
-font-size: 18.5px;
+color: #fff;
+font-size: 19px;
 font-family: axiforma-regular,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+
 `
 export const StyleBackImgH1Subheading = styled(StyleBackgroundImageTopNav)`
 line-height: 46px;
@@ -169,17 +169,22 @@ margin-top: 175px;
 color: #b4b2a9;
 font-size: 17px;
 margin-left: 46px;
+opacity: .9;
+font-weight: 600;
 `
 export const StyleServiceCard = styled(StyleBackgroundImageTopNav)`
 
 position: fixed;
 width: 25%;
-margin: 165px 835px 70px;
+margin: 155px 835px 70px;
 background-image: linear-gradient(130deg,#642b73,#c6426e);
 border-top-left-radius: 4px;
 border-top-right-radius: 4px;
 text-align: center;
-padding: 20px 24px 26px;
+padding: 20px 24px 30px;
+display: flex;
+flex-direction: column;
+height: auto;
 
 `
 export const StyleServiceCardH2 = styled(HIWHeaderHeading)`
@@ -192,12 +197,32 @@ padding: 0px;
 export const StyleServicecardButton = styled.button`
 width:  310px;
 height: 48px;
-padding: 16px;
+padding: 13px;
 border-radius: 4px;
-display: flex;
+display: block;
 align-items: center;
 border: none;
-margin-top: 47px;
-position: absolute;
+position: relative;
+margin-top: 20px;
+font-weight: 500;
+
+.arrow {
+float: right;
+margin: 0px;
+font-size: 26px;
+
+}
+
+.buttonText {
+flex: 1;
+float: left;
+margin:0px;
+font-size: 17px;
+font-family: axiforma-regular,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+color: #000000;
+font-weight: 500;
+opacity: .9
+}
 
 `
+
