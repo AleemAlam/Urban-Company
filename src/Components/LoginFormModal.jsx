@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import Modal from "react-modal";
 import ClearIcon from "@material-ui/icons/Clear";
 import styled from "styled-components";
 import ArrowDropDownIcon from "@material-ui/icons/ArrowDropDown";
+import firebase from "../utils/firebase";
 const StyledModal = styled(Modal)`
   position: absolute;
   top: 0;
@@ -72,6 +73,45 @@ const StyledModal = styled(Modal)`
   }
 `;
 export default function LoginFormModal({ showModal, setShowModal }) {
+  const [number, setNumber] = useState("");
+  const configCaptcha = () => {
+    window.recaptchaVerifier = new firebase.auth.RecaptchaVerifier(
+      "sign-in-button",
+      {
+        size: "invisible",
+        callback: (response) => {
+          onSignInSubmit();
+          console.log("verified");
+        },
+        defaultCountry: "IN",
+      }
+    );
+  };
+
+  const onSignInSubmit = (e) => {
+    e.preventDefault();
+    const phoneNumber = "+91" + number;
+    console.log(phoneNumber);
+    configCaptcha();
+    const appVerifier = window.recaptchaVerifier;
+    firebase
+      .auth()
+      .signInWithPhoneNumber(phoneNumber, appVerifier)
+      .then((confirmationResult) => {
+        // SMS sent. Prompt user to type the code from the message, then sign the
+        // user in with confirmationResult.confirm(code).
+        window.confirmationResult = confirmationResult;
+        console.log("OTP Send");
+        // ...
+      })
+      .catch((error) => {
+        // Error; SMS not sent
+        console.log("OTP not Send", error);
+
+        // ...
+      });
+  };
+
   return (
     <StyledModal
       style={{
@@ -90,23 +130,31 @@ export default function LoginFormModal({ showModal, setShowModal }) {
         <p>Please Login to continue</p>
       </div>
       <div className="separator"></div>
-      <div className="form">
-        <div className="innerContainer">
-          <div className="labelSep">
-            <label htmlFor="">
-              <img
-                src="https://www.countryflags.com/wp-content/uploads/india-flag-png-xl.png"
-                alt=""
-              />
-              <span class="flag-icon flag-icon-gr">+91 </span>
-              <ArrowDropDownIcon />
-            </label>
+      <form onSubmit={onSignInSubmit}>
+        <div className="form">
+          <div id="sign-in-button"></div>
+          <div className="innerContainer">
+            <div className="labelSep">
+              <label htmlFor="">
+                <img
+                  src="https://www.countryflags.com/wp-content/uploads/india-flag-png-xl.png"
+                  alt=""
+                />
+                <span class="flag-icon flag-icon-gr">+91 </span>
+                <ArrowDropDownIcon />
+              </label>
+            </div>
+            <input
+              type="text"
+              placeholder="Your Phone Number"
+              value={number}
+              onChange={(e) => setNumber(e.target.value)}
+            />
           </div>
-          <input type="text" placeholder="Your Phone Number" />
         </div>
-      </div>
 
-      <button>Continue</button>
+        <button>Continue</button>
+      </form>
     </StyledModal>
   );
 }
