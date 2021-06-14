@@ -7,6 +7,7 @@ background-color: #f5f5f5;
 `
 
 export const StyleImageCont = styled.div`
+
 width: 100%;
 height: 458px;
 margin: 0%;
@@ -46,6 +47,7 @@ margin: 0 32px;
 z-index: 1;
 margin-top: 20px;
 margin-left: 65px;
+box-shadow: none;
 `
 export const StyleHIWMainCont = styled(StyleHowItWorksCont)`
 height: auto;
@@ -110,6 +112,7 @@ color: #000;
 padding: 0px;
 margin: 0px;
 text-align: left;
+box-shadow: none;
 `
 
 export const StyleHIWTextContParagraph = styled.p`
@@ -176,7 +179,7 @@ export const StyleServiceCard = styled(StyleBackgroundImageTopNav)`
 
 position: fixed;
 width: 25%;
-margin: 155px 835px 70px;
+margin: 100px 835px 70px;
 background-image: linear-gradient(130deg,#642b73,#c6426e);
 border-top-left-radius: 4px;
 border-top-right-radius: 4px;
@@ -222,6 +225,55 @@ font-family: axiforma-regular,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,H
 color: #000000;
 font-weight: 500;
 opacity: .9
+}
+
+`
+export const StyleRatingCardCont = styled(StyleServiceCard)`
+box-sizing: border-box;
+max-width: 363.3px;
+min-width: 363.3px;
+background-color: #fdfdfd;
+background-image: none;
+min-height: 121px;
+max-height: 121px;
+margin-top: 316px;
+margin-bottom: 0px;
+border-radius: 4px;
+box-shadow: 0 20px 20px 0 rgb(0 0 0 / 10%);
+display: flex;
+flex-direction: row;
+
+.rightDiv{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding: 0px 24px;
+    width: 57%;
+    margin-left: 25px;
+
+}
+
+.leftDiv{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding: 0px 0px 10px 0px;
+    font-size: 12px;
+    width: 43%;
+}
+
+.ratingCardP {
+   
+    margin: 8px 0 0;
+    font-size: 13px;
+    line-height: 1.33;
+    color: #757575;
+    font-weight: 500;
+}
+
+.bookingNum {
+    font-weight: 700;
+    font-size: 24px;
 }
 
 `
