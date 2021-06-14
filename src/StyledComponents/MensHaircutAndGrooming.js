@@ -17,6 +17,7 @@ export const Heading = styled.div`
 
 export const Container = styled.div`
   width: 100%;
+  position: relative;
   margin-top: 75px;
   max-height: 90vh;
   position: fixed;
@@ -51,7 +52,7 @@ export const PackageDetails = styled.div`
   margin: auto;
   border-right: 1px solid #dbdbdb;
   overflow-y: scroll;
-  height: 80vh;
+  height: 90vh;
   h1 {
     font-size: 36px;
     margin: 10px 7%;
@@ -177,7 +178,7 @@ export const ViewDetails = styled.div`
   margin: auto;
   border-right: 1px solid #dbdbdb;
   overflow-y: scroll;
-  height: 80vh;
+  height: 90vh;
 
   .closeDetails {
     display: flex;
@@ -409,12 +410,12 @@ export const MostHelpfulReviews = styled.div`
 export const CartNote = styled.div`
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  width: 95%;
+  /* align-items: center; */
+  width: 100%;
   height: 50px;
   position: fixed;
   bottom: 0;
-  margin: 1vh 2% auto 2%;
+  /* margin: auto 1%; */
   background: #ffffff;
   border-top: 1px solid #dbdbdb;
 
@@ -446,16 +447,18 @@ export const CartNote = styled.div`
   }
 `;
 
+// saftey page
+
 export const SafteyCondition = styled.div`
   display: flex;
   flex-direction: column;
-  width: 50%;
+  width: 60%;
   height: 90%;
   justify-content: center;
   align-items: center;
   position: fixed;
   top: 5%;
-  left: 25%;
+  left: 20%;
   background: #ffffff;
 
   .header {
@@ -493,6 +496,7 @@ export const SafteyCondition = styled.div`
       color: white;
       font-size: 20px;
       border-radius: 5px;
+      cursor: pointer;
     }
   }
 
@@ -529,6 +533,284 @@ export const SafteyCondition = styled.div`
       li {
         margin: 10px;
       }
+    }
+  }
+`;
+
+// cart model
+
+export const CartModel = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 64%;
+  height: 95%;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 5%;
+  left: 18%;
+  background: #ffffff;
+
+  .header {
+    display: flex;
+    width: 100%;
+    height: 10%;
+    justify-content: space-between;
+    align-items: center;
+    background: #fafafa;
+    border-bottom: 1px solid #dbdbdb;
+
+    p {
+      margin: 2.5%;
+      font-size: 18px;
+      color: rgb(66, 66, 66);
+    }
+  }
+  .cart {
+    width: 100%;
+    height: 60vh;
+    overflow-y: scroll;
+  }
+
+  .bottomBorder {
+    width: 80%;
+    height: 15px;
+    margin: auto;
+    background: rgb(245, 245, 245);
+  }
+
+  .offer {
+    width: 80%;
+    height: 10vh;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+
+    .promo {
+      display: flex;
+      gap: 15px;
+      height: 50px;
+      align-items: center;
+    }
+  }
+
+  .total {
+    width: 80%;
+    margin: auto;
+
+    div {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 0;
+    }
+
+    img {
+      width: 100%;
+      height: 20vh;
+      border-bottom: 1px solid rgb(245, 245, 245);
+    }
+  }
+
+  .payment {
+    height: 30vh;
+    /* border: 1px solid; */
+    width: 98%;
+    margin: auto;
+    bottom: 0;
+  }
+
+  .payment img {
+    width: 50px;
+    height: 50px;
+    margin: -40px 47% 0;
+    position: relative;
+  }
+
+  .payment > div:nth-child(2) {
+    width: 96%;
+    text-align: center;
+    margin: 1vh auto 5px;
+
+    h3 {
+      font-size: 22px;
+    }
+
+    p {
+      margin: -10px auto 0;
+    }
+  }
+
+  .payment > div:nth-child(3) {
+    display: flex;
+    justify-content: space-around;
+    margin: 3vh auto;
+    align-items: flex-end;
+
+    button {
+      width: 48%;
+      height: 8vh;
+      border-radius: 5px;
+      border: 1px solid #dbdbdb;
+      outline: none;
+      cursor: pointer;
+      background: transparent;
+      font-size: 20px;
+      font-weight: 500;
+    }
+  }
+
+  .payment > div:nth-child(3) > button:nth-child(2) {
+    background: black;
+    color: #ffffff;
+  }
+`;
+
+export const ItemsInCart = styled.div`
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+
+  ul > li {
+    line-height: 22px;
+    font-size: 14px;
+  }
+
+  .button {
+    margin-top: 5vh;
+    margin-left: 10vw;
+  }
+
+  border-bottom: 1px solid rgb(245, 245, 245);
+`;
+
+export const FrequntlyAdded = styled.div`
+  height: 44vh;
+  width: 80%;
+  margin: auto;
+
+  .suggetions {
+    display: flex;
+    gap: 10px;
+  }
+`;
+
+export const FrequntlyAddedProduct = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 135px;
+  border: 1px solid rgb(245, 245, 245);
+  border-radius: 10px;
+  img {
+    width: 135px;
+    height: 135px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+
+  p {
+    margin: auto 10px;
+  }
+
+  .button {
+    margin: 10px 10px;
+  }
+`;
+
+export const MoveToLocation = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  height: 90%;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 5%;
+  left: 20%;
+  background: #ffffff;
+
+  .header {
+    display: flex;
+    width: 100%;
+    height: 10%;
+    justify-content: space-between;
+    align-items: center;
+    background: #fafafa;
+    border-bottom: 1px solid #dbdbdb;
+
+    p {
+      margin: 2.5%;
+      font-size: 18px;
+      color: rgb(66, 66, 66);
+    }
+  }
+
+  .containt {
+    width: 50%;
+    height: 90vh;
+    margin: "auto";
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h2 {
+      margin: 50px auto;
+      font-size: 28px;
+    }
+
+    button {
+      width: 450px;
+      height: 60px;
+      border-radius: 5px;
+      margin: 15px auto;
+      text-align: center;
+      font-size: 22px;
+      font-weight: 540;
+      border: 1px solid #304ffe;
+      outline: none;
+      cursor: pointer;
+    }
+
+    button:nth-child(2) {
+      background: #304ffe;
+      color: #ffffff;
+    }
+    button:nth-child(3) {
+      color: #304ffe;
+      background: transparent;
+    }
+  }
+`;
+
+export const SelectTheLocation = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  height: 90%;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 5%;
+  left: 20%;
+  background: #ffffff;
+
+  .header {
+    display: flex;
+    width: 100%;
+    height: 10%;
+    justify-content: space-between;
+    align-items: center;
+    background: #fafafa;
+    border-bottom: 1px solid #dbdbdb;
+
+    p {
+      margin: 2.5%;
+      font-size: 18px;
+      color: rgb(66, 66, 66);
     }
   }
 `;

@@ -7,8 +7,8 @@ export const ServiceCard = () => {
             <StyleServiceCardH2>Need an AC Expert for:</StyleServiceCardH2>
 
             <ServiceCardButton />
-       
-            
+            <ServiceCardButton />
+
         </StyleServiceCard>
     )
 }

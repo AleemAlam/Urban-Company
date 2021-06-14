@@ -1,8 +1,16 @@
 import React, { useState } from "react";
 import { SafteyCondition } from "../../StyledComponents/MensHaircutAndGrooming";
 
-export default function Covid19TC({ setSefty }) {
-    const [safteyAgree, setSafteyAgree] = useState("")
+export default function Covid19TC({ setSefty, setSafteyAgree }) {
+  const [acceptTC, setAcceptTC] = useState(false);
+
+  const handleAgree = () => {
+    if (acceptTC === true) {
+      setSafteyAgree(true);
+      setSefty(false);
+    }
+  };
+  console.log(acceptTC);
   return (
     <SafteyCondition>
       <div className="header">
@@ -19,7 +27,7 @@ export default function Covid19TC({ setSefty }) {
         </p>
       </div>
       <div className="condition">
-        <input type="radio" value="radio" />{" "}
+        <input onChange={() => setAcceptTC(true)} type="radio" value="radio" />{" "}
         <strong>Click here to agree</strong>
         <ul>
           <li>
@@ -42,7 +50,7 @@ export default function Covid19TC({ setSefty }) {
       </div>
 
       <div className="buttonDiv">
-        <button>I agree</button>
+        <button onClick={handleAgree}>I agree</button>
       </div>
     </SafteyCondition>
   );

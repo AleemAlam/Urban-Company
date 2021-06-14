@@ -4,9 +4,10 @@ import MensHairCutAndGrooming from "./Page/SalonForMen/MensHairCutAndGrooming";
 function App() {
   return (
     <div>
-      {/* <MensHairCutAndGrooming /> */}
+
       <Routes />
       {/* <MensHairCutAndGrooming /> */}
+
     </div>
   );
 }
