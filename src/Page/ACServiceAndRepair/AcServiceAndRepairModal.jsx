@@ -7,6 +7,10 @@ import PackageDetail from "./PackageDetail";
 import ViewDetail from "./ViewDetail";
 import MoveLocation from "./MoveLocation";
 import SelectLocation from "./SelectLocation";
+import { useDispatch, useSelector } from "react-redux";
+import { MoveToSaftey } from "../../Redux/Model/MainModel/Action";
+import { moveModal } from "../../Redux/Model/SwitchModal/reducer";
+import { showModal } from "../../Redux/Model/SwitchModal/action";
 
 // npm install npm@latest -g
 // rm -rf node_modules && npm install
@@ -21,9 +25,12 @@ export default function AcServiceAndRepairModal() {
   const [moveLocation, setMoveLocation] = useState(false);
   const [selectLocation, setSelectLocation] = useState(false);
 
-  const [toSafteyLoading, setToSafteyLoading] = useState(false);
-  const [toSaftey, setToSaftey] = useState(false);
-  const [toSafteyErorr, setToSafteyErorr] = useState(false);
+  const toSaftey = false;
+
+  const dispatch = useDispatch();
+
+  const state = useSelector((state) => state.moveModal);
+  console.log(state);
 
   const handleCount = (num) => {
     setCount(count + num);
@@ -62,7 +69,12 @@ export default function AcServiceAndRepairModal() {
             <h4>Click to save ₹00 on final bill</h4>
             <h4>❯</h4>
           </div>
-          <div className="cartDetails" onClick={() => setSefty(true)}>
+          <div
+            className="cartDetails"
+            onClick={() => {
+              dispatch(showModal(toSaftey));
+            }}
+          >
             <h4>
               <span>0</span> ₹000
             </h4>
@@ -71,7 +83,7 @@ export default function AcServiceAndRepairModal() {
         </CartNote>
       ) : null}
 
-      {sefty ? (
+      {toSaftey ? (
         <Covid19TC setSefty={setSefty} setSafteyAgree={setSafteyAgree} />
       ) : null}
 

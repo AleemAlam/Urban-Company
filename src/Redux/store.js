@@ -1,8 +1,9 @@
 import { applyMiddleware, combineReducers, compose, createStore } from "redux";
 import thunk from "redux-thunk";
+import { moveModal } from "./Model/SwitchModal/reducer";
 
 const rootReducer = combineReducers({
-    
+  moveModal: moveModal,
 });
 // const myAsyncMiddleware = (store) => (next) => (actions) => {
 //   // store-Original redux store
