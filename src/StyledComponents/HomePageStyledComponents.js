@@ -339,8 +339,26 @@ export const ShowLocation = styled.div`
   & .clear {
     position: absolute;
     top: 5px;
-    left: 300px;
+    left: 295px;
     color: black;
+    cursor: pointer;
+  }
+`;
+
+export const SuggestionContainer = styled.div`
+  background-color: white;
+  border-radius: 3px;
+  color: #555;
+  position: relative;
+  top: -18px;
+  & div {
+    padding: 10px 15px;
+
+    border-radius: 3px;
+    text-transform: capitalize;
+  }
+  & div:hover {
+    background-color: #f5f5f5;
     cursor: pointer;
   }
 `;

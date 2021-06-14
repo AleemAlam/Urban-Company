@@ -9,6 +9,7 @@ import LocationOnOutlinedIcon from "@material-ui/icons/LocationOnOutlined";
 import ExpandMoreOutlinedIcon from "@material-ui/icons/ExpandMoreOutlined";
 import axios from "axios";
 import ClearIcon from "@material-ui/icons/Clear";
+import Suggestion from "./Suggestion";
 
 const initAddress = {
   houseNumber: "",
@@ -33,6 +34,7 @@ const initAddress = {
 };
 
 export default function SearchBar() {
+  const [textInput, setTextInput] = useState("");
   const [showLocationDiv, setShowLocationDiv] = useState(false);
   const [address, setAddress] = useState(initAddress);
   const handleLocation = () => {
@@ -42,6 +44,11 @@ export default function SearchBar() {
       alert("Geolocation is not supported by this browser.");
     }
   };
+
+  const handleSearch = (e) => {
+    setTextInput(e.target.value);
+  };
+
   const getCoordinates = (position) => {
     const { longitude, latitude } = position.coords;
     axios
@@ -92,13 +99,20 @@ export default function SearchBar() {
         )}
       </div>
       <div style={{ position: "relative" }}>
-        <input type="text" placeholder="search for a service " />
+        <input
+          type="text"
+          onChange={handleSearch}
+          placeholder="search for a service "
+        />
 
         <SearchIcon />
-        <Link>Salon for men</Link>
-        <Link>Salon for women</Link>
-        <Link>Massage for men</Link>
-        <span>etc</span>
+        <div style={{ marginTop: 7 }}>
+          <Link>Salon for men</Link>
+          <Link>Salon for women</Link>
+          <Link>Massage for men</Link>
+          <span>etc</span>
+        </div>
+        {textInput.length > 2 && <Suggestion text={textInput} />}
       </div>
     </StyledInput>
   );

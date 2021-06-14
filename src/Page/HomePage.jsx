@@ -13,6 +13,9 @@ import BigText from "../Components/BigText";
 import OfferSection from "../Components/OfferSection";
 import TwoCard from "../Components/TwoCard";
 import MyFooter from "../Components/MyFooter";
+import { useState } from "react";
+import { Modal } from "@material-ui/core";
+import LoginFormModal from "../Components/LoginFormModal";
 
 const services = [
   {
@@ -183,7 +186,7 @@ const tweets = [
   },
 ];
 
-export default function HomePage() {
+export default function HomePage({ showModal, setShowModal }) {
   const breakPoints = [
     { width: 600, itemsToShow: 2 },
     { width: 600, itemsToShow: 2 },
@@ -247,7 +250,7 @@ export default function HomePage() {
       <BigCard img="https://res.cloudinary.com/urbanclap/image/upload/q_auto,f_auto,fl_progressive:steep,w_2159/t_high_res_template/categories/category_v2/category_3cffdf20.png" />
       <Separator style={{ marginBottom: 30 }} />
       <TwoCard />
-      <MyFooter />
+      <LoginFormModal showModal={showModal} setShowModal={setShowModal} />
     </div>
   );
 }

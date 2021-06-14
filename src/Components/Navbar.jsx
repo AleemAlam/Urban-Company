@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { StyledNavbar } from "../StyledComponents/HomePageStyledComponents";
 
-export default function Navbar() {
+export default function Navbar({ setShowModal }) {
   return (
     <StyledNavbar>
       <Link>
@@ -19,7 +19,7 @@ export default function Navbar() {
           <p className="addUnderline">Register As A Professional</p>{" "}
         </Link>
         <Link>
-          <p>Login/Sign Up</p>
+          <p onClick={() => setShowModal(true)}>Login/Sign Up</p>
         </Link>
       </div>
     </StyledNavbar>
