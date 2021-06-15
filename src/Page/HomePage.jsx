@@ -16,6 +16,7 @@ import MyFooter from "../Components/MyFooter";
 import { useState } from "react";
 import { Modal } from "@material-ui/core";
 import LoginFormModal from "../Components/LoginFormModal";
+import { Link } from "react-router-dom";
 
 const services = [
   {
@@ -197,7 +198,12 @@ export default function HomePage({ showModal, setShowModal }) {
       <MyCarousel />
       <Container>
         {services.map((service, i) => (
-          <ServiceSmallCard key={i} name={service.name} img={service.img} />
+          <Link
+            style={{ textDecoration: "none", color: "black" }}
+            to="ac-service-repair"
+          >
+            <ServiceSmallCard key={i} name={service.name} img={service.img} />
+          </Link>
         ))}
       </Container>
       <ImgCardContainer>

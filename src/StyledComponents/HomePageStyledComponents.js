@@ -116,7 +116,9 @@ export const Container = styled.div`
 export const SmallCard = styled.div`
   width: 150px;
   height: 100px;
-  padding: 10px;
+  padding: 20px 10px;
+  padding-bottom: 0px;
+  border-radius: 3px;
   margin: 12px;
   font-size: 15px;
   text-align: center;
@@ -124,6 +126,9 @@ export const SmallCard = styled.div`
   & img {
     width: 32px;
     height: 32px;
+  }
+  &:hover {
+    background-color: #f7f7f7;
   }
 `;
 
