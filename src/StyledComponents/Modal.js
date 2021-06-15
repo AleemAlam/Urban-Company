@@ -518,8 +518,8 @@ export const SafteyCondition = styled.div`
 
     button {
       width: 750px;
-      height: 60px;
-      margin: auto;
+      height: 50px;
+      margin: 5px auto;
       background: #313232;
       outline: none;
       border: none;
@@ -563,6 +563,25 @@ export const SafteyCondition = styled.div`
       li {
         margin: 10px;
       }
+    }
+  }
+  .AC-Safety {
+    overflow-y: scroll;
+    width: 100%;
+    margin: auto;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center; */
+    p {
+      text-align: center;
+      font-size: 28px;
+      font-weight: 500;
+    }
+
+    img {
+      width: 725px;
+      height: 1050px;
+      margin: auto 39px;
     }
   }
 `;
@@ -687,7 +706,7 @@ export const CartModel = styled.div`
       outline: none;
       cursor: pointer;
       background: transparent;
-      font-size: 20px;
+      font-size: 18px;
       font-weight: 500;
     }
   }
@@ -845,5 +864,23 @@ export const SelectTheLocation = styled.div`
       color: rgb(66, 66, 66);
       cursor: context-menu;
     }
+  }
+
+  .location-data {
+    width: 100%;
+    height: 90vh;
+    display: flex;
+  }
+
+  .liveMap {
+    width: 70%;
+    height: 100%;
+    background: yellow;
+  }
+  .location-form {
+    width: 30%;
+    height: 100%;
+    min-width: 270px;
+    border: 1px solid;
   }
 `;

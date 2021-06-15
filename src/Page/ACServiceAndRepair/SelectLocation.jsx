@@ -16,6 +16,10 @@ export default function SelectLocation({ setMoveLocation, setSelectLocation }) {
         <p>Men's Haircut & Grooming</p>
         <p></p>
       </div>
+      <div className="location-data">
+        <div className="liveMap"></div>
+        <div className="location-form"></div>
+      </div>
     </SelectTheLocation>
   );
 }
