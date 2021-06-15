@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { SafteyCondition } from "../../StyledComponents/MensHaircutAndGrooming";
+import { SafteyCondition } from "../../StyledComponents/Modal";
 
 export default function Covid19TC({ setSefty, setSafteyAgree }) {
   const [acceptTC, setAcceptTC] = useState(false);
@@ -14,7 +14,7 @@ export default function Covid19TC({ setSefty, setSafteyAgree }) {
   return (
     <SafteyCondition>
       <div className="header">
-        <p>&#129120;</p>
+        <p onClick={() => setSefty(false)}>&#129120;</p>
         <p>Men's Haircut & Grooming</p>
         <p onClick={() => setSefty(false)}>✖</p>
       </div>

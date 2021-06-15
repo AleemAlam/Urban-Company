@@ -7,10 +7,6 @@ import PackageDetail from "./PackageDetail";
 import ViewDetail from "./ViewDetail";
 import MoveLocation from "./MoveLocation";
 import SelectLocation from "./SelectLocation";
-import { useDispatch, useSelector } from "react-redux";
-import { MoveToSaftey } from "../../Redux/Model/MainModel/Action";
-import { moveModal } from "../../Redux/Model/SwitchModal/reducer";
-import { showModal } from "../../Redux/Model/SwitchModal/action";
 
 // npm install npm@latest -g
 // rm -rf node_modules && npm install
@@ -20,17 +16,10 @@ export default function AcServiceAndRepairModal() {
   const [showDetails, setShowDetails] = useState(false);
 
   const [count, setCount] = useState(0);
-  const [sefty, setSefty] = useState(false);
+  const [safty, setSafty] = useState(false);
   const [safteyAgree, setSafteyAgree] = useState(false);
   const [moveLocation, setMoveLocation] = useState(false);
   const [selectLocation, setSelectLocation] = useState(false);
-
-  const toSaftey = false;
-
-  const dispatch = useDispatch();
-
-  const state = useSelector((state) => state.moveModal);
-  console.log(state);
 
   const handleCount = (num) => {
     setCount(count + num);
@@ -60,7 +49,7 @@ export default function AcServiceAndRepairModal() {
         />
       </Container>
       {count !== 0 &&
-      !sefty &&
+      !safty &&
       !safteyAgree &&
       !moveLocation &&
       !selectLocation ? (
@@ -69,12 +58,7 @@ export default function AcServiceAndRepairModal() {
             <h4>Click to save ₹00 on final bill</h4>
             <h4>❯</h4>
           </div>
-          <div
-            className="cartDetails"
-            onClick={() => {
-              dispatch(showModal(toSaftey));
-            }}
-          >
+          <div className="cartDetails" onClick={() => setSafty(true)}>
             <h4>
               <span>0</span> ₹000
             </h4>
@@ -83,8 +67,8 @@ export default function AcServiceAndRepairModal() {
         </CartNote>
       ) : null}
 
-      {toSaftey ? (
-        <Covid19TC setSefty={setSefty} setSafteyAgree={setSafteyAgree} />
+      {safty ? (
+        <Covid19TC setSefty={setSafty} setSafteyAgree={setSafteyAgree} />
       ) : null}
 
       {safteyAgree ? (
@@ -92,6 +76,7 @@ export default function AcServiceAndRepairModal() {
           count={count}
           setCount={setCount}
           handleCount={handleCount}
+          setSefty={setSafty}
           setMoveLocation={setMoveLocation}
           setSafteyAgree={setSafteyAgree}
         />
@@ -99,12 +84,18 @@ export default function AcServiceAndRepairModal() {
 
       {moveLocation ? (
         <MoveLocation
+          setSafteyAgree={setSafteyAgree}
           setMoveLocation={setMoveLocation}
           setSelectLocation={setSelectLocation}
         />
       ) : null}
 
-      {selectLocation ? <SelectLocation /> : null}
+      {selectLocation ? (
+        <SelectLocation
+          setMoveLocation={setMoveLocation}
+          setSelectLocation={setSelectLocation}
+        />
+      ) : null}
     </>
   );
 }

@@ -503,6 +503,7 @@ export const SafteyCondition = styled.div`
     p {
       margin: 2.5%;
       font-size: 18px;
+      cursor: context-menu;
     }
   }
 
@@ -593,6 +594,7 @@ export const CartModel = styled.div`
       margin: 2.5%;
       font-size: 18px;
       color: rgb(66, 66, 66);
+      cursor: context-menu;
     }
   }
   .cart {
@@ -773,6 +775,7 @@ export const MoveToLocation = styled.div`
       margin: 2.5%;
       font-size: 18px;
       color: rgb(66, 66, 66);
+      cursor: context-menu;
     }
   }
 
@@ -840,6 +843,7 @@ export const SelectTheLocation = styled.div`
       margin: 2.5%;
       font-size: 18px;
       color: rgb(66, 66, 66);
+      cursor: context-menu;
     }
   }
 `;
