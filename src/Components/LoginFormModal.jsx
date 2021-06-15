@@ -4,6 +4,8 @@ import ClearIcon from "@material-ui/icons/Clear";
 import styled from "styled-components";
 import ArrowDropDownIcon from "@material-ui/icons/ArrowDropDown";
 import firebase from "../utils/firebase";
+import { useDispatch } from "react-redux";
+import { userLogin } from "../Redux/auth/action";
 const StyledModal = styled(Modal)`
   position: absolute;
   top: 0;
@@ -74,6 +76,9 @@ const StyledModal = styled(Modal)`
 `;
 export default function LoginFormModal({ showModal, setShowModal }) {
   const [number, setNumber] = useState("");
+  const [otp, setOtp] = useState("");
+  const [showOtp, setShowOtp] = useState("");
+  const dispatch = useDispatch();
   const configCaptcha = () => {
     window.recaptchaVerifier = new firebase.auth.RecaptchaVerifier(
       "sign-in-button",
@@ -91,7 +96,6 @@ export default function LoginFormModal({ showModal, setShowModal }) {
   const onSignInSubmit = (e) => {
     e.preventDefault();
     const phoneNumber = "+91" + number;
-    console.log(phoneNumber);
     configCaptcha();
     const appVerifier = window.recaptchaVerifier;
     firebase
@@ -102,6 +106,7 @@ export default function LoginFormModal({ showModal, setShowModal }) {
         // user in with confirmationResult.confirm(code).
         window.confirmationResult = confirmationResult;
         console.log("OTP Send");
+        setShowOtp(true);
         // ...
       })
       .catch((error) => {
@@ -110,6 +115,11 @@ export default function LoginFormModal({ showModal, setShowModal }) {
 
         // ...
       });
+  };
+
+  const handleSignIn = (e) => {
+    e.preventDefault();
+    dispatch(userLogin(otp, setShowModal));
   };
 
   return (
@@ -130,31 +140,45 @@ export default function LoginFormModal({ showModal, setShowModal }) {
         <p>Please Login to continue</p>
       </div>
       <div className="separator"></div>
-      <form onSubmit={onSignInSubmit}>
-        <div className="form">
-          <div id="sign-in-button"></div>
-          <div className="innerContainer">
-            <div className="labelSep">
-              <label htmlFor="">
-                <img
-                  src="https://www.countryflags.com/wp-content/uploads/india-flag-png-xl.png"
-                  alt=""
-                />
-                <span class="flag-icon flag-icon-gr">+91 </span>
-                <ArrowDropDownIcon />
-              </label>
-            </div>
+      {showOtp ? (
+        <form onSubmit={handleSignIn}>
+          <div className="form">
             <input
               type="text"
-              placeholder="Your Phone Number"
-              value={number}
-              onChange={(e) => setNumber(e.target.value)}
+              placeholder="Enter OTP"
+              value={otp}
+              style={{ top: 0 }}
+              onChange={(e) => setOtp(e.target.value)}
             />
           </div>
-        </div>
-
-        <button>Continue</button>
-      </form>
+          <button>Submit</button>
+        </form>
+      ) : (
+        <form onSubmit={onSignInSubmit}>
+          <div className="form">
+            <div id="sign-in-button"></div>
+            <div className="innerContainer">
+              <div className="labelSep">
+                <label htmlFor="">
+                  <img
+                    src="https://www.countryflags.com/wp-content/uploads/india-flag-png-xl.png"
+                    alt=""
+                  />
+                  <span class="flag-icon flag-icon-gr">+91 </span>
+                  <ArrowDropDownIcon />
+                </label>
+              </div>
+              <input
+                type="text"
+                placeholder="Your Phone Number"
+                value={number}
+                onChange={(e) => setNumber(e.target.value)}
+              />
+            </div>
+          </div>
+          <button>Continue</button>
+        </form>
+      )}
     </StyledModal>
   );
 }

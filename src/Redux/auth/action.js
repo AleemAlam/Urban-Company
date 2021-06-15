@@ -7,14 +7,16 @@ import {
   USER_LOGIN_SUCCESS,
 } from "./actionType";
 
-export const userLogin = (payload) => (dispatch) => {
+export const userLogin = (otp, setModal) => (dispatch) => {
   dispatch(userLoginRequest());
-  const code = payload.otp;
+  const code = otp;
   window.confirmationResult
     .confirm(code)
     .then((result) => {
       const user = result.user;
+      console.log(user);
       dispatch(userLoginSuccess(user));
+      setModal(false);
     })
     .catch((error) => {
       dispatch(userLoginFailure());
@@ -51,6 +53,8 @@ const userLoginSuccess = (payload) => {
 };
 
 const userLoginFailure = () => {
+  console.log("enter error");
+
   return {
     type: USER_LOGIN_FAILURE,
   };
