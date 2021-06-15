@@ -1,12 +1,12 @@
 import { StyleReviewsCont } from '../../StyledComponents/AcServiceAndRepairStyle'
-import { AiFillStar,AiOutlineArrowDown } from "react-icons/ai"
+import { AiFillStar, AiOutlineArrowDown } from "react-icons/ai"
 import React from "react"
 
 export const Reviews = () => {
 
-    const [status,setStatus] = React.useState(false)
+    const [status, setStatus] = React.useState(false)
 
-    const handleClick = ()=> {
+    const handleClick = () => {
         setStatus(true)
     }
 
@@ -26,11 +26,11 @@ export const Reviews = () => {
 
                             <div className="rating">
                                 <AiFillStar className="star"></AiFillStar>
-                                <div style={{marginTop:"7px"}}>
-                                <span style={{ color: "#228d27",fontWeight:"700"}}>4.7</span>
-                                <span>(195 ratings)</span>
+                                <div style={{ marginTop: "7px" }}>
+                                    <span style={{ color: "#228d27", fontWeight: "700" }}>4.7</span>
+                                    <span>(195 ratings)</span>
                                 </div>
-                            
+
                             </div>
                         </div>
 
@@ -51,8 +51,8 @@ export const Reviews = () => {
 
                                         <div className="review-rating">
                                             <AiFillStar className="star"></AiFillStar>
-                                            
-                                            <span style={{ color: "#228d27",fontWeight:"700"}}>5.0</span>
+
+                                            <span style={{ color: "#228d27", fontWeight: "700" }}>5.0</span>
                                             <p>Thank you for a timely visit and service of my ac.I have paid in cash the balance amount. Thank you!</p>
                                         </div>
                                     </div>
@@ -60,35 +60,35 @@ export const Reviews = () => {
 
                             </li>
 
-                            <button onClick={handleClick}>
-                               <div>
-                               <AiOutlineArrowDown></AiOutlineArrowDown>
-                                   </div> 
-                                <span>click to read more reviews</span>
-                            </button>
+                            {status ?
+                                <li>
+                                    <div style={{ display: "flex", flexDirection: "row" }}>
+                                        <div className="rating-imageBox">
+                                            {/* <img src="" alt="error" /> */}
+                                            S
+                                        </div>
 
-                            {status ? 
-                            <li>
-                            <div style={{ display: "flex", flexDirection: "row" }}>
-                                <div className="rating-imageBox">
-                                    {/* <img src="" alt="error" /> */}
-                                    S
-                                </div>
+                                        <div className="review-details">
+                                            <h4>Sanjay</h4>
 
-                                <div className="review-details">
-                                    <h4>Sanjay</h4>
+                                            <div className="review-rating">
+                                                <AiFillStar className="star"></AiFillStar>
 
-                                    <div className="review-rating">
-                                        <AiFillStar className="star"></AiFillStar>
-                                        
-                                        <span style={{ color: "#228d27",fontWeight:"700"}}>5.0</span>
-                                        <p>Thank you for a timely visit and service of my ac.I have paid in cash the balance amount. Thank you!</p>
+                                                <span style={{ color: "#228d27", fontWeight: "700" }}>5.0</span>
+                                                <p>Thank you for a timely visit and service of my ac.I have paid in cash the balance amount. Thank you!</p>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
 
-                        </li>
-                              : ""}
+                                </li>
+                                : <button onClick={handleClick}>
+                                    <div>
+                                        <AiOutlineArrowDown></AiOutlineArrowDown>
+                                    </div>
+                                    <span>click to read more reviews</span>
+                                </button>}
+
+
                             <li></li>
                         </ul>
                     </div>

@@ -26,28 +26,31 @@ margin: 0%;
 `
 
 export const StyleNavigationBarCont = styled.div`
-
-width: 54%;
+box-sizing: border-box;
+width: 50%;
 height: 75px;
 background-color: #ffffff;
 padding: 0px 30px;
-margin: 0px 0px 0px 32px;
 position: sticky;
 position: -webkit-sticky;
 top: 0;
 display: flex;
 z-index: 5;
 box-shadow: 0 4px 12px 0 #ddd;
-margin-left: 65px;
+margin: auto;
+margin-right: 39%;
 `
 
 export const StyleHowItWorksCont = styled(StyleNavigationBarCont)`
+box-sizing: border-box;
 height: 95px;
 margin: 0 32px;
 z-index: 1;
 margin-top: 20px;
-margin-left: 65px;
 box-shadow: none;
+margin: auto;
+margin-right: 39%;
+
 `
 export const StyleHIWMainCont = styled(StyleHowItWorksCont)`
 height: auto;
@@ -57,6 +60,7 @@ padding-bottom: 20px;
 display:flex;
 flex-direction: column;
 position: static;
+
 `
 export const StyleAcServiceInCont = styled(StyleHowItWorksCont)`
 box-sizing: border-box;
@@ -67,9 +71,9 @@ margin-top: 40px;
 background-color: #ffffff;
 text-align: left;
 display:inline-block;
-width: 58.4%;
 line-height: 2;
 font-family: axiforma-bold,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+margin: 40px 39% auto 11%;
 
 h2 {
 font-size: 22px;
@@ -88,8 +92,7 @@ export const StyleTechnicians = styled(StyleAcServiceInCont)`
 
 line-height: 1;
 height: 100px;
-margin-bottom: 1px;
-
+margin: 40px 39% 0.1% 11%;
 `
 
 export const StyleReviewsCont = styled(StyleAcServiceInCont)`
@@ -262,9 +265,9 @@ flex-direction: row;
 margin-top: 1.5%;
 `
 export const StyleHIWLogoCont = styled(StyleHIWTextCont)`
-width: 7%;
+width: 6%;
 background-color: none;
-height: 43px;
+height: 40px;
 border-radius: 50%;
 margin: 0;
 `
@@ -308,13 +311,13 @@ export const StyleHIWTextContBorderLine = styled.div`
 height: 27px;
 width: 0.3%;
 background-color: #e2e2e2;
-margin-left: 6.3%;
+margin-left: 5.8%;
 `
 export const StyleBackgroundImageTopNav = styled(StyleNavigationBarCont)`
 background-color: transparent;
 box-shadow: none;
 position: absolute;
-margin: 11px 50px 30px 70px;
+margin: 0.8% auto 4% 10.7%;
 padding: 0;
 display: flex;
 column-gap: 10px;
@@ -336,19 +339,18 @@ line-height: 46px;
 margin-top: 175px;
 color: #b4b2a9;
 font-size: 17px;
-margin-left: 46px;
 opacity: .9;
 font-weight: 600;
+margin-left: 9.8%;
 `
 export const StyleServiceCard = styled(StyleBackgroundImageTopNav)`
-
-position: fixed;
-width: 25%;
 box-sizing: border-box;
+position: fixed;
+width: 21.6%;
 max-width: 363.3px;
 min-width: 363.3px;
-margin: 100px auto 70px;
-margin-left: 66%;
+box-sizing: border-box;
+margin: 12.5vh auto 121px 63%;
 background-image: linear-gradient(130deg,#642b73,#c6426e);
 border-top-left-radius: 4px;
 border-top-right-radius: 4px;
@@ -357,7 +359,6 @@ padding: 20px 24px 30px;
 display: flex;
 flex-direction: column;
 height: auto;
-
 `
 export const StyleServiceCardH2 = styled(HIWHeaderHeading)`
 font-size: 23px;
