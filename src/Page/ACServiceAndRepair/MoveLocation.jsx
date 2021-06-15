@@ -1,7 +1,11 @@
 import React from "react";
-import { MoveToLocation } from "../../StyledComponents/MensHaircutAndGrooming";
+import { MoveToLocation } from "../../StyledComponents/Modal";
 
-export default function MoveLocation({ setMoveLocation, setSelectLocation }) {
+export default function MoveLocation({
+  setMoveLocation,
+  setSelectLocation,
+  setSafteyAgree,
+}) {
   const handleLocation = () => {
     setMoveLocation(false);
     setSelectLocation(true);
@@ -9,7 +13,14 @@ export default function MoveLocation({ setMoveLocation, setSelectLocation }) {
   return (
     <MoveToLocation>
       <div className="header">
-        <p>&#129120;</p>
+        <p
+          onClick={() => {
+            setSafteyAgree(true);
+            setMoveLocation(false);
+          }}
+        >
+          &#129120;
+        </p>
         <p>Men's Haircut & Grooming</p>
         <p></p>
       </div>
