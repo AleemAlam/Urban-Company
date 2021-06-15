@@ -5,12 +5,13 @@ import {
   FrequntlyAdded,
   FrequntlyAddedProduct,
   ItemsInCart,
-} from "../../StyledComponents/MensHaircutAndGrooming";
+} from "../../StyledComponents/Modal";
 
 export default function Cart({
   count,
   setCount,
   handleCount,
+  setSefty,
   setMoveLocation,
   setSafteyAgree,
 }) {
@@ -21,7 +22,14 @@ export default function Cart({
   return (
     <CartModel>
       <div className="header">
-        <p>&#129120;</p>
+        <p
+          onClick={() => {
+            setSafteyAgree(false);
+            setSefty(true);
+          }}
+        >
+          &#129120;
+        </p>
         <p>Men's Haircut & Grooming</p>
         <p></p>
       </div>

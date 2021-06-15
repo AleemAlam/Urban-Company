@@ -16,14 +16,10 @@ export default function AcServiceAndRepairModal() {
   const [showDetails, setShowDetails] = useState(false);
 
   const [count, setCount] = useState(0);
-  const [sefty, setSefty] = useState(false);
+  const [safty, setSafty] = useState(false);
   const [safteyAgree, setSafteyAgree] = useState(false);
   const [moveLocation, setMoveLocation] = useState(false);
   const [selectLocation, setSelectLocation] = useState(false);
-
-  const [toSafteyLoading, setToSafteyLoading] = useState(false);
-  const [toSaftey, setToSaftey] = useState(false);
-  const [toSafteyErorr, setToSafteyErorr] = useState(false);
 
   const handleCount = (num) => {
     setCount(count + num);
@@ -53,7 +49,7 @@ export default function AcServiceAndRepairModal() {
         />
       </Container>
       {count !== 0 &&
-      !sefty &&
+      !safty &&
       !safteyAgree &&
       !moveLocation &&
       !selectLocation ? (
@@ -62,7 +58,7 @@ export default function AcServiceAndRepairModal() {
             <h4>Click to save ₹00 on final bill</h4>
             <h4>❯</h4>
           </div>
-          <div className="cartDetails" onClick={() => setSefty(true)}>
+          <div className="cartDetails" onClick={() => setSafty(true)}>
             <h4>
               <span>0</span> ₹000
             </h4>
@@ -71,8 +67,8 @@ export default function AcServiceAndRepairModal() {
         </CartNote>
       ) : null}
 
-      {sefty ? (
-        <Covid19TC setSefty={setSefty} setSafteyAgree={setSafteyAgree} />
+      {safty ? (
+        <Covid19TC setSefty={setSafty} setSafteyAgree={setSafteyAgree} />
       ) : null}
 
       {safteyAgree ? (
@@ -80,6 +76,7 @@ export default function AcServiceAndRepairModal() {
           count={count}
           setCount={setCount}
           handleCount={handleCount}
+          setSefty={setSafty}
           setMoveLocation={setMoveLocation}
           setSafteyAgree={setSafteyAgree}
         />
@@ -87,12 +84,18 @@ export default function AcServiceAndRepairModal() {
 
       {moveLocation ? (
         <MoveLocation
+          setSafteyAgree={setSafteyAgree}
           setMoveLocation={setMoveLocation}
           setSelectLocation={setSelectLocation}
         />
       ) : null}
 
-      {selectLocation ? <SelectLocation /> : null}
+      {selectLocation ? (
+        <SelectLocation
+          setMoveLocation={setMoveLocation}
+          setSelectLocation={setSelectLocation}
+        />
+      ) : null}
     </>
   );
 }
