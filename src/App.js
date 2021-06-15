@@ -5,9 +5,9 @@ import Routes from "./Page/Routes.jsx";
 function App() {
   return (
     <div>
-      {/* <Routes /> */}
+      <Routes />
       {/* <MensHairCutAndGrooming /> */}
-      <AcServiceAndRepairModal />
+      {/* <AcServiceAndRepairModal /> */}
     </div>
   );
 }
