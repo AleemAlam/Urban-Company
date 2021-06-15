@@ -5,9 +5,9 @@ import AcServiceAndRepairModal from "./Page/ACServiceAndRepair/AcServiceAndRepai
 function App() {
   return (
     <div>
-      {/* <Routes /> */}
+      <Routes />
       {/* <MensHairCutAndGrooming /> */}
-      <AcServiceAndRepairModal />
+      {/* <AcServiceAndRepairModal /> */}
     </div>
   );
 }
