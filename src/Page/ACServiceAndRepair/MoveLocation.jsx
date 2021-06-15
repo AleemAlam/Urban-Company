@@ -27,7 +27,7 @@ export default function MoveLocation({
       <div className="containt">
         <h2>Where do you want the service?</h2>
         <button onClick={handleLocation}>Your current location</button>
-        <button>Some other location</button>
+        <button onClick={handleLocation}>Some other location</button>
       </div>
     </MoveToLocation>
   );
