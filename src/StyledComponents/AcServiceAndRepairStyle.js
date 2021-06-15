@@ -12,6 +12,7 @@ height: 458px;
 margin: 0%;
 padding: 0%;
 position: relative;
+
 `
 
 export const StyleBackgroundImage = styled.img`
@@ -46,6 +47,7 @@ margin: 0 32px;
 z-index: 1;
 margin-top: 20px;
 margin-left: 65px;
+box-shadow: none;
 `
 export const StyleHIWMainCont = styled(StyleHowItWorksCont)`
 height: auto;
@@ -54,11 +56,176 @@ padding-top: 20px;
 padding-bottom: 20px;
 display:flex;
 flex-direction: column;
+position: static;
 `
 export const StyleAcServiceInCont = styled(StyleHowItWorksCont)`
-
+box-sizing: border-box;
+position: static;
 height: 130px;
+padding: 24px 60px;
 margin-top: 40px;
+background-color: #ffffff;
+text-align: left;
+display:inline-block;
+width: 58.4%;
+line-height: 2;
+font-family: axiforma-bold,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+
+h2 {
+font-size: 22px;
+font-weight: bold;
+color: #212121;
+margin: 0px 0px 16px;
+}
+
+p{
+color: #757575;
+font-size: 14px;
+}
+`
+
+export const StyleTechnicians = styled(StyleAcServiceInCont)`
+
+line-height: 1;
+height: 100px;
+margin-bottom: 1px;
+
+`
+
+export const StyleReviewsCont = styled(StyleAcServiceInCont)`
+margin-top: 1px;
+margin-bottom: 1px;
+height: auto;
+
+ul,li {
+list-style-type:none;
+display: list-item;
+}
+
+.imageBox {
+height: 80px;
+width: 80px;
+border-radius: 50%;
+border: 1px solid #e2e2e2;
+text-align: left;
+}
+
+.rating-imageBox{
+box-sizing:border-box;
+padding-top: 2px;
+height: 40px;
+width: 46px;
+border-radius: 50%;
+border: 1px solid #e2e2e2;
+text-align: center;
+background-color: #FFE082;
+margin-left: 30px;
+margin-top: 24px;
+color: white;
+border: none;
+font-size: 18px;
+font-weight: 700;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    line-height: 0;
+
+    h4{
+        margin-top: 10px;
+        font-size: 17px;
+        font-weight: 500;
+        color: #212121;
+    }
+    p {
+        line-height: 0.5;
+        font-size: 13px;
+        color: #757575;
+    }
+}
+
+.reviews {
+    display: flex;
+    flex-direction: row;
+    margin-left: 24px;
+}
+
+.review-details{
+    margin-left: 24px;
+    margin-top: 16px;
+    padding: 0px;
+
+    h4{
+        
+    font-size: 16px;
+    margin: 0px;
+    padding: 0px;
+    font-weight: 500;
+    color: #212121;
+    }
+
+    p {
+        line-height: 2;
+        font-size: 13px;
+        color: #757575;
+        padding: 8px;
+        margin-top: 0px;
+    }
+
+}
+
+.rating {
+    margin-top: 20px;
+    font-size: 14px;
+    display: flex;
+    flex-direction: row;
+    
+    span{
+        margin-left:5px;
+    }
+}
+
+.review-rating{
+    font-size: 14px;
+}
+
+.details {
+    margin-left: 24px;
+}
+img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.star{
+    color: #228d27;
+    font-weight: 700;
+    font-size: 15px;
+}
+span{
+    font-size: 14.5px;
+}
+
+button{
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    color: #424242;
+    padding: 8px 16px;
+    background-color: #fff;
+    border: 1px solid #d4d4d4;
+    border-radius: 20px;
+    height: 32px;
+    box-shadow: 0 2px 4px 0 rgb(0 0 0 / 8%);
+    display: flex;
+    flex-direction: row;
+    margin-left: 30%;
+    span{
+        font-size: 13.4px;
+    }
+}
 `
 export const StyleStickyNavBtn = styled.div`
 
@@ -110,6 +277,7 @@ color: #000;
 padding: 0px;
 margin: 0px;
 text-align: left;
+box-shadow: none;
 `
 
 export const StyleHIWTextContParagraph = styled.p`
@@ -154,14 +322,14 @@ flex-direction: row;
 font-size: 15.2px;
 `
 export const StyleWhiteColorDiv = styled.div`
-color: #DDDDDD;
+color: #ddd;
 `
 export const StyleBackgroundImageheadingH1 = styled(StyleBackgroundImageTopNav)`
 margin-top: 90px;
-color: white;
-font-weight: 600;
-font-size: 18.5px;
+color: #fff;
+font-size: 19px;
 font-family: axiforma-regular,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+
 `
 export const StyleBackImgH1Subheading = styled(StyleBackgroundImageTopNav)`
 line-height: 46px;
@@ -169,17 +337,25 @@ margin-top: 175px;
 color: #b4b2a9;
 font-size: 17px;
 margin-left: 46px;
+opacity: .9;
+font-weight: 600;
 `
 export const StyleServiceCard = styled(StyleBackgroundImageTopNav)`
 
 position: fixed;
 width: 25%;
-margin: 165px 835px 70px;
+box-sizing: border-box;
+max-width: 363.3px;
+min-width: 363.3px;
+margin: 100px 835px 70px;
 background-image: linear-gradient(130deg,#642b73,#c6426e);
 border-top-left-radius: 4px;
 border-top-right-radius: 4px;
 text-align: center;
-padding: 20px 24px 26px;
+padding: 20px 24px 30px;
+display: flex;
+flex-direction: column;
+height: auto;
 
 `
 export const StyleServiceCardH2 = styled(HIWHeaderHeading)`
@@ -192,12 +368,81 @@ padding: 0px;
 export const StyleServicecardButton = styled.button`
 width:  310px;
 height: 48px;
-padding: 16px;
+padding: 13px;
 border-radius: 4px;
-display: flex;
+display: block;
 align-items: center;
 border: none;
-margin-top: 47px;
-position: absolute;
+position: relative;
+margin-top: 20px;
+font-weight: 500;
+
+.arrow {
+float: right;
+margin: 0px;
+font-size: 26px;
+
+}
+
+.buttonText {
+flex: 1;
+float: left;
+margin:0px;
+font-size: 17px;
+font-family: axiforma-regular,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+color: #000000;
+font-weight: 500;
+opacity: .9
+}
 
 `
+export const StyleRatingCardCont = styled(StyleServiceCard)`
+box-sizing: border-box;
+max-width: 363.3px;
+min-width: 363.3px;
+background-color: #fdfdfd;
+background-image: none;
+min-height: 121px;
+max-height: 121px;
+margin-top: 316px;
+margin-bottom: 0px;
+border-radius: 4px;
+box-shadow: 0 20px 20px 0 rgb(0 0 0 / 10%);
+display: flex;
+flex-direction: row;
+
+.rightDiv{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding: 0px 24px;
+    width: 57%;
+    margin-left: 25px;
+
+}
+
+.leftDiv{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding: 0px 0px 10px 0px;
+    font-size: 12px;
+    width: 43%;
+}
+
+.ratingCardP {
+   
+    margin: 8px 0 0;
+    font-size: 13px;
+    line-height: 1.33;
+    color: #757575;
+    font-weight: 500;
+}
+
+.bookingNum {
+    font-weight: 700;
+    font-size: 24px;
+}
+
+`
+

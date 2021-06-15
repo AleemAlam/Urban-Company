@@ -3,6 +3,10 @@ import { StyleAcServiceInCont } from '../../StyledComponents/AcServiceAndRepairS
 
 export const AcServiceIn = () => {
     return (
-        <StyleAcServiceInCont />
+        <StyleAcServiceInCont>
+
+            <h2>AC Service In Delhi</h2>
+            <p>Get your window or split AC service in Delhi done by Urban C...</p>
+        </StyleAcServiceInCont>
     )
 }

@@ -7,7 +7,7 @@ export default function ServiceCard({ img, title, subTitle }) {
     <StyledServiceCard>
       <ServiceImgCard img={img} />
       <p>{title}</p>
-      <p>{subTitle}</p>
+      <p style={{ fontSize: 13 }}>{subTitle}</p>
     </StyledServiceCard>
   );
 }

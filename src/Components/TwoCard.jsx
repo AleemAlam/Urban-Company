@@ -5,6 +5,7 @@ import {
 } from "../StyledComponents/HomePageStyledComponents";
 import BigText from "./BigText";
 import SubHeading from "./SubHeading";
+import ArrowDropDownIcon from "@material-ui/icons/ArrowDropDown";
 
 export default function TwoCard() {
   return (
@@ -23,8 +24,23 @@ export default function TwoCard() {
         </StyledText>
         <div className="form">
           <div className="innerContainer">
-            <label htmlFor="">
-              <span class="flag-icon flag-icon-gr"></span>+91
+            <label
+              style={{ borderRight: "1px solid #e8ebe9", padding: "8px 5px" }}
+              htmlFor=""
+            >
+              <img
+                style={{
+                  width: 25,
+                  height: 18,
+                  marginRight: 10,
+                  position: "relative",
+                  top: 1,
+                }}
+                src="https://www.countryflags.com/wp-content/uploads/india-flag-png-xl.png"
+                alt=""
+              />
+              <span>+91 </span>
+              <ArrowDropDownIcon style={{ position: "relative", top: 2 }} />
             </label>
             <input type="text" />
           </div>
