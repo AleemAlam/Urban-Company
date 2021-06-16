@@ -123,7 +123,9 @@ export default function ViewDetail({
               alt=""
             />
           </div>
-          <div className="favoriteLook">
+
+          {/* this part is not required here */}
+          {/* <div className="favoriteLook">
             <h2>How to Save your Favorite Look with Us?</h2>
             <p>Choose your preferred hairstyle before the booking</p>
             <p>
@@ -135,14 +137,19 @@ export default function ViewDetail({
               SAFE portal
             </p>
             <p>Your Stylist will refer to this image for the next service</p>
-          </div>
+          </div> */}
 
-          
+          <img
+            style={{ width: "90%", margin: "30px 5% 0" }}
+            src="https://res.cloudinary.com/urbanclap/image/upload/t_high_res_template,q_auto:low,f_auto/images/growth/luminosity/1598252612847-eac8c8.png"
+            alt=""
+          />
 
+          {/* Here UC promise is using for Leading brands */}
           <UCPromise>
-            <h2>UC Promise</h2>
+            <h2>All Leading Brands Repaired</h2>
             <img
-              src="https://res.cloudinary.com/urbanclap/image/upload/t_medium_res_template,q_auto:low,f_auto/images/growth/luminosity/1600859033165-2141fa.png"
+              src="https://res.cloudinary.com/urbanclap/image/upload/t_medium_res_template,q_auto:low,f_auto/images/growth/home-screen/1613992518048-dc8cbf.png"
               alt=""
             />
 
@@ -169,7 +176,20 @@ export default function ViewDetail({
                 <p>100% Mess Free</p>
               </div>
             </div>
-            <div className="whyServices">
+
+            <img
+              style={{ width: "90%", height: "50%", margin: "30px 5%" }}
+              src="https://res.cloudinary.com/urbanclap/image/upload/t_high_res_template,q_auto:low,f_auto/images/growth/luminosity/1598253862063-8f18ae.png"
+              alt=""
+            />
+
+            <img
+              src="https://res.cloudinary.com/urbanclap/image/upload/t_high_res_template,q_auto:low,f_auto/images/growth/luminosity/1613668941534-fbd808.png"
+              alt=""
+            />
+
+            {/* below div is required in men's salon */}
+            {/* <div className="whyServices">
               <h2>Why get a UC grooming service</h2>
               <p>
                 <span>💇 </span> Haircut in the Safety of your Home
@@ -195,8 +215,9 @@ export default function ViewDetail({
                   For best results, shampoo your hair before you get a haircut
                 </p>
               </div>
-            </div>
+            </div> */}
           </UCPromise>
+
           <FrequentlyAskedQue>
             <h2>Frequently asked questions</h2>
             <div className="question">
@@ -337,17 +358,33 @@ export default function ViewDetail({
                 <p>HYGIENE RATING ⓘ</p>
                 <div>
                   <h2>
-                    <span>ĵ </span> 4.95
+                    <span> </span> 4.95
                   </h2>
                   <p>EXCELLENT</p>
                 </div>
               </div>
             </div>
-            <div className="ratingGraph">show rating graph</div>
-            <img
+            <div className="ratingGraph">
+              <div className="ratingGraph1">
+                <p>Excellent(91.8%)</p>
+                <p>Good(5.2%)</p>
+                <p>Worst(1.3%)</p>
+                <p>Average(1.2%)</p>
+                <p>Poor(0.5%)</p>
+              </div>
+              <div className="ratingGraph2">
+                <div style={{ background: "#228D27", width: "91.8%" }}></div>
+                <div style={{ background: "#228D27", width: "5.2%" }}></div>
+                <div style={{ background: "#DD0017", width: "1.3%" }}></div>
+                <div style={{ background: "#ff9800", width: "1.2%" }}></div>
+                <div style={{ background: "#dd0017", width: "0.5%" }}></div>
+              </div>
+            </div>
+            {/* below image is used in men's salon */}
+            {/* <img
               src="https://res.cloudinary.com/urbanclap/image/upload/t_high_res_template,q_30/categories/category_v2/category_bc376c70.png"
               alt=""
-            />
+            /> */}
           </ReviewPastMonth>
           <MostHelpfulReviews>
             <h2>Most helpful reviews</h2>
@@ -361,19 +398,28 @@ export default function ViewDetail({
                 </div>
 
                 <div>
-                  <h3 style={{ color: "#424242" }}>Prajakti Ranjit</h3>
-                  <p style={{ marginTop: "-18px", color: "#a5a5a5" }}>
-                    Pune, 8th jun, 2021
+                  <h3 style={{ color: "#333", fontWeight: "500" }}>
+                    Manisha Thakur
+                  </h3>
+                  <p
+                    style={{
+                      marginTop: "-18px",
+                      color: "#888",
+                      fontSize: "14px",
+                    }}
+                  >
+                    New Delhi, 14th Jun, 2021
                   </p>
                   <p
                     style={{
                       fontWeight: "480",
                       fontSize: "18px",
                       marginTop: "-8px",
-                      color: "#a5a5a5",
+                      color: "#424242",
                     }}
                   >
-                    Excellent service. Thanks.
+                    Absolutely awesome work done.. very descent.well behaved...
+                    overall excellent work.
                   </p>
                 </div>
               </div>
@@ -400,22 +446,121 @@ export default function ViewDetail({
                 </div>
 
                 <div>
-                  <h3 style={{ color: "#424242" }}>Aditya sdfsef</h3>
-                  <p style={{ marginTop: "-18px", color: "#a5a5a5" }}>
-                    Pune, 8th jun, 2021
+                  <h3 style={{ color: "#333", fontWeight: "500" }}>
+                    balraj gill
+                  </h3>
+                  <p
+                    style={{
+                      marginTop: "-18px",
+                      color: "#888",
+                      fontSize: "14px",
+                    }}
+                  >
+                    New Delhi, 14th Jun, 2021
                   </p>
                   <p
                     style={{
                       fontWeight: "480",
                       fontSize: "18px",
                       marginTop: "-8px",
-                      color: "#a5a5a5",
+                      color: "#424242",
                     }}
                   >
-                    Simple and quick haircut! Even during the high bookings,
-                    Zahid ensured he gave a quality haircut rather than rushing
-                    away. 10/10 would recommend and definitely going to ask for
-                    him the next time I book.
+                    V honest and hardworking technician
+                  </p>
+                </div>
+              </div>
+              <div>
+                <h3
+                  style={{
+                    fontSize: "20px",
+                    color: "#1c8e1c",
+                    width: "51px",
+                  }}
+                >
+                  ★ 5.0
+                </h3>
+              </div>
+            </div>
+            {/* {blow div is only for checking, will be removed after backend work} */}
+            <div>
+              <div className="reviewer">
+                <div>
+                  <img
+                    src="https://lh6.googleusercontent.com/-hSL3JBY1taE/AAAAAAAAAAI/AAAAAAAAJa8/3k-zwv9pjcQ/s96-c/photo.jpg"
+                    alt=""
+                  />
+                </div>
+
+                <div>
+                  <h3 style={{ color: "#333", fontWeight: "500" }}>
+                    Ramesh Tewari
+                  </h3>
+                  <p
+                    style={{
+                      marginTop: "-18px",
+                      color: "#888",
+                      fontSize: "14px",
+                    }}
+                  >
+                    New Delhi, 14th Jun, 2021
+                  </p>
+                  <p
+                    style={{
+                      fontWeight: "480",
+                      fontSize: "18px",
+                      marginTop: "-8px",
+                      color: "#424242",
+                    }}
+                  >
+                    Acche se Prince
+                  </p>
+                </div>
+              </div>
+              <div>
+                <h3
+                  style={{
+                    fontSize: "20px",
+                    color: "#1c8e1c",
+                    width: "51px",
+                  }}
+                >
+                  ★ 5.0
+                </h3>
+              </div>
+            </div>
+            {/* {blow div is only for checking, will be removed after backend work} */}
+            <div>
+              <div className="reviewer">
+                <div>
+                  <img
+                    src="https://lh3.googleusercontent.com/-qU2GvZAszb4/AAAAAAAAAAI/AAAAAAAAAAA/n3CgalSyRbM/s64-c/104112222725894170346.jpg"
+                    alt=""
+                  />
+                </div>
+
+                <div>
+                  <h3 style={{ color: "#333", fontWeight: "500" }}>
+                    Ayush Tulsiyan
+                  </h3>
+                  <p
+                    style={{
+                      marginTop: "-18px",
+                      color: "#888",
+                      fontSize: "14px",
+                    }}
+                  >
+                    New Delhi, 14th Jun, 2021
+                  </p>
+                  <p
+                    style={{
+                      fontWeight: "480",
+                      fontSize: "18px",
+                      marginTop: "-8px",
+                      color: "#424242",
+                    }}
+                  >
+                    very good behavior and was on time
                   </p>
                 </div>
               </div>

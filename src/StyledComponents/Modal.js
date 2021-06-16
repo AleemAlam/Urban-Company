@@ -280,7 +280,7 @@ export const ViewDetails = styled.div`
   }
 
   .servicesIncluded {
-    width: 100%;
+    width: 85%;
     margin: 1vh 7%;
     height: auto;
     padding: 5px;
@@ -306,6 +306,11 @@ export const ViewDetails = styled.div`
 
 export const UCPromise = styled.div`
   margin: 7vh 7.5% 2vh;
+
+  h2 {
+    font-weight: 600;
+    font-size: 20px;
+  }
 
   img {
     width: 100%;
@@ -375,6 +380,10 @@ export const ReviewPastMonth = styled.div`
   width: 84%;
   margin: 8vh 7.5%;
 
+  h2 {
+    font-weight: 600;
+    font-size: 20px;
+  }
   img {
     width: 100%;
     height: 35vh;
@@ -390,7 +399,7 @@ export const ReviewPastMonth = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
+    margin-top: 20px;
     span {
       font-size: 20px;
       color: #1c8e1c;
@@ -413,6 +422,7 @@ export const ReviewPastMonth = styled.div`
     border: 1px solid #dbdbdb;
     border-radius: 3px;
     padding: 0 10px;
+    margin-bottom: 10px;
 
     div {
       display: flex;
@@ -437,14 +447,46 @@ export const ReviewPastMonth = styled.div`
     }
   }
   .ratingGraph {
-    width: 84%;
-    margin: 8vh 7.5%;
+    width: 100%;
+    margin: 3vh auto 0;
+    display: flex;
+    gap: 20px;
+  }
+
+  .ratingGraph1 {
+    display: flex;
+    flex-direction: column;
+
+    /* border: 1px solid; */
+
+    p {
+      text-align: right;
+      margin-top: -10px;
+    }
+  }
+
+  .ratingGraph2 {
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid; */
+    width: 100%;
+    margin-top: -10px;
+
+    div {
+      height: 12px;
+      margin: 7px;
+    }
   }
 `;
 
 export const MostHelpfulReviews = styled.div`
   width: 84%;
   margin: 8vh 7.5%;
+
+  h2 {
+    font-weight: 600;
+    font-size: 20px;
+  }
 
   div {
     display: flex;
