@@ -356,6 +356,7 @@ export const StyleServiceCardH2 = styled(HIWHeaderHeading)`
   color: white;
   text-align: left;
   padding: 0px;
+  z-index: 1;
 `;
 
 export const StyleServicecardButton = styled.button`
@@ -464,4 +465,67 @@ export const StyleCarosuleNavDiv = styled.div`
 `;
 export const StyleCarosuleMainDiv = styled(StyleCarosuleNavDiv)`
   height: 320px;
-`;
+  display: flex;
+  flex-direction: row;
+  padding-left: 0%;
+  padding-right: 0%;
+
+  p{
+    margin-left: 7%;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+`
+export const ImgDiv = styled.div`
+display: flex;
+justify-content: center;
+align-items: center;
+height: 138px;
+width: 100%;
+background-color: #683bb7;
+color: #fff;
+margin: 15px;
+font-size: 4em;
+border-radius: 5px;
+
+img{
+width: 100%;
+height: 100%;
+border-radius: 5px;
+object-fit:cover;
+}
+`
+export const StylePopularServiceDiv = styled(StyleCarosuleDiv)``
+export const StylePopularServiceMainDiv = styled(StyleCarosuleMainDiv)`
+
+padding: 2.5%;
+padding-top: 1%;
+display: flex;
+flex-direction: column;
+height: auto;
+
+div{
+   box-sizing: border-box;
+   padding: 0%;
+   padding-top: 2.8%;
+    width: 100%;
+    height: 47px;
+    font-weight: 500;
+    border-bottom: 1px dotted #e2e2e2;
+
+    p{
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+        margin-bottom: 0;
+        font-size: 14.5px;
+        color: #616161;
+        font-weight: 500;
+    }
+}
+`
+export const StylePopularServiceNavbar = styled(StyleCarosuleNavDiv)`
+
+
+`
