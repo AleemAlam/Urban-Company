@@ -24,65 +24,6 @@ export const StyleBackgroundImage = styled.img`
 `;
 
 export const StyleNavigationBarCont = styled.div`
-<<<<<<< HEAD
-  width: 54%;
-  height: 75px;
-  background-color: #ffffff;
-  padding: 0px 30px;
-  margin: 0px 0px 0px 32px;
-  position: sticky;
-  position: -webkit-sticky;
-  top: 0;
-  display: flex;
-  z-index: 5;
-  box-shadow: 0 4px 12px 0 #ddd;
-  margin-left: 65px;
-`;
-
-export const StyleHowItWorksCont = styled(StyleNavigationBarCont)`
-  height: 95px;
-  margin: 0 32px;
-  z-index: 1;
-  margin-top: 20px;
-  margin-left: 65px;
-  box-shadow: none;
-`;
-export const StyleHIWMainCont = styled(StyleHowItWorksCont)`
-  height: auto;
-  margin-top: 0.2%;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  display: flex;
-  flex-direction: column;
-  position: static;
-`;
-export const StyleAcServiceInCont = styled(StyleHowItWorksCont)`
-  box-sizing: border-box;
-  position: static;
-  height: 130px;
-  padding: 24px 60px;
-  margin-top: 40px;
-  background-color: #ffffff;
-  text-align: left;
-  display: inline-block;
-  width: 58.4%;
-  line-height: 2;
-  font-family: axiforma-bold, -apple-system, BlinkMacSystemFont, Segoe UI,
-    Roboto, Helvetica, Arial, sans-serif;
-
-  h2 {
-    font-size: 22px;
-    font-weight: bold;
-    color: #212121;
-    margin: 0px 0px 16px;
-  }
-
-  p {
-    color: #757575;
-    font-size: 14px;
-  }
-`;
-=======
 box-sizing: border-box;
 width: 50%;
 height: 75px;
@@ -144,7 +85,6 @@ color: #757575;
 font-size: 14px;
 }
 `
->>>>>>> 70cbbb99ca3bf19c89b07b44121380c24409b28c
 
 export const StyleTechnicians = styled(StyleAcServiceInCont)`
   line-height: 1;
