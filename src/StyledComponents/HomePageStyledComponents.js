@@ -353,9 +353,12 @@ export const ShowLocation = styled.div`
 export const SuggestionContainer = styled.div`
   background-color: white;
   border-radius: 3px;
-  color: #555;
   position: relative;
   top: -18px;
+  & a {
+    color: #555;
+    text-decoration: none;
+  }
   & div {
     padding: 10px 15px;
 
