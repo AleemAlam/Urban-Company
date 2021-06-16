@@ -4,13 +4,14 @@ import {
 }
     from '../../StyledComponents/AcServiceAndRepairStyle'
 
-import {CarosuleNavbar} from "../ServicePageComponents/CarosuleNavbar.jsx"
+import {CarosuleNavbar} from "../../Components/ServicePageComponents/CarosuleNavbar.jsx"
 
 export const Carosule = () => {
     return (
         <StyleCarosuleDiv>
 
            <CarosuleNavbar />
+
             <StyleCarosuleMainDiv>
 
             </StyleCarosuleMainDiv>
