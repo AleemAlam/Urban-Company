@@ -9,14 +9,11 @@ import {
   Separator,
 } from "../StyledComponents/HomePageStyledComponents";
 import BigCard from "../Components/BigCard";
-import BigText from "../Components/BigText";
 import OfferSection from "../Components/OfferSection";
 import TwoCard from "../Components/TwoCard";
-import MyFooter from "../Components/MyFooter";
-import { useState } from "react";
-import { Modal } from "@material-ui/core";
 import LoginFormModal from "../Components/LoginFormModal";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const services = [
   {
@@ -209,7 +206,18 @@ export default function HomePage({ showModal, setShowModal }) {
       <ImgCardContainer>
         <Carousel breakPoints={breakPoints}>
           {packages.map((item, i) => (
-            <ServiceImgCard {...item} />
+            <motion.button
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              style={{ background: "none", border: "none", padding: "10px" }}
+            >
+              <ServiceImgCard
+                as={motion.div}
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                {...item}
+              />
+            </motion.button>
           ))}
         </Carousel>
       </ImgCardContainer>

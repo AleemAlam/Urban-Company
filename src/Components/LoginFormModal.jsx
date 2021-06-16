@@ -1,12 +1,13 @@
 import React, { useState } from "react";
-import Modal from "react-modal";
 import ClearIcon from "@material-ui/icons/Clear";
 import styled from "styled-components";
 import ArrowDropDownIcon from "@material-ui/icons/ArrowDropDown";
 import firebase from "../utils/firebase";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { userLogin } from "../Redux/auth/action";
-const StyledModal = styled(Modal)`
+import { motion, AnimatePresence } from "framer-motion";
+import Loader from "./Loader";
+const StyledModal = styled.div`
   position: absolute;
   top: 0;
   right: 0;
@@ -77,8 +78,10 @@ const StyledModal = styled(Modal)`
 export default function LoginFormModal({ showModal, setShowModal }) {
   const [number, setNumber] = useState("");
   const [otp, setOtp] = useState("");
+  const [loading, setLoading] = useState(false);
   const [showOtp, setShowOtp] = useState("");
   const dispatch = useDispatch();
+  const isLoading = useSelector((state) => state.auth.isLoading);
   const configCaptcha = () => {
     window.recaptchaVerifier = new firebase.auth.RecaptchaVerifier(
       "sign-in-button",
@@ -95,6 +98,7 @@ export default function LoginFormModal({ showModal, setShowModal }) {
 
   const onSignInSubmit = (e) => {
     e.preventDefault();
+    setLoading(true);
     const phoneNumber = "+91" + number;
     configCaptcha();
     const appVerifier = window.recaptchaVerifier;
@@ -107,6 +111,7 @@ export default function LoginFormModal({ showModal, setShowModal }) {
         window.confirmationResult = confirmationResult;
         console.log("OTP Send");
         setShowOtp(true);
+        setLoading(false);
         // ...
       })
       .catch((error) => {
@@ -121,64 +126,91 @@ export default function LoginFormModal({ showModal, setShowModal }) {
     e.preventDefault();
     dispatch(userLogin(otp, setShowModal));
   };
+  console.log(isLoading);
 
   return (
-    <StyledModal
-      style={{
-        overlay: {
-          backgroundColor: "rgba(0,0,0,.7)",
-        },
-      }}
-      isOpen={showModal}
-      onRequestClose={() => setShowModal(false)}
-    >
-      <div className="head">
-        <ClearIcon
-          onClick={() => setShowModal(false)}
-          style={{ cursor: "pointer" }}
-        />
-        <p>Please Login to continue</p>
-      </div>
-      <div className="separator"></div>
-      {showOtp ? (
-        <form onSubmit={handleSignIn}>
-          <div className="form">
-            <input
-              type="text"
-              placeholder="Enter OTP"
-              value={otp}
-              style={{ top: 0 }}
-              onChange={(e) => setOtp(e.target.value)}
-            />
-          </div>
-          <button>Submit</button>
-        </form>
-      ) : (
-        <form onSubmit={onSignInSubmit}>
-          <div className="form">
-            <div id="sign-in-button"></div>
-            <div className="innerContainer">
-              <div className="labelSep">
-                <label htmlFor="">
-                  <img
-                    src="https://www.countryflags.com/wp-content/uploads/india-flag-png-xl.png"
-                    alt=""
-                  />
-                  <span class="flag-icon flag-icon-gr">+91 </span>
-                  <ArrowDropDownIcon />
-                </label>
+    showModal && (
+      <>
+        <AnimatePresence exitBeforeEnter>
+          <motion.div
+            variants={{ visible: { opacity: 1 }, hidden: { opacity: 1 } }}
+            initial="hidden"
+            animate="visible"
+            transition={{ duration: 1 }}
+            style={{
+              position: "fixed",
+              top: 0,
+              left: 0,
+              width: "100%",
+              height: "100%",
+              backgroundColor: "rgba(0,0,0,.7)",
+              zIndex: 1,
+            }}
+          >
+            {(loading || isLoading) && <Loader transparent={true} />}
+            <StyledModal
+              as={motion.div}
+              initial={{ x: "50vw" }}
+              animate={{ x: 0 }}
+              transition={{ type: "none", duration: 0.5, bounce: 0.3 }}
+              // style={{
+              //   overlay: {
+              //     backgroundColor: "rgba(0,0,0,.7)",
+              //   },
+              // }}
+              onRequestClose={() => setShowModal(false)}
+            >
+              <div className="head">
+                <ClearIcon
+                  onClick={() => setShowModal(false)}
+                  style={{ cursor: "pointer" }}
+                />
+                <p>Please Login to continue</p>
               </div>
-              <input
-                type="text"
-                placeholder="Your Phone Number"
-                value={number}
-                onChange={(e) => setNumber(e.target.value)}
-              />
-            </div>
-          </div>
-          <button>Continue</button>
-        </form>
-      )}
-    </StyledModal>
+              <div className="separator"></div>
+              {showOtp ? (
+                <form onSubmit={handleSignIn}>
+                  <div className="form">
+                    <input
+                      type="text"
+                      placeholder="Enter OTP"
+                      value={otp}
+                      style={{ top: 0 }}
+                      onChange={(e) => setOtp(e.target.value)}
+                    />
+                  </div>
+                  <button>Submit</button>
+                </form>
+              ) : (
+                <form onSubmit={onSignInSubmit}>
+                  <div className="form">
+                    <div id="sign-in-button"></div>
+                    <div className="innerContainer">
+                      <div className="labelSep">
+                        <label htmlFor="">
+                          <img
+                            src="https://www.countryflags.com/wp-content/uploads/india-flag-png-xl.png"
+                            alt=""
+                          />
+                          <span class="flag-icon flag-icon-gr">+91 </span>
+                          <ArrowDropDownIcon />
+                        </label>
+                      </div>
+                      <input
+                        type="text"
+                        placeholder="Your Phone Number"
+                        value={number}
+                        onChange={(e) => setNumber(e.target.value)}
+                      />
+                    </div>
+                  </div>
+                  <button>Continue</button>
+                </form>
+              )}
+            </StyledModal>
+          </motion.div>
+        </AnimatePresence>
+      </>
+    )
   );
 }

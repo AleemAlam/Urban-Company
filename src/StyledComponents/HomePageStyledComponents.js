@@ -135,13 +135,9 @@ export const SmallCard = styled.div`
 export const CardImg = styled.img`
   width: 256px;
   height: 150px;
-  border: 5px solid white;
-  &:hover {
-    border: none;
-    width: 266px;
-    height: 160px;
-    cursor: pointer;
-  }
+  overflow: hidden;
+
+  cursor: pointer;
 `;
 
 export const ImgCardContainer = styled.div`
