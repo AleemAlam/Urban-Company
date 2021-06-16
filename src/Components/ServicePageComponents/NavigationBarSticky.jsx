@@ -1,16 +1,15 @@
-import React from 'react'
-import { StyleNavigationBarCont } from '../../StyledComponents/AcServiceAndRepairStyle'
-import { StickyNavigationBarBtn } from './StickyNavigationBarBtn'
+import React from "react";
+import { StyleNavigationBarCont } from "../../StyledComponents/AcServiceAndRepairStyle";
+import { StickyNavigationBarBtn } from "./StickyNavigationBarBtn";
 
 export const NavigationBarSticky = () => {
-    return (
-        <StyleNavigationBarCont>
-            <StickyNavigationBarBtn text="How it Works"/>
-            <StickyNavigationBarBtn text="Technicians"/>
-            <StickyNavigationBarBtn text="Customer Reviwes"/>
-            <StickyNavigationBarBtn text="Blogs"/>
-            <StickyNavigationBarBtn text="About Ac Repairs"/>
-
-        </StyleNavigationBarCont>
-    )
-}
+  return (
+    <StyleNavigationBarCont>
+      <StickyNavigationBarBtn text="How it Works" />
+      <StickyNavigationBarBtn text="Technicians" />
+      <StickyNavigationBarBtn text="Customer Reviwes" />
+      <StickyNavigationBarBtn text="Blogs" />
+      <StickyNavigationBarBtn text="About Ac Repairs" />
+    </StyleNavigationBarCont>
+  );
+};
