@@ -8,6 +8,7 @@ import { NavigationBarSticky } from "../../Components/ServicePageComponents/Navi
 import {MainCont} from "../../StyledComponents/AcServiceAndRepairStyle.js";
 import { Reviews } from "../../Components/ServicePageComponents/Reviews.jsx";
 import Navbar from "../../Components/Navbar.jsx"
+import {Carosule} from "../../Components/ServicePageComponents/Carosule.jsx"
 
 export default function AcServiceAndRepair() {
   return (
@@ -25,7 +26,7 @@ export default function AcServiceAndRepair() {
       <Reviews />
       <Reviews />
       <Reviews />
-
+      <Carosule />
     </MainCont>
     </>
   );

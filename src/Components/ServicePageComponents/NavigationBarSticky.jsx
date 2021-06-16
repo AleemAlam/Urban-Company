@@ -3,10 +3,12 @@ import { StyleNavigationBarCont } from '../../StyledComponents/AcServiceAndRepai
 import { StickyNavigationBarBtn } from './StickyNavigationBarBtn'
 
 export const NavigationBarSticky = () => {
+
     return (
         <StyleNavigationBarCont>
-            <StickyNavigationBarBtn text="How it Works"/>
-            <StickyNavigationBarBtn text="Technicians"/>
+
+            <StickyNavigationBarBtn text="How it Works" />
+            <StickyNavigationBarBtn text="Technicians" className="technicians"/>
             <StickyNavigationBarBtn text="Customer Reviwes"/>
             <StickyNavigationBarBtn text="Blogs"/>
             <StickyNavigationBarBtn text="About Ac Repairs"/>
