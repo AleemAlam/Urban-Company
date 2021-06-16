@@ -1,13 +1,14 @@
-import AcServiceAndRepairModal from "./Page/ACServiceAndRepair/AcServiceAndRepairModal.jsx";
+//import AcServiceAndRepairModal from "./Page/ACServiceAndRepair/AcServiceAndRepairModal";
+
 import Routes from "./Page/Routes.jsx";
 //import MensHairCutAndGrooming from "./Page/SalonForMen/MensHairCutAndGrooming";
 
 function App() {
   return (
     <div>
-      {/* <Routes /> */}
+      <Routes />
       {/* <MensHairCutAndGrooming /> */}
-      <AcServiceAndRepairModal />
+      {/* <AcServiceAndRepairModal /> */}
     </div>
   );
 }
