@@ -24,6 +24,7 @@ export const StyleBackgroundImage = styled.img`
 `;
 
 export const StyleNavigationBarCont = styled.div`
+<<<<<<< HEAD
   width: 54%;
   height: 75px;
   background-color: #ffffff;
@@ -81,6 +82,69 @@ export const StyleAcServiceInCont = styled(StyleHowItWorksCont)`
     font-size: 14px;
   }
 `;
+=======
+box-sizing: border-box;
+width: 50%;
+height: 75px;
+background-color: #ffffff;
+padding: 0px 30px;
+position: sticky;
+position: -webkit-sticky;
+top: 0;
+display: flex;
+z-index: 5;
+box-shadow: 0 4px 12px 0 #ddd;
+margin: auto;
+margin-right: 39%;
+`
+
+export const StyleHowItWorksCont = styled(StyleNavigationBarCont)`
+box-sizing: border-box;
+height: 95px;
+margin: 0 32px;
+z-index: 1;
+margin-top: 20px;
+box-shadow: none;
+margin: auto;
+margin-right: 39%;
+
+`
+export const StyleHIWMainCont = styled(StyleHowItWorksCont)`
+height: auto;
+margin-top: 0.2%;
+padding-top: 20px;
+padding-bottom: 20px;
+display:flex;
+flex-direction: column;
+position: static;
+
+`
+export const StyleAcServiceInCont = styled(StyleHowItWorksCont)`
+box-sizing: border-box;
+position: static;
+height: 130px;
+padding: 24px 60px;
+margin-top: 40px;
+background-color: #ffffff;
+text-align: left;
+display:inline-block;
+line-height: 2;
+font-family: axiforma-bold,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+margin: 40px 39% auto 11%;
+
+h2 {
+font-size: 22px;
+font-weight: bold;
+color: #212121;
+margin: 0px 0px 16px;
+}
+
+p{
+color: #757575;
+font-size: 14px;
+}
+`
+>>>>>>> 70cbbb99ca3bf19c89b07b44121380c24409b28c
 
 export const StyleTechnicians = styled(StyleAcServiceInCont)`
   line-height: 1;
@@ -88,6 +152,7 @@ export const StyleTechnicians = styled(StyleAcServiceInCont)`
   margin-bottom: 1px;
 `;
 
+<<<<<<< HEAD
 export const StyleReviewsCont = styled(StyleAcServiceInCont)`
   margin-top: 1px;
   margin-bottom: 1px;
@@ -123,6 +188,12 @@ export const StyleReviewsCont = styled(StyleAcServiceInCont)`
     font-size: 18px;
     font-weight: 700;
   }
+=======
+line-height: 1;
+height: 100px;
+margin: 40px 39% 0.1% 11%;
+`
+>>>>>>> 70cbbb99ca3bf19c89b07b44121380c24409b28c
 
   .header {
     display: flex;
@@ -257,12 +328,21 @@ export const StyleHIWTextCont = styled(StyleHowItWorksCont)`
   margin-top: 1.5%;
 `;
 export const StyleHIWLogoCont = styled(StyleHIWTextCont)`
+<<<<<<< HEAD
   width: 7%;
   background-color: none;
   height: 43px;
   border-radius: 50%;
   margin: 0;
 `;
+=======
+width: 6%;
+background-color: none;
+height: 40px;
+border-radius: 50%;
+margin: 0;
+`
+>>>>>>> 70cbbb99ca3bf19c89b07b44121380c24409b28c
 export const StyleHIWTextContHeading = styled.h4`
   font-size: 16px;
   font-weight: 700;
@@ -296,6 +376,7 @@ export const HIWTextContLogo = styled.img`
 `;
 
 export const StyleHIWTextContBorderLine = styled.div`
+<<<<<<< HEAD
   height: 27px;
   width: 0.3%;
   background-color: #e2e2e2;
@@ -312,6 +393,24 @@ export const StyleBackgroundImageTopNav = styled(StyleNavigationBarCont)`
   flex-direction: row;
   font-size: 15.2px;
 `;
+=======
+height: 27px;
+width: 0.3%;
+background-color: #e2e2e2;
+margin-left: 5.8%;
+`
+export const StyleBackgroundImageTopNav = styled(StyleNavigationBarCont)`
+background-color: transparent;
+box-shadow: none;
+position: absolute;
+margin: 0.8% auto 4% 10.7%;
+padding: 0;
+display: flex;
+column-gap: 10px;
+flex-direction: row;
+font-size: 15.2px;
+`
+>>>>>>> 70cbbb99ca3bf19c89b07b44121380c24409b28c
 export const StyleWhiteColorDiv = styled.div`
   color: #ddd;
 `;
@@ -323,6 +422,7 @@ export const StyleBackgroundImageheadingH1 = styled(StyleBackgroundImageTopNav)`
     Roboto, Helvetica, Arial, sans-serif;
 `;
 export const StyleBackImgH1Subheading = styled(StyleBackgroundImageTopNav)`
+<<<<<<< HEAD
   line-height: 46px;
   margin-top: 175px;
   color: #b4b2a9;
@@ -348,6 +448,33 @@ export const StyleServiceCard = styled(StyleBackgroundImageTopNav)`
   flex-direction: column;
   height: auto;
 `;
+=======
+line-height: 46px;
+margin-top: 175px;
+color: #b4b2a9;
+font-size: 17px;
+opacity: .9;
+font-weight: 600;
+margin-left: 9.8%;
+`
+export const StyleServiceCard = styled(StyleBackgroundImageTopNav)`
+box-sizing: border-box;
+position: fixed;
+width: 21.6%;
+max-width: 363.3px;
+min-width: 363.3px;
+box-sizing: border-box;
+margin: 12.5vh auto 121px 63%;
+background-image: linear-gradient(130deg,#642b73,#c6426e);
+border-top-left-radius: 4px;
+border-top-right-radius: 4px;
+text-align: center;
+padding: 20px 24px 30px;
+display: flex;
+flex-direction: column;
+height: auto;
+`
+>>>>>>> 70cbbb99ca3bf19c89b07b44121380c24409b28c
 export const StyleServiceCardH2 = styled(HIWHeaderHeading)`
   font-size: 23px;
   color: white;
@@ -429,5 +556,46 @@ export const StyleRatingCardCont = styled(StyleServiceCard)`
   .bookingNum {
     font-weight: 700;
     font-size: 24px;
+<<<<<<< HEAD
   }
 `;
+=======
+}
+
+`
+
+export const StyleCarosuleDiv = styled.div`
+
+box-sizing: border-box;
+background-color: transparent;
+width: 61%;
+height: auto;
+margin-top: 2.5%;
+margin-bottom: 2.5%;
+margin-left: 5.5%;
+`
+export const StyleCarosuleNavDiv = styled.div`
+
+box-sizing: border-box;
+position: static;
+width: 82%;
+height: 90px;
+background-color: #ffffff;
+margin: auto;
+text-align: left;
+padding: 1%;
+padding-left: 2.5%;
+border-bottom: 1px solid #e2e2e2;
+h2{
+font-family: unset;
+font-size: 22px;
+color: #212121;
+font-weight: 700;
+}
+
+`
+export const StyleCarosuleMainDiv = styled(StyleCarosuleNavDiv)`
+height: 320px;
+
+`
+>>>>>>> 70cbbb99ca3bf19c89b07b44121380c24409b28c
