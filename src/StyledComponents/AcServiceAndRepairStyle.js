@@ -448,3 +448,37 @@ flex-direction: row;
 
 `
 
+export const StyleCarosuleDiv = styled.div`
+
+box-sizing: border-box;
+background-color: transparent;
+width: 61%;
+height: auto;
+margin-top: 2.5%;
+margin-bottom: 2.5%;
+margin-left: 5.5%;
+`
+export const StyleCarosuleNavDiv = styled.div`
+
+box-sizing: border-box;
+position: static;
+width: 82%;
+height: 90px;
+background-color: #ffffff;
+margin: auto;
+text-align: left;
+padding: 1%;
+padding-left: 2.5%;
+border-bottom: 1px solid #e2e2e2;
+h2{
+font-family: unset;
+font-size: 22px;
+color: #212121;
+font-weight: 700;
+}
+
+`
+export const StyleCarosuleMainDiv = styled(StyleCarosuleNavDiv)`
+height: 320px;
+
+`
