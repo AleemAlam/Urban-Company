@@ -16,7 +16,7 @@ export default function Covid19TC({ setSefty, setSafteyAgree }) {
     <SafteyCondition>
       <div className="header">
         <p onClick={() => setSefty(false)}>&#129120;</p>
-        <p>Men's Haircut & Grooming</p>
+        <p>AC Service and Repair</p>
         <p onClick={() => setSefty(false)}>✖</p>
       </div>
 

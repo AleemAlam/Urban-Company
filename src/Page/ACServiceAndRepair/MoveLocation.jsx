@@ -21,8 +21,8 @@ export default function MoveLocation({
         >
           &#129120;
         </p>
-        <p>Men's Haircut & Grooming</p>
-        <p></p>
+        <p>AC Service and Repair</p>
+        <p onClick={() => setMoveLocation(false)}>✖</p>
       </div>
       <div className="containt">
         <h2>Where do you want the service?</h2>

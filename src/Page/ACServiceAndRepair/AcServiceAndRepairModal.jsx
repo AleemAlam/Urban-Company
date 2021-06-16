@@ -30,9 +30,9 @@ export default function AcServiceAndRepairModal() {
       <Heading>
         <p></p>
         <p>AC Service and Repair</p>
-        <p style={{ marginRight: "30px" }}>X</p>
+        <p style={{ marginRight: "30px" }}>✖</p>
       </Heading>
-      <Container style={count === 0 ? { height: "90vh" } : { height: "80vh" }}>
+      <Container>
         <Menu />
         <PackageDetail
           count={count}
