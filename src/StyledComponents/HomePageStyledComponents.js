@@ -116,7 +116,9 @@ export const Container = styled.div`
 export const SmallCard = styled.div`
   width: 150px;
   height: 100px;
-  padding: 10px;
+  padding: 20px 10px;
+  padding-bottom: 0px;
+  border-radius: 3px;
   margin: 12px;
   font-size: 15px;
   text-align: center;
@@ -125,18 +127,17 @@ export const SmallCard = styled.div`
     width: 32px;
     height: 32px;
   }
+  &:hover {
+    background-color: #f7f7f7;
+  }
 `;
 
 export const CardImg = styled.img`
   width: 256px;
   height: 150px;
-  border: 5px solid white;
-  &:hover {
-    border: none;
-    width: 266px;
-    height: 160px;
-    cursor: pointer;
-  }
+  overflow: hidden;
+
+  cursor: pointer;
 `;
 
 export const ImgCardContainer = styled.div`
@@ -348,9 +349,12 @@ export const ShowLocation = styled.div`
 export const SuggestionContainer = styled.div`
   background-color: white;
   border-radius: 3px;
-  color: #555;
   position: relative;
   top: -18px;
+  & a {
+    color: #555;
+    text-decoration: none;
+  }
   & div {
     padding: 10px 15px;
 

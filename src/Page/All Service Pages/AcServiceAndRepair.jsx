@@ -8,6 +8,10 @@ import { NavigationBarSticky } from "../../Components/ServicePageComponents/Navi
 import {MainCont} from "../../StyledComponents/AcServiceAndRepairStyle.js";
 import { Reviews } from "../../Components/ServicePageComponents/Reviews.jsx";
 import Navbar from "../../Components/Navbar.jsx"
+import {CarosuleTechnicians} from "../../Components/ServicePageComponents/CarosuleTechnicians.jsx"
+import {CarosuleBlogs} from "../../Components/ServicePageComponents/CarosuleBlogs.jsx"
+import {PopularServices} from "../../Components/ServicePageComponents/PopularServices.jsx"
+import {PopularLocality} from "../../Components/ServicePageComponents/PopularLocality.jsx"
 
 export default function AcServiceAndRepair() {
   return (
@@ -25,7 +29,10 @@ export default function AcServiceAndRepair() {
       <Reviews />
       <Reviews />
       <Reviews />
-
+      <CarosuleTechnicians />
+      <PopularServices />
+      <PopularLocality />
+      <CarosuleBlogs />
     </MainCont>
     </>
   );

@@ -1,8 +1,11 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { StyledNavbar } from "../StyledComponents/HomePageStyledComponents";
 
 export default function Navbar({ setShowModal }) {
+  const isAuth = useSelector((state) => state.auth.isAuth);
+
   return (
     <StyledNavbar>
       <Link>
@@ -18,9 +21,20 @@ export default function Navbar({ setShowModal }) {
         <Link>
           <p className="addUnderline">Register As A Professional</p>{" "}
         </Link>
-        <Link>
-          <p onClick={() => setShowModal(true)}>Login/Sign Up</p>
-        </Link>
+        {isAuth && (
+          <Link>
+            <p onClick={() => setShowModal(true)}>My Bookings</p>
+          </Link>
+        )}
+        {!isAuth ? (
+          <Link>
+            <p onClick={() => setShowModal(true)}>Login/Sign Up</p>
+          </Link>
+        ) : (
+          <Link>
+            <p>Logout-Verified Customer</p>{" "}
+          </Link>
+        )}
       </div>
     </StyledNavbar>
   );

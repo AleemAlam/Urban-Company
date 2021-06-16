@@ -1,6 +1,6 @@
 import React from "react";
 import { SuggestionContainer } from "../StyledComponents/HomePageStyledComponents";
-
+import { Link } from "react-router-dom";
 const suggestionTags = [
   { name: "salon for men" },
   { name: "salon for women" },
@@ -20,7 +20,12 @@ export default function Suggestion({ text }) {
   return (
     <SuggestionContainer>
       {suggestionTags.map(
-        (item) => item.name.includes(text) && <div>{item.name}</div>
+        (item) =>
+          item.name.includes(text) && (
+            <div>
+              <Link to="/ac-service-repair/">{item.name}</Link>
+            </div>
+          )
       )}
     </SuggestionContainer>
   );
