@@ -30,13 +30,13 @@ export default function Cart({
         >
           &#129120;
         </p>
-        <p>Men's Haircut & Grooming</p>
-        <p></p>
+        <p>AC Service and Repair</p>
+        <p onClick={() => setSafteyAgree(false)}>✖</p>
       </div>
       <div className="cart">
         <ItemsInCart className="cartItem">
           <div>
-            <h4>Hair cut</h4>
+            <h4>Window AC Check-up</h4>
             <ul>
               <li>
                 More than 7L Men trust us with their haircut | No mess left
@@ -129,17 +129,23 @@ export default function Cart({
                 </p>
               </div>
               <div>
-                <p style={{ fontWeight: "480" }}>
+                <p style={{ fontWeight: "480", color: "#212121" }}>
                   Offer, promo code and gift cards
                 </p>
-                <p style={{ fontSize: "14px", marginTop: "-15px" }}>
+                <p
+                  style={{
+                    fontSize: "14px",
+                    marginTop: "-15px",
+                    color: "#757575",
+                  }}
+                >
                   3 offers available
                 </p>
               </div>
             </div>
           </div>
           <div>
-            <p style={{ fontSize: "20px" }}>❯</p>
+            <p style={{ fontSize: "20px", color: "#757575" }}>❯</p>
           </div>
         </div>
 
@@ -159,8 +165,8 @@ export default function Cart({
             alt=""
           />
           <div>
-            <p style={{ fontWeight: "500" }}>Total</p>
-            <p style={{ fontWeight: "500" }}>₹000</p>
+            <p style={{ fontWeight: "500", color: "#212121" }}>Total</p>
+            <p style={{ fontWeight: "500", color: "#212121" }}>₹000</p>
           </div>
         </div>
 

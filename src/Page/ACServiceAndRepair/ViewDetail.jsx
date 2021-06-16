@@ -21,7 +21,7 @@ export default function ViewDetail({
       {showDetails ? (
         <>
           <div className="closeDetails">
-            <p onClick={() => setShowDetails(false)}>X</p>
+            <p onClick={() => setShowDetails(false)}>✖</p>
             <video preload="auto" controls="play/stop" autoplay>
               <source
                 src="blob:https://www.urbancompany.com/a615022d-de87-4e2c-9407-f929b35ff885"
@@ -33,7 +33,7 @@ export default function ViewDetail({
 
           <div className="menuDataShortDetails">
             <div>
-              <h3>Hair Cut</h3>
+              <h3>Split AC Regular Service</h3>
               <p>
                 <span style={{ color: "#1C8E1C", fontWeight: "bolder" }}>
                   ★ 4.76
@@ -70,8 +70,14 @@ export default function ViewDetail({
             </AddButton>
           </div>
           <div>
-            <h2 style={{ marginLeft: "7.5%" }}>
-              What does this service include?
+            <h2
+              style={{
+                marginLeft: "7.5%",
+                fontWeight: "700",
+                fontSize: "18px",
+              }}
+            >
+              Know more about AC Servicing
             </h2>
             <div className="servicesIncluded">
               <img
@@ -79,10 +85,17 @@ export default function ViewDetail({
                 alt=""
               />
               <div>
-                <p style={{ fontWeight: "600", color: "#b5b5b5" }}>
-                  Haircut in the Safety of your Home
+                <p style={{ fontWeight: "600", color: "#212121" }}>
+                  What is included
                 </p>
-                <p style={{ marginTop: "-15px", color: "#b5b5b5" }}>
+                <p
+                  style={{
+                    marginTop: "-15px",
+                    color: "#757575",
+                    fontWeight: "400",
+                    fontSize: "13px",
+                  }}
+                >
                   Disposable towel, cape, and single-use peoducts
                 </p>
               </div>
@@ -90,10 +103,17 @@ export default function ViewDetail({
           </div>
           <div className="servicesIncluded">
             <div>
-              <p style={{ fontWeight: "600", color: "#b5b5b5" }}>
+              <p style={{ fontWeight: "600", color: "#212121" }}>
                 100% Mess Free experience
               </p>
-              <p style={{ marginTop: "-15px", color: "#b5b5b5" }}>
+              <p
+                style={{
+                  marginTop: "-15px",
+                  color: "#757575",
+                  fontWeight: "400",
+                  fontSize: "13px",
+                }}
+              >
                 Post service cleanup guaranteed with no hair left behind on the
                 floor
               </p>
@@ -116,6 +136,8 @@ export default function ViewDetail({
             </p>
             <p>Your Stylist will refer to this image for the next service</p>
           </div>
+
+          
 
           <UCPromise>
             <h2>UC Promise</h2>
@@ -182,7 +204,7 @@ export default function ViewDetail({
                 style={{ display: "flex", justifyContent: "space-between" }}
                 onClick={() => setFaq(!faq)}
               >
-                <p>Will there be mess post service?</p>
+                <p>How long will it take to repair my appliance?</p>
                 <p>{faq ? "❮" : "❯"}</p>
               </div>
               {faq ? (
@@ -190,12 +212,114 @@ export default function ViewDetail({
                   style={{
                     marginTop: "-5px",
                     fontSize: "14px",
-                    color: "#a5a5a5",
+                    color: "#757575",
+                    fontWeight: "400",
+                    lineHeight: "1.5",
                   }}
                 >
-                  Our stylists carry floor sheets to catch the hair that falls
-                  on the floor. They perform a thorough cleanup post service to
-                  ensure zero mess is left behind.
+                  Repair time depends on factors such as cause of the issue &
+                  availability of spare parts. Our professionals will ensure it
+                  is repaired in the shortest time possible.
+                </p>
+              ) : null}
+            </div>
+
+            <div className="question">
+              <div
+                style={{ display: "flex", justifyContent: "space-between" }}
+                onClick={() => setFaq(!faq)}
+              >
+                <p>Will I have to provide anything?</p>
+                <p>{faq ? "❮" : "❯"}</p>
+              </div>
+              {faq ? (
+                <p
+                  style={{
+                    marginTop: "-5px",
+                    fontSize: "14px",
+                    color: "#757575",
+                    fontWeight: "400",
+                    lineHeight: "1.5",
+                  }}
+                >
+                  Our professionals carry all required tools with them. However
+                  you do have to ensure that your electricity connection is
+                  working.
+                </p>
+              ) : null}
+            </div>
+
+            <div className="question">
+              <div
+                style={{ display: "flex", justifyContent: "space-between" }}
+                onClick={() => setFaq(!faq)}
+              >
+                <p>What if the same issue occurs again?</p>
+                <p>{faq ? "❮" : "❯"}</p>
+              </div>
+              {faq ? (
+                <p
+                  style={{
+                    marginTop: "-5px",
+                    fontSize: "14px",
+                    color: "#757575",
+                    fontWeight: "400",
+                    lineHeight: "1.5",
+                  }}
+                >
+                  Incase the same issue occurs again, we'll be happy to revisit.
+                  Please check out our UC warranty section to know more.
+                </p>
+              ) : null}
+            </div>
+
+            <div className="question">
+              <div
+                style={{ display: "flex", justifyContent: "space-between" }}
+                onClick={() => setFaq(!faq)}
+              >
+                <p>How can I be sure that genuine products are being used?</p>
+                <p>{faq ? "❮" : "❯"}</p>
+              </div>
+              {faq ? (
+                <p
+                  style={{
+                    marginTop: "-5px",
+                    fontSize: "14px",
+                    color: "#757575",
+                    fontWeight: "400",
+                    lineHeight: "1.5",
+                  }}
+                >
+                  We value your trust in Urban Company and hence we ensure all
+                  spare parts meet our high quality standards. Please check our
+                  rate card for more details.
+                </p>
+              ) : null}
+            </div>
+
+            <div className="question">
+              <div
+                style={{ display: "flex", justifyContent: "space-between" }}
+                onClick={() => setFaq(!faq)}
+              >
+                <p>What if my appliance gets damaged during the repair?</p>
+                <p>{faq ? "❮" : "❯"}</p>
+              </div>
+              {faq ? (
+                <p
+                  style={{
+                    marginTop: "-5px",
+                    fontSize: "14px",
+                    color: "#757575",
+                    fontWeight: "400",
+                    lineHeight: "1.5",
+                  }}
+                >
+                  Although this is highly unlikely, in the rare case that this
+                  might happen, your appliance will be covered under our Damage
+                  Protection Plan. Please check out UC Warranty section to know
+                  more.
                 </p>
               ) : null}
             </div>
