@@ -9,14 +9,14 @@ import {
   Separator,
 } from "../StyledComponents/HomePageStyledComponents";
 import BigCard from "../Components/BigCard";
-import BigText from "../Components/BigText";
 import OfferSection from "../Components/OfferSection";
 import TwoCard from "../Components/TwoCard";
-import MyFooter from "../Components/MyFooter";
-import { useState } from "react";
-import { Modal } from "@material-ui/core";
 import LoginFormModal from "../Components/LoginFormModal";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import { useSelector } from "react-redux";
+import Loader from "../Components/Loader";
+import styled from "styled-components";
 
 const services = [
   {
@@ -187,14 +187,30 @@ const tweets = [
   },
 ];
 
+const StyledCarousel = styled(Carousel)`
+  & .rec.rec-arrow-right {
+    margin-left: 96%;
+  }
+  & .rec-arrow {
+    margin-top: 0;
+  }
+  .rec-carousel-item:hover {
+    outline: none;
+    box-shadow: none !important;
+  }
+`;
+
 export default function HomePage({ showModal, setShowModal }) {
   const breakPoints = [
-    { width: 600, itemsToShow: 2 },
-    { width: 600, itemsToShow: 2 },
-    { width: 900, itemsToShow: 4 },
+    { width: 540, itemsToShow: 1 },
+    { width: 830, itemsToShow: 2 },
+    { width: 950, itemsToShow: 3 },
+    { width: 1050, itemsToShow: 4 },
   ];
+  const isLoading = useSelector((state) => state.auth.isLoading);
   return (
     <div>
+      {isLoading && <Loader transparent={false} />}
       <MyCarousel />
       <Container>
         {services.map((service, i) => (
@@ -207,11 +223,22 @@ export default function HomePage({ showModal, setShowModal }) {
         ))}
       </Container>
       <ImgCardContainer>
-        <Carousel breakPoints={breakPoints}>
+        <StyledCarousel breakPoints={breakPoints}>
           {packages.map((item, i) => (
-            <ServiceImgCard {...item} />
+            <motion.button
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              style={{ background: "none", border: "none", padding: "10px" }}
+            >
+              <ServiceImgCard
+                as={motion.div}
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                {...item}
+              />
+            </motion.button>
           ))}
-        </Carousel>
+        </StyledCarousel>
       </ImgCardContainer>
       <Separator margin={true} />
       <BigCard img="https://res.cloudinary.com/urbanclap/image/upload/q_auto,f_auto,fl_progressive:steep,w_2880/t_high_res_template/images/growth/home-screen/1618376960342-f0afcb.jpeg" />
@@ -230,7 +257,7 @@ export default function HomePage({ showModal, setShowModal }) {
       <Separator margin={true} />
       <OfferSection
         text="Appliances"
-        subHeading={"Service, Repaire, Installation & Uninstallation"}
+        subHeading={"Service, Repair, Installation & Uninstallation"}
         cardDetails={appliances}
       />
       <Separator margin={true} />

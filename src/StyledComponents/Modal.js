@@ -28,11 +28,13 @@ export const Container = styled.div`
   /* display: grid;
   grid-template-columns: 29vw 35vw 34vw; */
   display: flex;
+
   justify-content: space-between;
   /* align-items: center; */
 `;
 export const MENU = styled.div`
-  width: 29%;
+  /* width: 29%; */
+  flex: 0.7;
 
   border-right: 1px solid #dbdbdb;
 
@@ -49,16 +51,64 @@ export const MENU = styled.div`
     border: 1px solid #b5b5b5;
     cursor: pointer;
     background: transparent;
-    color: #b5b5b5;
+    color: #757575;
     font-weight: 500;
   }
 `;
 export const PackageDetails = styled.div`
-  width: 35%;
+  /* width: 35%; */
+  flex: 1;
   margin: auto;
+  margin-left: 20px;
+  /* border-left: 1px solid #dbdbdb; */
   border-right: 1px solid #dbdbdb;
   overflow-y: scroll;
   height: 90vh;
+`;
+
+export const AddButton = styled.div`
+  .addToCartItem {
+    color: #6598ff;
+    border: 1px solid #6598ff;
+    outline: #6598ff;
+    padding: 5px 10px;
+    font-size: 18px;
+    border-radius: 2px;
+    background: transparent;
+  }
+  .addedToCartItem {
+    display: flex;
+    border: 1px solid #304ffe;
+    width: 90px;
+    height: 30px;
+  }
+  .addedToCartItem > button {
+    padding: 5px;
+    border: none;
+    outline: none;
+    font-weight: 500;
+  }
+
+  .addedToCartItem > button:nth-child(1),
+  .addedToCartItem > button:nth-child(3) {
+    background: #304ffe;
+    color: #ffffff;
+    font-size: 20px;
+    width: 30px;
+  }
+
+  .addedToCartItem > button:nth-child(2) {
+    background: #ffffff;
+    color: #304ffe;
+    font-size: 18px;
+    width: 30px;
+  }
+`;
+
+export const PackageDetailsCards = styled.div`
+  div {
+    width: 80%;
+  }
   h2 {
     font-size: 30px;
     font-weight: 550;
@@ -110,26 +160,36 @@ export const PackageDetails = styled.div`
     border-bottom: 1px solid #dbdbdb;
     width: 85%;
     margin: 2vh 7.5% auto;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
+    /* border: 1px solid; */
   }
 
   /* below images will show optional */
   .menuDataShortDetails > img {
     width: 90px;
-    height: 60px;
+    height: 90px;
     border-radius: 3px;
-    margin-right: 10px;
+    margin-right: 15px;
+    /* margin-top: -25px; */
   }
 
   .menuDataShortDetailsPrice {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 73.5%;
+    width: 100%;
+    /* border: 1px solid; */
+    .data {
+      width: 300px;
+    }
     p {
       margin-top: -10px;
-      color: #b5b5b5;
+      color: #757575;
     }
+  }
+
+  .data {
+    width: 70%;
   }
 
   .EditThisPackageButton {
@@ -151,77 +211,41 @@ export const PackageDetails = styled.div`
   }
 `;
 
-export const AddButton = styled.div`
-  .addToCartItem {
-    color: #6598ff;
-    border: 1px solid #6598ff;
-    outline: #6598ff;
-    padding: 5px 10px;
-    font-size: 18px;
-    border-radius: 2px;
-    background: transparent;
-  }
-  .addedToCartItem {
-    display: flex;
-    border: 1px solid #304ffe;
-    width: 90px;
-    height: 30px;
-  }
-  .addedToCartItem > button {
-    padding: 5px;
-    border: none;
-    outline: none;
-    font-weight: 500;
-  }
-
-  .addedToCartItem > button:nth-child(1),
-  .addedToCartItem > button:nth-child(3) {
-    background: #304ffe;
-    color: #ffffff;
-    font-size: 20px;
-    width: 30px;
-  }
-
-  .addedToCartItem > button:nth-child(2) {
-    background: #ffffff;
-    color: #304ffe;
-    font-size: 18px;
-    width: 30px;
-  }
-`;
-
 // view details
 
 export const ViewDetails = styled.div`
-  width: 35%;
+  /* width: 35%; */
+  flex: 1;
 
   margin: auto;
   border-right: 1px solid #dbdbdb;
   overflow-y: scroll;
   height: 90vh;
+`;
 
+export const ViewDetailsCards = styled.div`
   .closeDetails {
     display: flex;
   }
 
   .closeDetails > p {
-    background: #c7c9ce;
-    width: 30px;
-    height: 30px;
+    background: #dfdedf;
+    width: 40px;
+    height: 40px;
     margin-top: 40px;
-    margin-left: 0px;
+    margin-left: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 24px;
-    color: white;
+    color: #f7f8fa;
     cursor: pointer;
   }
 
   .closeDetails > video {
-    width: 85%;
-    height: 50vh;
-    margin: 5vh 7.5% 5vh 1%;
+    width: 88%;
+    height: 100%;
+    margin: 5vh auto 5vh 0;
   }
 
   .closeDetails > img {
@@ -237,9 +261,13 @@ export const ViewDetails = styled.div`
     width: 85%;
     margin: auto 7.5%;
 
+    h3 {
+      color: #252525;
+      font-weight: 500;
+    }
     p {
       margin-top: -15px;
-      color: #b5b5b5;
+      color: #212121;
     }
   }
 
@@ -254,12 +282,13 @@ export const ViewDetails = styled.div`
   }
 
   .servicesIncluded {
-    width: 84%;
+    width: 85%;
     margin: 1vh 7%;
     height: auto;
     padding: 5px;
     display: flex;
     gap: 15px;
+
     align-items: center;
     border-bottom: 1px solid #dbdbdb;
   }
@@ -279,6 +308,11 @@ export const ViewDetails = styled.div`
 
 export const UCPromise = styled.div`
   margin: 7vh 7.5% 2vh;
+
+  h2 {
+    font-weight: 600;
+    font-size: 20px;
+  }
 
   img {
     width: 100%;
@@ -327,12 +361,19 @@ export const FrequentlyAskedQue = styled.div`
   width: 84%;
   margin: 8vh 7.5%;
 
+  h2 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: #212121;
+  }
+
   .question {
     border-bottom: 1px solid #dbdbdb;
     div > p {
-      font-weight: 480;
-      font-size: 18px;
-      color: #a5a5a5;
+      font-weight: 500;
+      font-size: 16px;
+      color: #212121;
     }
   }
 `;
@@ -341,6 +382,10 @@ export const ReviewPastMonth = styled.div`
   width: 84%;
   margin: 8vh 7.5%;
 
+  h2 {
+    font-weight: 600;
+    font-size: 20px;
+  }
   img {
     width: 100%;
     height: 35vh;
@@ -356,7 +401,7 @@ export const ReviewPastMonth = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
+    margin-top: 10px;
     span {
       font-size: 20px;
       color: #1c8e1c;
@@ -379,6 +424,7 @@ export const ReviewPastMonth = styled.div`
     border: 1px solid #dbdbdb;
     border-radius: 3px;
     padding: 0 10px;
+    margin-bottom: 10px;
 
     div {
       display: flex;
@@ -403,14 +449,46 @@ export const ReviewPastMonth = styled.div`
     }
   }
   .ratingGraph {
-    width: 84%;
-    margin: 8vh 7.5%;
+    width: 100%;
+    margin: 3vh auto 0;
+    display: flex;
+    gap: 20px;
+  }
+
+  .ratingGraph1 {
+    display: flex;
+    flex-direction: column;
+
+    /* border: 1px solid; */
+
+    p {
+      text-align: right;
+      margin-top: -10px;
+    }
+  }
+
+  .ratingGraph2 {
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid; */
+    width: 100%;
+    margin-top: -10px;
+
+    div {
+      height: 12px;
+      margin: 7px;
+    }
   }
 `;
 
 export const MostHelpfulReviews = styled.div`
   width: 84%;
   margin: 8vh 7.5%;
+
+  h2 {
+    font-weight: 600;
+    font-size: 20px;
+  }
 
   div {
     display: flex;
@@ -454,7 +532,7 @@ export const CartNote = styled.div`
     align-items: center;
     padding: 0 10px;
     border-radius: 4px;
-    width: 22.5%;
+    width: calc(20% - 15px) !important;
     cursor: pointer;
     margin: 5px 20px;
     h4 {
@@ -481,13 +559,13 @@ export const CartNote = styled.div`
 export const SafteyCondition = styled.div`
   display: flex;
   flex-direction: column;
-  width: 60%;
+  width: 50%;
   height: 90%;
   justify-content: center;
   align-items: center;
   position: fixed;
   top: 5%;
-  left: 20%;
+  left: 25%;
   background: #ffffff;
 
   .header {
@@ -504,6 +582,7 @@ export const SafteyCondition = styled.div`
       margin: 2.5%;
       font-size: 18px;
       cursor: context-menu;
+      color: #424242;
     }
   }
 
@@ -576,12 +655,13 @@ export const SafteyCondition = styled.div`
       text-align: center;
       font-size: 28px;
       font-weight: 500;
+      color: #212121;
     }
 
     img {
       width: 725px;
       height: 1050px;
-      margin: auto 39px;
+      margin: auto 100px;
     }
   }
 `;
@@ -591,13 +671,13 @@ export const SafteyCondition = styled.div`
 export const CartModel = styled.div`
   display: flex;
   flex-direction: column;
-  width: 64%;
+  width: 50%;
   height: 95%;
   justify-content: center;
   align-items: center;
   position: fixed;
   top: 5%;
-  left: 18%;
+  left: 25%;
   background: #ffffff;
 
   .header {
@@ -612,7 +692,7 @@ export const CartModel = styled.div`
     p {
       margin: 2.5%;
       font-size: 18px;
-      color: rgb(66, 66, 66);
+      color: #424242;
       cursor: context-menu;
     }
   }
@@ -631,8 +711,8 @@ export const CartModel = styled.div`
 
   .offer {
     width: 80%;
-    height: 10vh;
-    margin: auto;
+    height: auto;
+    margin: 15px auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -654,6 +734,10 @@ export const CartModel = styled.div`
       display: flex;
       justify-content: space-between;
       margin-bottom: 0;
+
+      p {
+        color: #757575;
+      }
     }
 
     img {
@@ -708,6 +792,7 @@ export const CartModel = styled.div`
       background: transparent;
       font-size: 18px;
       font-weight: 500;
+      color: #000000de;
     }
   }
 
@@ -722,28 +807,50 @@ export const ItemsInCart = styled.div`
   margin: auto;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 
-  ul > li {
-    line-height: 22px;
-    font-size: 14px;
-  }
+  div {
+    h4 {
+      font-weight: 600;
+      margin-left: 10px;
+    }
 
-  .button {
-    margin-top: 5vh;
-    margin-left: 10vw;
+    ul > li {
+      line-height: 22px;
+      font-size: 14px;
+      color: rgb(117, 117, 117);
+    }
+
+    .button {
+      margin-top: 5vh;
+      margin-left: 10vw;
+    }
+
+    p {
+      color: rgb(33, 33, 33);
+      margin-left: 10px;
+    }
   }
 
   border-bottom: 1px solid rgb(245, 245, 245);
 `;
 
 export const FrequntlyAdded = styled.div`
-  height: 44vh;
+  height: auto;
   width: 80%;
-  margin: auto;
+  margin: auto auto 20px;
+
+  h3 {
+    margin-left: 10px;
+    font-weight: 600;
+    color: #000000;
+    font-size: 20px;
+  }
 
   .suggetions {
     display: flex;
     gap: 10px;
+    margin: auto 10px;
   }
 `;
 
@@ -772,13 +879,13 @@ export const FrequntlyAddedProduct = styled.div`
 export const MoveToLocation = styled.div`
   display: flex;
   flex-direction: column;
-  width: 60%;
+  width: 50%;
   height: 90%;
   justify-content: center;
   align-items: center;
   position: fixed;
   top: 5%;
-  left: 20%;
+  left: 25%;
   background: #ffffff;
 
   .header {
@@ -793,7 +900,7 @@ export const MoveToLocation = styled.div`
     p {
       margin: 2.5%;
       font-size: 18px;
-      color: rgb(66, 66, 66);
+      color: #424242;
       cursor: context-menu;
     }
   }
@@ -809,7 +916,7 @@ export const MoveToLocation = styled.div`
     align-items: center;
 
     h2 {
-      margin: 50px auto;
+      margin: 0px auto 50px;
       font-size: 28px;
     }
 
@@ -840,13 +947,13 @@ export const MoveToLocation = styled.div`
 export const SelectTheLocation = styled.div`
   display: flex;
   flex-direction: column;
-  width: 60%;
+  width: 50%;
   height: 90%;
   justify-content: center;
   align-items: center;
   position: fixed;
   top: 5%;
-  left: 20%;
+  left: 25%;
   background: #ffffff;
 
   .header {
@@ -861,7 +968,7 @@ export const SelectTheLocation = styled.div`
     p {
       margin: 2.5%;
       font-size: 18px;
-      color: rgb(66, 66, 66);
+      color: #424242;
       cursor: context-menu;
     }
   }
@@ -880,7 +987,104 @@ export const SelectTheLocation = styled.div`
   .location-form {
     width: 30%;
     height: 100%;
-    min-width: 270px;
-    border: 1px solid;
+    min-width: 300px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+
+    .your-location {
+      position: relative;
+      margin-left: 30px;
+      color: #d4d4d4;
+      background: #ffffff;
+      width: 105px;
+      padding: 5px;
+    }
+  }
+
+  .inputs {
+    height: auto;
+    width: 260px;
+    margin: -32px auto 0;
+
+    div {
+      border: 1px solid #d4d4d4;
+      padding: 8px 16px;
+      display: flex;
+      justify-content: space-between;
+      font-size: 14px;
+      border-radius: 4px;
+      box-sizing: border-box;
+      gap: 0;
+      margin: 20px auto;
+
+      input {
+        border: none;
+        outline: none;
+        line-height: 18px;
+      }
+
+      select {
+        width: 80px;
+        border: none;
+        outline: none;
+      }
+
+      button {
+        border: none;
+        outline: none;
+        color: #304fee;
+        font-weight: 600;
+        background: transparent;
+      }
+    }
+  }
+
+  .options {
+    height: auto;
+    width: 260px;
+    margin: auto;
+
+    p {
+      color: rgb(158, 158, 158);
+    }
+
+    div {
+      display: flex;
+      gap: 20px;
+
+      button {
+        color: #fff;
+        padding: 4px 10px;
+        background: #999;
+        border-radius: 20px;
+        outline: none;
+        border: none;
+        &:active {
+          background: #304fee;
+        }
+        cursor: pointer;
+      }
+    }
+  }
+  .addButton {
+    width: 300px;
+    height: 65px;
+    border-top: 1px solid #d4d4d4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    button {
+      width: 284;
+      height: 50;
+      font-size: 18px;
+      background: #999;
+      padding: 15px 50px;
+      color: #fff;
+      outline: none;
+      border: none;
+      cursor: pointer;
+    }
   }
 `;
