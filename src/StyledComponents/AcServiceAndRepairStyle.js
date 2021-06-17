@@ -11,7 +11,9 @@ export const StyleImageCont = styled.div`
   height: 458px;
   margin: 0%;
   padding: 0%;
-  position: relative;
+  /* position: relative; */
+  z-index: 2;
+  margin-top: 3.6%;
 `;
 
 export const StyleBackgroundImage = styled.img`
@@ -31,7 +33,7 @@ export const StyleNavigationBarCont = styled.div`
   padding: 0px 30px;
   position: sticky;
   position: -webkit-sticky;
-  top: 0;
+  top: 7.5%;
   display: flex;
   z-index: 5;
   box-shadow: 0 4px 12px 0 #ddd;
@@ -320,6 +322,7 @@ export const StyleWhiteColorDiv = styled.div`
 `;
 export const StyleBackgroundImageheadingH1 = styled(StyleBackgroundImageTopNav)`
   margin-top: 90px;
+  z-index: 3;
   color: #fff;
   font-size: 19px;
   font-family: axiforma-regular, -apple-system, BlinkMacSystemFont, Segoe UI,
@@ -333,6 +336,7 @@ export const StyleBackImgH1Subheading = styled(StyleBackgroundImageTopNav)`
   opacity: 0.9;
   font-weight: 600;
   margin-left: 9.8%;
+  z-index: 3;
 `;
 export const StyleServiceCard = styled(StyleBackgroundImageTopNav)`
   box-sizing: border-box;
