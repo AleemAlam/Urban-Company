@@ -32,6 +32,7 @@ export const servicesData = (payload) => async (dispatch) => {
     const { data } = await axios.get(
       `https://fake-api-project-for-masai.herokuapp.com/services`
     );
+    console.log(data);
     dispatch(serviceSuccess(data));
   } catch (error) {
     dispatch(serviceFailure(error));

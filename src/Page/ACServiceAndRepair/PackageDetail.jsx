@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { servicesData } from "../../Redux/app/Services/action";
 import { PackageDetails } from "../../StyledComponents/Modal";
 import PackageDetailsCard from "./PackageDetailsCard";
+import Loader from "../../Components/Loader";
 
 export default function PackageDetail({
   setShowDetails,
@@ -13,26 +14,53 @@ export default function PackageDetail({
   const dispatch = useDispatch();
   const service = useSelector((state) => state.service);
 
-  console.log(service.services);
+  console.log(service);
 
   useEffect(() => {
     dispatch(servicesData());
-  }, []);
+    console.log("package Details");
+  }, [dispatch]);
 
   return (
-    <PackageDetails>
-      {service.services.map((item, id) => {
+    <>
+      {service.isLoading ? (
+        <Loader />
+      ) : service.isError ? (
+        <h1>Error 404!</h1>
+      ) : (
+        <PackageDetails>
+          {service.services[0].acService.map((item, id) => {
+            return (
+              <>
+                <PackageDetailsCard
+                  key={id}
+                  data={item}
+                  setShowDetails={setShowDetails}
+                  count={count}
+                  setCount={setCount}
+                  handleCount={handleCount}
+                />
+              </>
+            );
+          })}
+        </PackageDetails>
+      )}
+    </>
+    /* <PackageDetails>
+      {service.services[0].acService.map((item, id) => {
         return (
-          <div key={id}>
+          <>
             <PackageDetailsCard
+              key={id}
+              data={item}
               setShowDetails={setShowDetails}
               count={count}
               setCount={setCount}
               handleCount={handleCount}
             />
-          </div>
+          </>
         );
       })}
-    </PackageDetails>
+    </PackageDetails> */
   );
 }
