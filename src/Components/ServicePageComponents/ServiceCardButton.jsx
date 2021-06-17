@@ -1,15 +1,34 @@
 import { StyleServicecardButton } from "../../StyledComponents/AcServiceAndRepairStyle"
 import { BiChevronRight } from "react-icons/bi";
+import React from "react"
+import { css } from "@emotion/react";
+import ClipLoader from "react-spinners/ClipLoader";
 
 import { Link } from "react-router-dom"
 
 export const ServiceCardButton = (props) => {
 
+   const [loading,setLoading] = React.useState(false)
+
+   const handleClick = ()=> {
+
+      setLoading(true)
+
+      setTimeout(() => {
+
+        setLoading(false)
+
+      },3000)
+     
+   }
+
     return (
         <>
+
+        
         <Link to="/ac-service-repair/add-service">
 
-       <StyleServicecardButton>
+       <StyleServicecardButton onClick={handleClick}>
           <BiChevronRight className="arrow"></BiChevronRight>
           <p className="buttonText">
              {props.text}
