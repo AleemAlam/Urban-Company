@@ -221,7 +221,9 @@ export const ViewDetails = styled.div`
   border-right: 1px solid #dbdbdb;
   overflow-y: scroll;
   height: 90vh;
+`;
 
+export const ViewDetailsCards = styled.div`
   .closeDetails {
     display: flex;
   }
@@ -399,7 +401,7 @@ export const ReviewPastMonth = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 10px;
     span {
       font-size: 20px;
       color: #1c8e1c;

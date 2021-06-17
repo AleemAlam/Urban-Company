@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Container, Heading, CartNote } from "../../StyledComponents/Modal";
 import Cart from "./Cart";
 import Covid19TC from "./Covid19TC";
@@ -7,6 +7,8 @@ import PackageDetail from "./PackageDetail";
 import ViewDetail from "./ViewDetail";
 import MoveLocation from "./MoveLocation";
 import SelectLocation from "./SelectLocation";
+import { useDispatch, useSelector } from "react-redux";
+import { servicesData } from "../../Redux/app/Services/action";
 
 // npm install npm@latest -g
 // rm -rf node_modules && npm install
@@ -24,6 +26,15 @@ export default function AcServiceAndRepairModal() {
   const handleCount = (num) => {
     setCount(count + num);
   };
+
+  const dispatch = useDispatch();
+  const service = useSelector((state) => state.service);
+
+  console.log(service);
+
+  useEffect(() => {
+    dispatch(servicesData());
+  }, []);
 
   return (
     <>
