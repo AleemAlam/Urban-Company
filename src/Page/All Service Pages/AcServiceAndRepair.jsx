@@ -13,11 +13,14 @@ import { CarosuleBlogs } from "../../Components/ServicePageComponents/CarosuleBl
 import { PopularServices } from "../../Components/ServicePageComponents/PopularServices.jsx";
 import { PopularLocality } from "../../Components/ServicePageComponents/PopularLocality.jsx";
 
-export default function AcServiceAndRepair() {
+export default function AcServiceAndRepair({ setShowServiceModal }) {
   return (
     <>
       <MainCont>
-        <ImageCont image="https://res.cloudinary.com/urbanclap/image/upload/fl_progressive,t_medium_res_template/categories/category_v2/category_08f70800.jpeg" />
+        <ImageCont
+          setShowServiceModal={setShowServiceModal}
+          image="https://res.cloudinary.com/urbanclap/image/upload/fl_progressive,t_medium_res_template/categories/category_v2/category_08f70800.jpeg"
+        />
         <NavigationBarSticky />
         <HowItworksHeader />
         <HIWMainCont />

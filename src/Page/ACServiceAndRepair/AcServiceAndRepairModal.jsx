@@ -37,7 +37,7 @@ export default function AcServiceAndRepairModal() {
   }, []);
 
   return (
-    <>
+    <div>
       <Heading>
         <p></p>
         <p>AC Service and Repair</p>
@@ -107,6 +107,6 @@ export default function AcServiceAndRepairModal() {
           setSelectLocation={setSelectLocation}
         />
       ) : null}
-    </>
+    </div>
   );
 }
