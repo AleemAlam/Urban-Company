@@ -11,15 +11,20 @@ export default function Routes() {
   const [showModal, setShowModal] = useState(false);
   return (
     <>
-      <Navbar setShowModal={setShowModal} />
-
       <Switch>
         <Route exact path="/">
+          <Navbar setShowModal={setShowModal} />
           <HomePage showModal={showModal} setShowModal={setShowModal} />
           <MyFooter />
         </Route>
 
         <Route exact path="/ac-service-repair">
+          <Navbar
+            setShowModal={setShowModal}
+            style={{ backgroundColor: "white", position: "relative" }}
+            linkColor="#666"
+            img="https://res.cloudinary.com/urbanclap/image/upload/q_auto,f_auto,fl_progressive:steep/t_high_res_template,q_auto:low,f_auto/categories/category_v2/category_22e80550.png"
+          />
           <AcServiceAndRepair />
           <MyFooter />
         </Route>

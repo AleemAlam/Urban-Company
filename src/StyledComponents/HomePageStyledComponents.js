@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const StyledNavbar = styled.div`
   width: 60%;
   display: flex;
-  padding: 10px;
+  padding: 3px;
   background: none;
   align-items: center;
   color: #fff;
@@ -75,8 +75,7 @@ export const StyledCarousel = styled.div`
     font-size: 15px;
   }
   background-size: cover;
-  background-image: url(${(props) =>
-    process.env.PUBLIC_URL + "slider-" + props.imgNum + ".jpeg"});
+  background-image: url(${process.env.PUBLIC_URL + "slider-1.jpeg"});
   background-repeat: no-repeat;
 `;
 
