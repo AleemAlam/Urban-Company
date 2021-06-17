@@ -3,7 +3,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { userLogout } from "../Redux/auth/action";
 import { StyledNavbar } from "../StyledComponents/HomePageStyledComponents";
-
 export default function Navbar({
   setShowModal,
   style,

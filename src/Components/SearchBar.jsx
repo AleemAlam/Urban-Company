@@ -62,7 +62,12 @@ export default function SearchBar() {
   };
   return (
     <StyledInput>
-      <div style={{ position: "relative" }}>
+      <div
+        className="locationContainer"
+        style={{
+          position: "relative",
+        }}
+      >
         <input
           className="locationInput"
           placeholder={
@@ -98,7 +103,7 @@ export default function SearchBar() {
           </ShowLocation>
         )}
       </div>
-      <div style={{ position: "relative" }}>
+      <div className="searchInput" style={{ position: "relative" }}>
         <input
           type="text"
           onChange={handleSearch}
@@ -106,7 +111,7 @@ export default function SearchBar() {
         />
 
         <SearchIcon />
-        <div style={{ marginTop: 7 }}>
+        <div style={{ marginTop: 7, textAlign: "left" }}>
           <Link>Salon for men</Link>
           <Link>Salon for women</Link>
           <Link>Massage for men</Link>

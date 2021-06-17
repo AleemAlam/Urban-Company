@@ -27,14 +27,19 @@ export const StyledNavbar = styled.div`
   & .addUnderline {
     text-decoration: underline;
   }
+  @media (max-width: 1180px) {
+  }
 `;
 export const StyledCarousel = styled.div`
   width: 100%;
   height: 550px;
   color: white;
+
   & .shadow {
     width: 100%;
-    height: 100%;
+
+    height: 400px;
+    padding-top: 150px;
     background: linear-gradient(
       180deg,
       rgba(0, 0, 0, 0.16),
@@ -43,12 +48,15 @@ export const StyledCarousel = styled.div`
   }
   & div > h1 {
     display: inline-block;
-    position: relative;
-    top: 30%;
-    margin: 0;
-    left: 35%;
     font-weight: 500;
+    margin: 0;
+    margin-bottom: 40px;
     font-size: 50px;
+  }
+  & .shadow > div {
+    width: 60%;
+    margin: auto;
+    text-align: center;
   }
   & .locationInput {
     width: 100px;
@@ -60,12 +68,12 @@ export const StyledCarousel = styled.div`
   & input {
     width: 600px;
     height: 50px;
-    position: relative;
     outline: none;
     font-size: 18px;
     padding: 2px 2px 2px 50px;
     border-radius: 2px;
     border: none;
+    margin: auto;
     display: block;
   }
   & a {
@@ -77,15 +85,17 @@ export const StyledCarousel = styled.div`
   background-size: cover;
   background-image: url(${process.env.PUBLIC_URL + "slider-1.jpeg"});
   background-repeat: no-repeat;
+
+  @media (max-width: 600px) {
+    div > h1 {
+      font-size: 40px;
+    }
+  }
 `;
 
 export const StyledInput = styled.div`
   display: flex !important;
-  position: relative;
-  top: 35%;
-  left: 30%;
-  width: 800px;
-  display: block;
+  flex-wrap: wrap;
   & svg {
     position: absolute;
     color: gray;
@@ -95,6 +105,63 @@ export const StyledInput = styled.div`
   }
   & .arrow {
     left: 160px;
+  }
+  & .locationContainer {
+    margin-left: 12%;
+  }
+  @media (max-width: 1680px) {
+    .locationContainer {
+      margin-left: 10%;
+    }
+  }
+  @media (max-width: 1620px) {
+    .locationContainer {
+      margin-left: 6%;
+    }
+  }
+  @media (max-width: 1550px) {
+    .locationContainer {
+      margin-left: 4%;
+    }
+  }
+  @media (max-width: 1500px) {
+    .locationContainer {
+      margin-left: 1%;
+    }
+  }
+  @media (max-width: 1500px) {
+    .locationContainer {
+      margin-left: 1%;
+    }
+    .searchInput {
+      margin-top: 10px;
+      margin-left: 1%;
+    }
+  }
+  @media (max-width: 1120px) {
+    .locationContainer {
+      margin-left: 1%;
+    }
+    .searchInput {
+      margin-top: 10px;
+      margin-left: 1%;
+      input {
+        width: 400px;
+      }
+    }
+  }
+  @media (max-width: 775px) {
+    .locationContainer {
+      margin-left: 1%;
+    }
+    .searchInput {
+      margin-top: 10px;
+
+      input {
+        width: 300px;
+        margin-left: 0;
+      }
+    }
   }
 `;
 
@@ -202,6 +269,9 @@ export const OfferContainer = styled.div`
   display: flex;
   margin: auto;
   justify-content: space-evenly;
+  @media (max-width: 1300px) {
+    flex-wrap: wrap;
+  }
 `;
 
 export const TwoContainer = styled.div`
@@ -304,6 +374,7 @@ export const StyledFooter = styled.div`
 export const ShowLocation = styled.div`
   background-color: white;
   position: absolute;
+  text-align: left;
   width: 280px;
   margin: 10px 0;
   padding: 20px;
@@ -348,6 +419,7 @@ export const ShowLocation = styled.div`
 export const SuggestionContainer = styled.div`
   background-color: white;
   border-radius: 3px;
+  text-align: left;
   position: relative;
   top: -18px;
   & a {
