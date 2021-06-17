@@ -41,7 +41,11 @@ export default function AcServiceAndRepairModal() {
         <p>AC Service and Repair</p>
         <p style={{ marginRight: "30px" }}>✖</p>
       </Heading>
-      <Container>
+      <Container
+        style={{
+          scrollBehavior: "smooth",
+        }}
+      >
         <Menu />
         <PackageDetail
           count={count}

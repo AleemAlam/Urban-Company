@@ -15,7 +15,7 @@ export default function PackageDetailsCard({
   console.log(name, service, repair, installation);
   return (
     <PackageDetailsCards>
-      <div id="SERVICE">
+      <div id="service">
         <h2>{name}</h2>
 
         {/* safetyMessage optional with image */}
@@ -144,7 +144,7 @@ export default function PackageDetailsCard({
       {repair.map((item, id) => {
         return (
           <>
-            <div id="REPAIR">
+            <div id="repair">
               <h2>{item.name}</h2>
 
               {/* safetyMessage optional with image */}
@@ -282,7 +282,7 @@ export default function PackageDetailsCard({
       })}
 
       {/* installation part */}
-      <div>
+      <div id="installation">
         <h2>{installation.name}</h2>
 
         {/* safetyMessage optional with image */}

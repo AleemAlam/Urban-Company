@@ -38,21 +38,30 @@ export const MENU = styled.div`
 
   border-right: 1px solid #dbdbdb;
 
-  button:nth-child(1) {
-    margin-top: 30px;
-  }
-  button {
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-    margin: 20px 30px auto auto;
-    border-radius: 5px;
-    outline: none;
-    border: 1px solid #b5b5b5;
-    cursor: pointer;
-    background: transparent;
-    color: #757575;
-    font-weight: 500;
+  a {
+    text-decoration: none;
+
+    button:nth-child(1) {
+      margin-top: 30px;
+    }
+    button {
+      display: flex;
+      flex-direction: column;
+      padding: 10px;
+      margin: 20px 30px auto auto;
+      border-radius: 5px;
+      outline: none;
+      border: 1px solid #b5b5b5;
+      cursor: pointer;
+      background: transparent;
+      color: #757575;
+      font-weight: 500;
+
+      &:active {
+        background: black;
+        color: #fff;
+      }
+    }
   }
 `;
 export const PackageDetails = styled.div`

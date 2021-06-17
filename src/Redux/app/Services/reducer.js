@@ -23,6 +23,8 @@ export const serviceReducer = (state = initialState, { type, payload }) => {
       return {
         ...state,
         services: payload,
+        isLoading: false,
+        isError: false,
       };
     }
 
