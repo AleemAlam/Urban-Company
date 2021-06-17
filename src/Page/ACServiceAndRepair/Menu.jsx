@@ -4,15 +4,16 @@ import { MENU } from "../../StyledComponents/Modal";
 export default function Menu() {
   return (
     <MENU>
-      <a href="#SERVICE">
+      <a href="#service">
         <button>Service</button>
       </a>
 
-      <a href="#REPAIR">
+      <a href="#repair">
         <button>Repair</button>
       </a>
-
-      <button>Installation & Uninstallation</button>
+      <a href="#installation">
+        <button>Installation & Uninstallation</button>
+      </a>
     </MENU>
   );
 }

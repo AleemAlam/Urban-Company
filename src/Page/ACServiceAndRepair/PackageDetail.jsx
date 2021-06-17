@@ -14,11 +14,10 @@ export default function PackageDetail({
   const dispatch = useDispatch();
   const service = useSelector((state) => state.service);
 
-  console.log(service);
+  //console.log(service.services[0].acService);
 
   useEffect(() => {
     dispatch(servicesData());
-    console.log("package Details");
   }, [dispatch]);
 
   return (
@@ -29,20 +28,21 @@ export default function PackageDetail({
         <h1>Error 404!</h1>
       ) : (
         <PackageDetails>
-          {service.services[0].acService.map((item, id) => {
-            return (
-              <>
-                <PackageDetailsCard
-                  key={id}
-                  data={item}
-                  setShowDetails={setShowDetails}
-                  count={count}
-                  setCount={setCount}
-                  handleCount={handleCount}
-                />
-              </>
-            );
-          })}
+          {service?.services[0]?.acService.length > 0 &&
+            service.services[0].acService.map((item, id) => {
+              return (
+                <>
+                  <PackageDetailsCard
+                    key={id}
+                    data={item}
+                    setShowDetails={setShowDetails}
+                    count={count}
+                    setCount={setCount}
+                    handleCount={handleCount}
+                  />
+                </>
+              );
+            })}
         </PackageDetails>
       )}
     </>
