@@ -19,7 +19,7 @@ export const CarosuleBlogs = () => {
 
   return (
     <StyleCarosuleDiv>
-      <CarosuleNavbar />
+      <CarosuleNavbar text="Featured Blogs on Home Improvement Blogs" id="blogs"/>
 
       <StyleCarosuleMainDiv>
         <Carousel breakPoints={breakPoints}>

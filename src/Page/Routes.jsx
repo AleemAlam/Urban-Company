@@ -20,14 +20,14 @@ export default function Routes() {
 
         <Route exact path="/ac-service-repair">
 
-          <div style={{width:"100%",backgroundColor:"white",height:"60px",margin:"0px",padding:"0px",zIndex:"4",position: "fixed"}}>
+          {/* <div style={{width:"100%",backgroundColor:"white",height:"60px",margin:"0px",padding:"0px",zIndex:"4",position: "fixed"}}> */}
           <Navbar
             setShowModal={setShowModal}
             style={{backgroundColor: "white",zIndex:"4",position: "fixed"}}
             linkColor="#666"
             img="https://res.cloudinary.com/urbanclap/image/upload/q_auto,f_auto,fl_progressive:steep/t_high_res_template,q_auto:low,f_auto/categories/category_v2/category_22e80550.png"
           />
-          </div>
+          {/* </div> */}
 
           <AcServiceAndRepair />
           <MyFooter />

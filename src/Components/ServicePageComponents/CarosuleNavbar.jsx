@@ -3,11 +3,11 @@ import {
 }
     from '../../StyledComponents/AcServiceAndRepairStyle'
 
-export const CarosuleNavbar = () => {
+export const CarosuleNavbar = (props) => {
     return (
         <>
-        <StyleCarosuleNavDiv>
-        <h2>Customers in New Delhi also booked</h2>
+        <StyleCarosuleNavDiv id={props.id}>
+        <h2>{props.text}</h2>
     </StyleCarosuleNavDiv>
     </>
     )

@@ -227,20 +227,6 @@ export const StyleReviewsCont = styled(StyleAcServiceInCont)`
     }
   }
 `;
-export const StyleStickyNavBtn = styled.div`
-  padding: 24px 0px 15px;
-  border-bottom: 3.3px solid black;
-  height: 33px;
-  margin: 0px 12px 0px 20px;
-  display: inline-block;
-  font-size: 16.5px;
-  text-align: left;
-  color: #616161;
-  cursor: pointer;
-  font-family: axiforma-regular, -apple-system, BlinkMacSystemFont, Segoe UI,
-    Roboto, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-`;
 export const HIWHeaderHeading = styled.h2`
   display: block;
   font-size: 22px;
