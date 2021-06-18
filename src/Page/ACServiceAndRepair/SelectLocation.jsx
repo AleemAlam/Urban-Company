@@ -5,7 +5,9 @@ export default function SelectLocation({
   setMoveLocation,
   setSelectLocation,
   setSelectTime,
+  userLocation,
 }) {
+  console.log(userLocation);
   return (
     <SelectTheLocation>
       <div className="header">
@@ -21,7 +23,12 @@ export default function SelectLocation({
         <p onClick={() => setSelectLocation(false)}>✖</p>
       </div>
       <div className="location-data">
-        <div className="liveMap"></div>
+        <div className="liveMap">
+          <img
+            src={`https://maps.googleapis.com/maps/api/staticmap?center=${userLocation.latitude},${userLocation.longitude}&zoom=13&size=600x300&maptype=roadmap&markers=color:blue%7C${userLocation.latitude},${userLocation.longitude}&key=AIzaSyCig6cda2cZ89e1meuo7KkZupEbcsYoP04`}
+            alt=""
+          />
+        </div>
         <div className="location-form">
           <div className="formSide">
             <p className="your-location">Your Location</p>
