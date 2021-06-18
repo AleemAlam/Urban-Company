@@ -22,6 +22,7 @@ export default function AcServiceAndRepair({ setShowServiceModal }) {
           setShowServiceModal={setShowServiceModal}
           image="https://res.cloudinary.com/urbanclap/image/upload/fl_progressive,t_medium_res_template/categories/category_v2/category_08f70800.jpeg"
         />
+        
         <NavigationBarSticky />
         <HowItworksHeader />
         <HIWMainCont />
@@ -39,6 +40,7 @@ export default function AcServiceAndRepair({ setShowServiceModal }) {
         <PopularServices />
         <PopularLocality />
         <CarosuleBlogs />
+        
       </MainCont>
     </>
   );

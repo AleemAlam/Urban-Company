@@ -38,7 +38,7 @@ export const StyleNavigationBarCont = styled.div`
   flex-direction: row;
   z-index: 5;
   box-shadow: 0 4px 12px 0 #ddd;
-  margin-left: 20%;
+  margin-left: 17%;
 `;
 
 export const StyleHowItWorksCont = styled(StyleNavigationBarCont)`
@@ -51,6 +51,7 @@ export const StyleHowItWorksCont = styled(StyleNavigationBarCont)`
   margin-right: 39%;
   margin-top: 30px;
   padding-left: 12px;
+  margin-left: 17%;
 `;
 export const StyleHIWMainCont = styled(StyleHowItWorksCont)`
   height: auto;
@@ -76,7 +77,7 @@ export const StyleAcServiceInCont = styled(StyleHowItWorksCont)`
     Roboto, Helvetica, Arial, sans-serif;
   margin: 40px 39% auto 11%;
   width: 41%;
-  margin-left: 20%;
+  margin-left: 17%;
   h2 {
     font-size: 22px;
     font-weight: bold;
@@ -96,7 +97,7 @@ box-sizing: border-box;
   height: 100px;
   margin: 40px 39% 0.1% 11%;
   width: 41%;
-  margin-left: 20%;
+  margin-left: 17%;
   padding-left: 37px;
 `;
 
@@ -288,7 +289,7 @@ export const StyleHIWTextContHeading = styled.h4`
 
 export const StyleHIWTextContParagraph = styled.p`
   font-size: 15px;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 1.5;
   letter-spacing: normal;
   color: #757575;
@@ -323,6 +324,7 @@ export const StyleBackgroundImageTopNav = styled(StyleNavigationBarCont)`
   column-gap: 10px;
   flex-direction: row;
   font-size: 15.2px;
+  font-weight: 500;
 `;
 export const StyleWhiteColorDiv = styled.div`
   color: #ddd;
@@ -331,6 +333,7 @@ export const StyleBackgroundImageheadingH1 = styled(StyleBackgroundImageTopNav)`
   margin-top: 90px;
   z-index: 3;
   color: #fff;
+  font-weight:900;
   font-size: 19px;
   font-family: axiforma-regular, -apple-system, BlinkMacSystemFont, Segoe UI,
     Roboto, Helvetica, Arial, sans-serif;
@@ -352,7 +355,7 @@ export const StyleServiceCard = styled(StyleBackgroundImageTopNav)`
   max-width: 363.3px;
   min-width: 363.3px;
   box-sizing: border-box;
-  margin: 12.5vh auto 121px 63%;
+  margin: 28vh auto 121px 59.7%;
   background-image: linear-gradient(130deg, #642b73, #c6426e);
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
@@ -408,7 +411,7 @@ export const StyleRatingCardCont = styled(StyleServiceCard)`
   background-image: none;
   min-height: 121px;
   max-height: 121px;
-  margin-top: 316px;
+  margin-top: 444px;
   margin-bottom: 0px;
   border-radius: 4px;
   box-shadow: 0 20px 20px 0 rgb(0 0 0 / 10%);
@@ -454,7 +457,7 @@ export const StyleCarosuleDiv = styled.div`
   height: auto;
   margin-top: 2.5%;
   margin-bottom: 2.5%;
-  margin-left: 15.5%;
+  margin-left: 12.5%;
 `;
 export const StyleCarosuleNavDiv = styled.div`
   box-sizing: border-box;
