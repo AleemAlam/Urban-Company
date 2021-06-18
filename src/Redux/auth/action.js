@@ -1,10 +1,10 @@
 import {
-  SEND_OTP_FAILURE,
-  SEND_OTP_REQUEST,
-  SEND_OTP_SUCCESS,
   USER_LOGIN_FAILURE,
   USER_LOGIN_REQUEST,
   USER_LOGIN_SUCCESS,
+  USER_LOGOUT_FAILURE,
+  USER_LOGOUT_REQUEST,
+  USER_LOGOUT_SUCCESS,
 } from "./actionType";
 
 export const userLogin = (otp, setModal) => (dispatch) => {
@@ -21,23 +21,6 @@ export const userLogin = (otp, setModal) => (dispatch) => {
     .catch((error) => {
       dispatch(userLoginFailure());
     });
-};
-
-export const otpRequest = () => {
-  return {
-    type: SEND_OTP_REQUEST,
-  };
-};
-export const otpSuccess = (payload) => {
-  return {
-    type: SEND_OTP_SUCCESS,
-  };
-};
-
-export const otpFailure = () => {
-  return {
-    type: SEND_OTP_FAILURE,
-  };
 };
 
 const userLoginRequest = () => {
@@ -57,5 +40,23 @@ const userLoginFailure = () => {
 
   return {
     type: USER_LOGIN_FAILURE,
+  };
+};
+
+export const userLogout = (payload) => (dispatch) => {
+  dispatch(userLogoutRequest());
+  setTimeout(() => {
+    dispatch(userLogoutSuccess());
+  }, 500);
+};
+
+const userLogoutRequest = () => {
+  return {
+    type: USER_LOGOUT_REQUEST,
+  };
+};
+const userLogoutSuccess = () => {
+  return {
+    type: USER_LOGOUT_SUCCESS,
   };
 };

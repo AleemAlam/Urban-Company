@@ -1,60 +1,56 @@
 .rec.rec-arrow:hover {
-background-color: #fff !important;
-color: #666 !important;
-border: 0px solid white !important;
-box-shadow: none;
+  background-color: #fff !important;
+  color: #666 !important;
+  border: 0px solid white !important;
+  box-shadow: none;
 }
 
 .rec.rec-arrow {
-    background-color: #fff !important;
-    border-radius: 2px;
-    height: 88px;
-    color: #666;
-    font-size: 19px;
-    border: 0px !important;
-    font-weight: bold;
-    position: absolute;
-    z-index: 1;
-    width: 20px !important;
-    border-color: #fff;
-    border: 0px solid white !important;
-    box-shadow: none;
+  background-color: #fff !important;
+  border-radius: 2px;
+  height: 88px;
+  color: #666;
+  font-size: 19px;
+  border: 0px !important;
+  font-weight: bold;
+  position: absolute;
+  z-index: 1;
+  width: 20px !important;
+  border-color: #fff;
+  border: 0px solid white !important;
+  box-shadow: none;
 }
 .rec.rec-arrow-button {
-width: 20x;
-border: 0px solid white !important;
-box-shadow: none;
+  width: 20x;
+  border: 0px solid white !important;
+  box-shadow: none;
 }
 
-
 .rec.rec-arrow-left {
-    margin-left: 0%;
-    margin-top: -3%;
-    border: 0px solid white !important;
-    box-shadow: none;
+  margin-left: 0%;
+  margin-top: -3%;
+  border: 0px solid white !important;
+  box-shadow: none;
 }
 
 .rec.rec-arrow-right {
   margin-top: -3%;
-    margin-left: 48%;
+  margin-left: 48%;
 }
-
 
 .rec-carousel-item:hover {
-    outline: none;
-    box-shadow: 0px 20px 30px -10px #192824 !important;
+  outline: none;
+  box-shadow: 0px 20px 30px -10px #192824 !important;
 }
-
 
 .rec.rec-carousel-item {
-padding: 0;
-margin: 0%;
-background-color: white !important;
-border-radius: 2px;
-z-index: 0;
+  padding: 0;
+  margin: 0%;
+  background-color: white !important;
+  border-radius: 2px;
+  z-index: 0;
 }
 
-
 .rec.rec-dot {
-    display: none;
+  display: none;
 }

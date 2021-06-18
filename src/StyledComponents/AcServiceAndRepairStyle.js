@@ -11,7 +11,9 @@ export const StyleImageCont = styled.div`
   height: 458px;
   margin: 0%;
   padding: 0%;
-  position: relative;
+  /* position: relative; */
+  z-index: 2;
+  margin-top: 3.6%;
 `;
 
 export const StyleBackgroundImage = styled.img`
@@ -25,18 +27,18 @@ export const StyleBackgroundImage = styled.img`
 
 export const StyleNavigationBarCont = styled.div`
   box-sizing: border-box;
-  width: 50%;
+  width: 41%;
+
   height: 75px;
   background-color: #ffffff;
   padding: 0px 30px;
   position: sticky;
   position: -webkit-sticky;
-  top: 0;
+  top: 7.5%;
   display: flex;
   z-index: 5;
   box-shadow: 0 4px 12px 0 #ddd;
-  margin: auto;
-  margin-right: 39%;
+  margin-left: 20%;
 `;
 
 export const StyleHowItWorksCont = styled(StyleNavigationBarCont)`
@@ -71,7 +73,8 @@ export const StyleAcServiceInCont = styled(StyleHowItWorksCont)`
   font-family: axiforma-bold, -apple-system, BlinkMacSystemFont, Segoe UI,
     Roboto, Helvetica, Arial, sans-serif;
   margin: 40px 39% auto 11%;
-
+  width: 41%;
+  margin-left: 20%;
   h2 {
     font-size: 22px;
     font-weight: bold;
@@ -89,6 +92,8 @@ export const StyleTechnicians = styled(StyleAcServiceInCont)`
   line-height: 1;
   height: 100px;
   margin: 40px 39% 0.1% 11%;
+  width: 41%;
+  margin-left: 20%;
 `;
 
 export const StyleReviewsCont = styled(StyleAcServiceInCont)`
@@ -227,7 +232,6 @@ export const StyleReviewsCont = styled(StyleAcServiceInCont)`
 `;
 export const StyleStickyNavBtn = styled.div`
   padding: 24px 0px 15px;
-  border-bottom: 3.3px solid black;
   height: 33px;
   margin: 0px 12px 0px 20px;
   display: inline-block;
@@ -320,6 +324,7 @@ export const StyleWhiteColorDiv = styled.div`
 `;
 export const StyleBackgroundImageheadingH1 = styled(StyleBackgroundImageTopNav)`
   margin-top: 90px;
+  z-index: 3;
   color: #fff;
   font-size: 19px;
   font-family: axiforma-regular, -apple-system, BlinkMacSystemFont, Segoe UI,
@@ -333,6 +338,7 @@ export const StyleBackImgH1Subheading = styled(StyleBackgroundImageTopNav)`
   opacity: 0.9;
   font-weight: 600;
   margin-left: 9.8%;
+  z-index: 3;
 `;
 export const StyleServiceCard = styled(StyleBackgroundImageTopNav)`
   box-sizing: border-box;
@@ -470,62 +476,57 @@ export const StyleCarosuleMainDiv = styled(StyleCarosuleNavDiv)`
   padding-left: 0%;
   padding-right: 0%;
 
-  p{
+  p {
     margin-left: 7%;
     font-size: 17px;
     font-weight: 500;
-}
-
-`
+  }
+`;
 export const ImgDiv = styled.div`
-display: flex;
-justify-content: center;
-align-items: center;
-height: 138px;
-width: 100%;
-background-color: #683bb7;
-color: #fff;
-margin: 15px;
-font-size: 4em;
-border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 138px;
+  width: 100%;
+  background-color: #683bb7;
+  color: #fff;
+  margin: 15px;
+  font-size: 4em;
+  border-radius: 5px;
 
-img{
-width: 100%;
-height: 100%;
-border-radius: 5px;
-object-fit:cover;
-}
-`
-export const StylePopularServiceDiv = styled(StyleCarosuleDiv)``
+  img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    object-fit: cover;
+  }
+`;
+export const StylePopularServiceDiv = styled(StyleCarosuleDiv)``;
 export const StylePopularServiceMainDiv = styled(StyleCarosuleMainDiv)`
+  padding: 2.5%;
+  padding-top: 1%;
+  display: flex;
+  flex-direction: column;
+  height: auto;
 
-padding: 2.5%;
-padding-top: 1%;
-display: flex;
-flex-direction: column;
-height: auto;
-
-div{
-   box-sizing: border-box;
-   padding: 0%;
-   padding-top: 2.8%;
+  div {
+    box-sizing: border-box;
+    padding: 0%;
+    padding-top: 2.8%;
     width: 100%;
     height: 47px;
     font-weight: 500;
     border-bottom: 1px dotted #e2e2e2;
 
-    p{
-        box-sizing: border-box;
-        padding: 0;
-        margin: 0;
-        margin-bottom: 0;
-        font-size: 14.5px;
-        color: #616161;
-        font-weight: 500;
+    p {
+      box-sizing: border-box;
+      padding: 0;
+      margin: 0;
+      margin-bottom: 0;
+      font-size: 14.5px;
+      color: #616161;
+      font-weight: 500;
     }
-}
-`
-export const StylePopularServiceNavbar = styled(StyleCarosuleNavDiv)`
-
-
-`
+  }
+`;
+export const StylePopularServiceNavbar = styled(StyleCarosuleNavDiv)``;
