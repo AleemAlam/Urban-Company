@@ -28,14 +28,14 @@ export const StyleBackgroundImage = styled.img`
 export const StyleNavigationBarCont = styled.div`
   box-sizing: border-box;
   width: 41%;
-
-  height: 75px;
+  height: 62px;
   background-color: #ffffff;
   padding: 0px 30px;
   position: sticky;
   position: -webkit-sticky;
   top: 7.5%;
   display: flex;
+  flex-direction: row;
   z-index: 5;
   box-shadow: 0 4px 12px 0 #ddd;
   margin-left: 20%;
@@ -46,10 +46,11 @@ export const StyleHowItWorksCont = styled(StyleNavigationBarCont)`
   height: 95px;
   margin: 0 32px;
   z-index: 1;
-  margin-top: 20px;
   box-shadow: none;
   margin: auto;
   margin-right: 39%;
+  margin-top: 30px;
+  padding-left: 12px;
 `;
 export const StyleHIWMainCont = styled(StyleHowItWorksCont)`
   height: auto;
@@ -65,6 +66,7 @@ export const StyleAcServiceInCont = styled(StyleHowItWorksCont)`
   position: static;
   height: 130px;
   padding: 24px 60px;
+  padding-left: 19px;
   margin-top: 40px;
   background-color: #ffffff;
   text-align: left;
@@ -89,17 +91,20 @@ export const StyleAcServiceInCont = styled(StyleHowItWorksCont)`
 `;
 
 export const StyleTechnicians = styled(StyleAcServiceInCont)`
+box-sizing: border-box;
   line-height: 1;
   height: 100px;
   margin: 40px 39% 0.1% 11%;
   width: 41%;
   margin-left: 20%;
+  padding-left: 37px;
 `;
 
 export const StyleReviewsCont = styled(StyleAcServiceInCont)`
   margin-top: 1px;
   margin-bottom: 1px;
   height: auto;
+  padding-left: 37px;
 
   ul,
   li {
@@ -119,7 +124,7 @@ export const StyleReviewsCont = styled(StyleAcServiceInCont)`
     box-sizing: border-box;
     padding-top: 2px;
     height: 40px;
-    width: 46px;
+    width: 53px;
     border-radius: 50%;
     border: 1px solid #e2e2e2;
     text-align: center;
@@ -264,7 +269,7 @@ export const StyleHIWTextCont = styled(StyleHowItWorksCont)`
   margin-top: 1.5%;
 `;
 export const StyleHIWLogoCont = styled(StyleHIWTextCont)`
-  width: 6%;
+  width: 7%;
   background-color: none;
   height: 40px;
   border-radius: 50%;
@@ -306,7 +311,7 @@ export const StyleHIWTextContBorderLine = styled.div`
   height: 27px;
   width: 0.3%;
   background-color: #e2e2e2;
-  margin-left: 5.8%;
+  margin-left: 6.9%;
 `;
 export const StyleBackgroundImageTopNav = styled(StyleNavigationBarCont)`
   background-color: transparent;
@@ -445,11 +450,11 @@ export const StyleRatingCardCont = styled(StyleServiceCard)`
 export const StyleCarosuleDiv = styled.div`
   box-sizing: border-box;
   background-color: transparent;
-  width: 61%;
+  width: 50%;
   height: auto;
   margin-top: 2.5%;
   margin-bottom: 2.5%;
-  margin-left: 5.5%;
+  margin-left: 15.5%;
 `;
 export const StyleCarosuleNavDiv = styled.div`
   box-sizing: border-box;

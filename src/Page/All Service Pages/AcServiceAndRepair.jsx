@@ -12,6 +12,7 @@ import { CarosuleTechnicians } from "../../Components/ServicePageComponents/Caro
 import { CarosuleBlogs } from "../../Components/ServicePageComponents/CarosuleBlogs.jsx";
 import { PopularServices } from "../../Components/ServicePageComponents/PopularServices.jsx";
 import { PopularLocality } from "../../Components/ServicePageComponents/PopularLocality.jsx";
+import { RelatedAcService } from "../../Components/ServicePageComponents/RelatedAcService.jsx";
 
 export default function AcServiceAndRepair({ setShowServiceModal }) {
   return (
@@ -30,6 +31,10 @@ export default function AcServiceAndRepair({ setShowServiceModal }) {
         <Reviews />
         <Reviews />
         <Reviews />
+        <Reviews />
+        <Reviews />
+        <Reviews />
+        <RelatedAcService />
         <CarosuleTechnicians />
         <PopularServices />
         <PopularLocality />
