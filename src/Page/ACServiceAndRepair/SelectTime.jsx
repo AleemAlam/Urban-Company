@@ -1,6 +1,6 @@
-import { amber } from "@material-ui/core/colors";
 import React from "react";
-import { Date, SelectTiming, Timing } from "../../StyledComponents/Modal";
+import {  SelectTiming } from "../../StyledComponents/Modal";
+import DateComponent, { TimingComponent } from "./MiniComponents";
 
 export default function SelectTime({
   setSelectLocation,
@@ -45,6 +45,7 @@ export default function SelectTime({
     setSelectTime(false);
     setPayment(true);
   };
+
   return (
     <SelectTiming>
       <div className="header">
@@ -65,12 +66,7 @@ export default function SelectTime({
           <p>Select date of service</p>
           <div>
             {date.map((e, i) => {
-              return (
-                <Date>
-                  <p>{e.day}</p>
-                  <h2>{e.date}</h2>
-                </Date>
-              );
+              return <DateComponent e={e} />;
             })}
           </div>
         </div>
@@ -79,11 +75,7 @@ export default function SelectTime({
           <p>Selecet time</p>
           <div>
             {time.map((e) => {
-              return (
-                <Timing>
-                  <p onClick={()=>{}}>{e}</p>
-                </Timing>
-              );
+              return <TimingComponent e={e} />;
             })}
           </div>
         </div>

@@ -1229,7 +1229,7 @@ export const Date = styled.div`
 export const Timing = styled.div`
   width: 130px;
   height: 60px;
-  border: 1px solid #dbdbdb;
+  /* border: 1px solid #dbdbdb; */
   border-radius: 4px;
 
   p {
@@ -1274,6 +1274,9 @@ export const MakePayment = styled.div`
     width: 100%;
     height: 80%;
     overflow-y: scroll;
+    display: flex;
+    gap: 4%;
+    justify-content: center;
   }
 
   .buttondiv {
@@ -1295,5 +1298,46 @@ export const MakePayment = styled.div`
     border: none;
     border-radius: 5px;
     cursor: pointer;
+  }
+
+  .paymentType,
+  .paymentSummary {
+    border: 1px solid;
+    width: 40%;
+    height: 100%;
+  }
+
+  .paymentSummary {
+    h3 {
+      font-weight: 500;
+    }
+  }
+  .priceDatails {
+    width: 100%;
+    height: 400px;
+    border: 1px solid #dbdbdb;
+    border-radius: 5px;
+
+    div {
+      border-bottom: 1px solid #dbdbdb;
+      height: 75px;
+      width: 90%;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      p {
+        color: #424242;
+        font-size: 18px;
+        font-weight: 450;
+      }
+    }
+  }
+
+  .insurance{
+    width: 100%;
+    height: auto;
+    
   }
 `;
