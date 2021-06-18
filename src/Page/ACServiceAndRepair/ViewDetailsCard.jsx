@@ -431,6 +431,7 @@ export default function ViewDetailsCard({
                       fontSize: "20px",
                       color: "#1c8e1c",
                       width: "51px",
+                      marginLeft: "-30px",
                     }}
                   >
                     ★ 5.0
@@ -478,6 +479,7 @@ export default function ViewDetailsCard({
                       fontSize: "20px",
                       color: "#1c8e1c",
                       width: "51px",
+                      marginLeft: "-30px",
                     }}
                   >
                     ★ 5.0
@@ -525,6 +527,7 @@ export default function ViewDetailsCard({
                       fontSize: "20px",
                       color: "#1c8e1c",
                       width: "51px",
+                      marginLeft: "-30px",
                     }}
                   >
                     ★ 5.0
@@ -572,6 +575,7 @@ export default function ViewDetailsCard({
                       fontSize: "20px",
                       color: "#1c8e1c",
                       width: "51px",
+                      marginLeft: "-30px",
                     }}
                   >
                     ★ 5.0

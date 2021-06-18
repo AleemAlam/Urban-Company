@@ -1,7 +1,11 @@
 import React from "react";
 import { SelectTheLocation } from "../../StyledComponents/Modal";
 
-export default function SelectLocation({ setMoveLocation, setSelectLocation }) {
+export default function SelectLocation({
+  setMoveLocation,
+  setSelectLocation,
+  setSelectTime,
+}) {
   return (
     <SelectTheLocation>
       <div className="header">
@@ -52,7 +56,14 @@ export default function SelectLocation({ setMoveLocation, setSelectLocation }) {
             </div>
           </div>
           <div className="addButton">
-            <button>Add Flat/Building/Street</button>
+            <button
+              onClick={() => {
+                setSelectTime(true);
+                setSelectLocation(false);
+              }}
+            >
+              Add Flat/Building/Street
+            </button>
           </div>
         </div>
       </div>

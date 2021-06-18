@@ -576,6 +576,7 @@ export const SafteyCondition = styled.div`
   top: 5%;
   left: 25%;
   background: #ffffff;
+  box-shadow: 1px 1px 5px 1px grey;
 
   .header {
     display: flex;
@@ -688,6 +689,7 @@ export const CartModel = styled.div`
   top: 5%;
   left: 25%;
   background: #ffffff;
+  box-shadow: 1px 1px 5px 1px grey;
 
   .header {
     display: flex;
@@ -896,6 +898,7 @@ export const MoveToLocation = styled.div`
   top: 5%;
   left: 25%;
   background: #ffffff;
+  box-shadow: 1px 1px 5px 1px grey;
 
   .header {
     display: flex;
@@ -964,6 +967,7 @@ export const SelectTheLocation = styled.div`
   top: 5%;
   left: 25%;
   background: #ffffff;
+  box-shadow: 1px 1px 5px 1px grey;
 
   .header {
     display: flex;
@@ -1094,6 +1098,68 @@ export const SelectTheLocation = styled.div`
       outline: none;
       border: none;
       cursor: pointer;
+    }
+  }
+`;
+
+export const SelectTiming = styled.div`
+  display: flex;
+  /* flex-direction: column; */
+  width: 50%;
+  height: 90%;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 5%;
+  left: 25%;
+  background: #ffffff;
+  box-shadow: 1px 1px 5px 1px grey;
+
+  .header {
+    display: flex;
+    width: 100%;
+    height: 10%;
+    justify-content: space-between;
+    align-items: center;
+    background: #fafafa;
+    border-bottom: 1px solid #dbdbdb;
+
+    p {
+      margin: 2.5%;
+      font-size: 18px;
+      color: #424242;
+      cursor: context-menu;
+    }
+  }
+`;
+
+export const MakePayment = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 90%;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 5%;
+  left: 25%;
+  background: #ffffff;
+  box-shadow: 1px 1px 5px 1px grey;
+
+  .header {
+    display: flex;
+    width: 100%;
+    height: 10%;
+    justify-content: space-between;
+    align-items: center;
+    background: #fafafa;
+    border-bottom: 1px solid #dbdbdb;
+
+    p {
+      margin: 2.5%;
+      font-size: 18px;
+      color: #424242;
+      cursor: context-menu;
     }
   }
 `;
