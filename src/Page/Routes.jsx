@@ -37,7 +37,7 @@ export default function Routes() {
               style={{
                 backgroundColor: "white",
                 position: "relative",
-                zIndex: "5",
+             zIndex: "5",
               }}
               linkColor="#666"
               img="https://res.cloudinary.com/urbanclap/image/upload/q_auto,f_auto,fl_progressive:steep/t_high_res_template,q_auto:low,f_auto/categories/category_v2/category_22e80550.png"

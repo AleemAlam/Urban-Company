@@ -19,7 +19,7 @@ export const CarosuleTechnicians = () => {
 
   return (
     <StyleCarosuleDiv>
-      <CarosuleNavbar />
+      <CarosuleNavbar text="Customers in New Delhi also booked" id="reviews"/>
 
       <StyleCarosuleMainDiv>
         <Carousel breakPoints={breakPoints}>
