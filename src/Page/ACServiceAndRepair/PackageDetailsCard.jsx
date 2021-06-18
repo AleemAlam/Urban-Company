@@ -77,7 +77,7 @@ export default function PackageDetailsCard({
                         {item.totalRating}
                       </p>
                       <p>
-                        {item.price} <del>{Math.round(item.price * 1.5)}</del>
+                        ₹ {item.price} <del>{Math.round(item.price * 1.5)}</del>
                         <span> ⓘ</span>
                       </p>
                       <p>{item.time} min</p>
@@ -209,7 +209,7 @@ export default function PackageDetailsCard({
                               {item.totalRating}
                             </p>
                             <p>
-                              {item.price}{" "}
+                              ₹ {item.price}{" "}
                               <del>{Math.round(item.price * 1.5)}</del>
                               <span> ⓘ</span>
                             </p>
@@ -344,7 +344,7 @@ export default function PackageDetailsCard({
                         {item.totalRating}
                       </p>
                       <p>
-                        {item.price} <del>{Math.round(item.price * 1.5)}</del>
+                        ₹ {item.price} <del>{Math.round(item.price * 1.5)}</del>
                         <span> ⓘ</span>
                       </p>
                       <p>{item.time} min</p>

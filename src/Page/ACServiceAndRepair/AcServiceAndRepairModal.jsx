@@ -9,8 +9,13 @@ import MoveLocation from "./MoveLocation";
 import SelectLocation from "./SelectLocation";
 import SelectTime from "./SelectTime";
 import Payment from "./Payment";
+
+import { useHistory } from "react-router";
+
+
 import axios from "axios";
 import { useEffect } from "react";
+
 // npm install npm@latest -g
 // rm -rf node_modules && npm install
 // npm update
@@ -25,10 +30,16 @@ export default function AcServiceAndRepairModal() {
   const [selectLocation, setSelectLocation] = useState(false);
   const [selectTime, setSelectTime] = useState(false);
   const [payment, setPayment] = useState(false);
+
+
+  const history = useHistory();
+
+
   const [userLocation, setUserLocation] = useState({
     longitude: "",
     latitude: "",
   });
+
   const handleCount = (num) => {
     setCount(count + num);
   };
@@ -73,7 +84,12 @@ export default function AcServiceAndRepairModal() {
         <Heading>
           <p></p>
           <p>AC Service and Repair</p>
-          <p style={{ marginRight: "30px" }}>✖</p>
+          <p
+            style={{ marginRight: "30px" }}
+            onClick={() => history.push("/ac-service-repair")}
+          >
+            ✖
+          </p>
         </Heading>
         <Container
           style={{

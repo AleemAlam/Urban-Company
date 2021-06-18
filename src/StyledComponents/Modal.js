@@ -682,7 +682,7 @@ export const CartModel = styled.div`
   display: flex;
   flex-direction: column;
   width: 50%;
-  height: 95%;
+  height: 90%;
   justify-content: center;
   align-items: center;
   position: fixed;
@@ -1007,11 +1007,12 @@ export const SelectTheLocation = styled.div`
 
     .your-location {
       position: relative;
-      margin-left: 30px;
+      margin-left: 32px;
       color: #d4d4d4;
       background: #ffffff;
       width: 105px;
-      padding: 5px;
+      padding: 5px 0;
+      z-index: 1;
     }
   }
 
@@ -1030,6 +1031,7 @@ export const SelectTheLocation = styled.div`
       box-sizing: border-box;
       gap: 0;
       margin: 20px auto;
+      position: relative;
 
       input {
         border: none;
@@ -1049,6 +1051,9 @@ export const SelectTheLocation = styled.div`
         color: #304fee;
         font-weight: 600;
         background: transparent;
+        position: absolute;
+        top: 18px;
+        right: 0;
       }
     }
   }
@@ -1104,7 +1109,7 @@ export const SelectTheLocation = styled.div`
 
 export const SelectTiming = styled.div`
   display: flex;
-  /* flex-direction: column; */
+  flex-direction: column;
   width: 50%;
   height: 90%;
   justify-content: center;
@@ -1130,6 +1135,108 @@ export const SelectTiming = styled.div`
       color: #424242;
       cursor: context-menu;
     }
+  }
+
+  .content {
+    width: 100%;
+    height: 80%;
+    overflow-y: scroll;
+
+    h4 {
+      margin: 24px auto 16px;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 24px;
+      color: #212121;
+      text-align: center;
+    }
+  }
+  .dates,
+  .time {
+    width: 450px;
+    margin: auto;
+    p {
+      color: #666666;
+      margin-left: 10px;
+    }
+  }
+  .dates {
+    height: 150px;
+    /* border: 1px solid; */
+
+    div {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  .time {
+    div {
+      display: flex;
+      flex-flow: wrap;
+      justify-content: space-between;
+      margin: 10px auto;
+      cursor: pointer;
+    }
+  }
+
+  .buttondiv {
+    width: 100%;
+    height: 10%;
+    border-top: 1px solid #dbdbdb;
+
+    button {
+      width: 915px;
+      height: 70px;
+      margin: 9px 23px;
+      background: #212121;
+      font-weight: 500;
+      text-align: center;
+      font-size: 20px;
+      color: #ffffff;
+      border-radius: 8px;
+      border: none;
+      outline: none;
+      cursor: pointer;
+    }
+  }
+`;
+
+export const Date = styled.div`
+  width: 100px;
+  height: 70px;
+  border: 1px solid #dbdbdb;
+  border-radius: 4px;
+  text-align: center;
+  display: flex;
+  gap: 0;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
+
+  p {
+    color: #666666;
+    margin-top: 5px;
+  }
+  h2 {
+    font-weight: 400;
+    font-size: 28px;
+    margin-top: -18px;
+  }
+`;
+
+export const Timing = styled.div`
+  width: 130px;
+  height: 60px;
+  /* border: 1px solid #dbdbdb; */
+  border-radius: 4px;
+
+  p {
+    width: 130px;
+
+    text-align: center;
+    color: #616161;
   }
 `;
 
@@ -1161,5 +1268,76 @@ export const MakePayment = styled.div`
       color: #424242;
       cursor: context-menu;
     }
+  }
+
+  .containt {
+    width: 100%;
+    height: 80%;
+    overflow-y: scroll;
+    display: flex;
+    gap: 4%;
+    justify-content: center;
+  }
+
+  .buttondiv {
+    width: 100%;
+    height: 90px;
+    border-top: 1px solid #dbdbdb;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  .oldbtn {
+    width: 240px;
+    height: 60px;
+    color: white;
+    font-weight: 500;
+    font-size: 20px;
+    margin: 15px 20px 15px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .paymentType,
+  .paymentSummary {
+    border: 1px solid;
+    width: 40%;
+    height: 100%;
+  }
+
+  .paymentSummary {
+    h3 {
+      font-weight: 500;
+    }
+  }
+  .priceDatails {
+    width: 100%;
+    height: 400px;
+    border: 1px solid #dbdbdb;
+    border-radius: 5px;
+
+    div {
+      border-bottom: 1px solid #dbdbdb;
+      height: 75px;
+      width: 90%;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      p {
+        color: #424242;
+        font-size: 18px;
+        font-weight: 450;
+      }
+    }
+  }
+
+  .insurance{
+    width: 100%;
+    height: auto;
+    
   }
 `;
