@@ -27,7 +27,8 @@ export const StyleBackgroundImage = styled.img`
 
 export const StyleNavigationBarCont = styled.div`
   box-sizing: border-box;
-  width: 50%;
+  width: 41%;
+
   height: 75px;
   background-color: #ffffff;
   padding: 0px 30px;
@@ -37,8 +38,7 @@ export const StyleNavigationBarCont = styled.div`
   display: flex;
   z-index: 5;
   box-shadow: 0 4px 12px 0 #ddd;
-  margin: auto;
-  margin-right: 39%;
+  margin-left: 20%;
 `;
 
 export const StyleHowItWorksCont = styled(StyleNavigationBarCont)`
@@ -73,7 +73,8 @@ export const StyleAcServiceInCont = styled(StyleHowItWorksCont)`
   font-family: axiforma-bold, -apple-system, BlinkMacSystemFont, Segoe UI,
     Roboto, Helvetica, Arial, sans-serif;
   margin: 40px 39% auto 11%;
-
+  width: 41%;
+  margin-left: 20%;
   h2 {
     font-size: 22px;
     font-weight: bold;
@@ -91,6 +92,8 @@ export const StyleTechnicians = styled(StyleAcServiceInCont)`
   line-height: 1;
   height: 100px;
   margin: 40px 39% 0.1% 11%;
+  width: 41%;
+  margin-left: 20%;
 `;
 
 export const StyleReviewsCont = styled(StyleAcServiceInCont)`
@@ -226,6 +229,19 @@ export const StyleReviewsCont = styled(StyleAcServiceInCont)`
       font-size: 13.4px;
     }
   }
+`;
+export const StyleStickyNavBtn = styled.div`
+  padding: 24px 0px 15px;
+  height: 33px;
+  margin: 0px 12px 0px 20px;
+  display: inline-block;
+  font-size: 16.5px;
+  text-align: left;
+  color: #616161;
+  cursor: pointer;
+  font-family: axiforma-regular, -apple-system, BlinkMacSystemFont, Segoe UI,
+    Roboto, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
 `;
 export const HIWHeaderHeading = styled.h2`
   display: block;
