@@ -46,21 +46,5 @@ export default function PackageDetail({
         </PackageDetails>
       )}
     </>
-    /* <PackageDetails>
-      {service.services[0].acService.map((item, id) => {
-        return (
-          <>
-            <PackageDetailsCard
-              key={id}
-              data={item}
-              setShowDetails={setShowDetails}
-              count={count}
-              setCount={setCount}
-              handleCount={handleCount}
-            />
-          </>
-        );
-      })}
-    </PackageDetails> */
   );
 }

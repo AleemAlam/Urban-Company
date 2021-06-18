@@ -1269,4 +1269,31 @@ export const MakePayment = styled.div`
       cursor: context-menu;
     }
   }
+
+  .containt {
+    width: 100%;
+    height: 80%;
+    overflow-y: scroll;
+  }
+
+  .buttondiv {
+    width: 100%;
+    height: 90px;
+    border-top: 1px solid #dbdbdb;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  .oldbtn {
+    width: 240px;
+    height: 60px;
+    color: white;
+    font-weight: 500;
+    font-size: 20px;
+    margin: 15px 20px 15px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
 `;

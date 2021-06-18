@@ -81,7 +81,7 @@ export default function SelectTime({
             {time.map((e) => {
               return (
                 <Timing>
-                  <p>{e}</p>
+                  <p onClick={()=>{}}>{e}</p>
                 </Timing>
               );
             })}
