@@ -6,7 +6,7 @@ import {
 
 export const PopularServices = () => {
   return (
-    <div style={{ marginLeft: "10%" }}>
+    <div style={{ marginLeft: "0%" }}>
       <StylePopularServiceDiv>
         <StylePopularServiceNavbar>
           <h2>Popular Services Near You</h2>
