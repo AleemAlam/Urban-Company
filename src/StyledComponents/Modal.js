@@ -576,6 +576,7 @@ export const SafteyCondition = styled.div`
   top: 5%;
   left: 25%;
   background: #ffffff;
+  box-shadow: 1px 1px 5px 1px grey;
 
   .header {
     display: flex;
@@ -688,6 +689,7 @@ export const CartModel = styled.div`
   top: 5%;
   left: 25%;
   background: #ffffff;
+  box-shadow: 1px 1px 5px 1px grey;
 
   .header {
     display: flex;
@@ -896,6 +898,7 @@ export const MoveToLocation = styled.div`
   top: 5%;
   left: 25%;
   background: #ffffff;
+  box-shadow: 1px 1px 5px 1px grey;
 
   .header {
     display: flex;
@@ -964,6 +967,7 @@ export const SelectTheLocation = styled.div`
   top: 5%;
   left: 25%;
   background: #ffffff;
+  box-shadow: 1px 1px 5px 1px grey;
 
   .header {
     display: flex;
