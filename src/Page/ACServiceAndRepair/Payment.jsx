@@ -1,16 +1,55 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router";
 import { MakePayment } from "../../StyledComponents/Modal";
+import { PayUsingDetails } from "./MiniComponents";
 
 export default function Payment({ setSelectTime, setPayment }) {
-  const [selectPayment, setSelectPayment] = useState(true);
+  const [selectPayment, setSelectPayment] = useState(false);
 
   const history = useHistory();
 
+  const payUsing = [
+    {
+      img: "https://img.icons8.com/dotty/80/000000/wallet-app.png",
+      type: "UPI",
+      arrow1: "&#8744;",
+      arrow2: "^",
+    },
+    {
+      img: "https://img.icons8.com/dotty/80/000000/bank-card-back-side.png",
+      type: "Credit/Debit Cards",
+      arrow1: "&#8744;",
+      arrow2: "^",
+    },
+    {
+      img: "https://img.icons8.com/dotty/80/000000/wallet-app.png",
+      type: "Wallet",
+      arrow1: "&#8744;",
+      arrow2: "^",
+    },
+
+    {
+      img: "https://img.icons8.com/ios/50/000000/transaction-approved.png",
+      type: "Netbanking",
+      arrow1: "&#8744;",
+      arrow2: "^",
+    },
+    {
+      img: "https://img.icons8.com/cotton/64/000000/pay.png",
+      type: "Pay after Service",
+      arrow1: "&#8744;",
+      arrow2: "^",
+    },
+  ];
+
   const handleMove = () => {
-    setPayment(false);
-    alert("Congratulations Your service has been booked successfully");
-    history.push("/ac-service-repair");
+    if (selectPayment) {
+      setPayment(false);
+      alert("Congratulations Your service has been booked successfully");
+      history.push("/ac-service-repair");
+    } else {
+      alert("Please select the payment method");
+    }
   };
 
   const price = 399;
@@ -30,7 +69,13 @@ export default function Payment({ setSelectTime, setPayment }) {
         <p onClick={() => setPayment(false)}>✖</p>
       </div>
       <div className="containt">
-        <div className="paymentType"></div>
+        {/* PAYMENT MAKING METHOD ^ */}
+        <div className="paymentType">
+          <h3>Pay Using</h3>
+          {payUsing.map((e) => (
+            <PayUsingDetails e={e} setSelectPayment={setSelectPayment} />
+          ))}
+        </div>
 
         {/* PAYMENT SUMMARY */}
         <div className="paymentSummary">
@@ -62,8 +107,11 @@ export default function Payment({ setSelectTime, setPayment }) {
             </div>
           </div>
 
-          <div className="insurance"></div>
-          <p>
+          <div className="insurance">
+            <h3>Rs. 10000 insurance on online payment</h3>
+            <p>ⓘ</p>
+          </div>
+          <p className="conditions">
             By proceeding you accept the latest versions of our
             <a href="#T&Cs">T&Cs</a>{" "}
             <a href="#Privacy Policy">Privacy Policy</a> and{" "}
