@@ -12,6 +12,7 @@ import { CarosuleTechnicians } from "../../Components/ServicePageComponents/Caro
 import { CarosuleBlogs } from "../../Components/ServicePageComponents/CarosuleBlogs.jsx";
 import { PopularServices } from "../../Components/ServicePageComponents/PopularServices.jsx";
 import { PopularLocality } from "../../Components/ServicePageComponents/PopularLocality.jsx";
+import { RelatedAcService } from "../../Components/ServicePageComponents/RelatedAcService.jsx";
 
 export default function AcServiceAndRepair({ setShowServiceModal }) {
   return (
@@ -21,6 +22,7 @@ export default function AcServiceAndRepair({ setShowServiceModal }) {
           setShowServiceModal={setShowServiceModal}
           image="https://res.cloudinary.com/urbanclap/image/upload/fl_progressive,t_medium_res_template/categories/category_v2/category_08f70800.jpeg"
         />
+        
         <NavigationBarSticky />
         <HowItworksHeader />
         <HIWMainCont />
@@ -30,10 +32,15 @@ export default function AcServiceAndRepair({ setShowServiceModal }) {
         <Reviews />
         <Reviews />
         <Reviews />
+        <Reviews />
+        <Reviews />
+        <Reviews />
+        <RelatedAcService />
         <CarosuleTechnicians />
         <PopularServices />
         <PopularLocality />
         <CarosuleBlogs />
+        
       </MainCont>
     </>
   );

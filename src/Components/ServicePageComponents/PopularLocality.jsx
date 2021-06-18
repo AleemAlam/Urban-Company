@@ -6,10 +6,10 @@ import {
 
 export const PopularLocality = () => {
   return (
-    <div style={{ marginLeft: "10%" }}>
+    <div style={{ marginLeft: "0%" }}>
       <StylePopularServiceDiv>
         <StylePopularServiceNavbar>
-          <h2>Popular Services Near You</h2>
+          <h2>Popular localities</h2>
         </StylePopularServiceNavbar>
 
         <StylePopularServiceMainDiv>

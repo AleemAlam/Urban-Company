@@ -13,13 +13,19 @@ export const ImageCont = (props) => {
   return (
     <StyleImageCont>
       <StyleBackgroundImage src={props.image} alt="error" />
-      <BackgroundImgTopNav></BackgroundImgTopNav>
-      <BackgroundImgHeadingH1></BackgroundImgHeadingH1>
-      <BackImgH1Subheading></BackImgH1Subheading>
-      <ServiceCard
-        setShowServiceModal={props.setShowServiceModal}
-      ></ServiceCard>
-      <RatingCard></RatingCard>
+      <div style={{ marginLeft: "5.5%" }}>
+        <BackgroundImgTopNav></BackgroundImgTopNav>
+        <BackgroundImgHeadingH1></BackgroundImgHeadingH1>
+        <BackImgH1Subheading></BackImgH1Subheading>
+      </div>
+
+      <div style={{ zIndex: "2", position: "relative" }}>
+        <ServiceCard
+          setShowServiceModal={props.setShowServiceModal}
+        ></ServiceCard>
+        <RatingCard></RatingCard>
+      </div>
+
     </StyleImageCont>
   );
 };

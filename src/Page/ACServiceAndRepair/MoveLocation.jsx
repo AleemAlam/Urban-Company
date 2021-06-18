@@ -5,10 +5,12 @@ export default function MoveLocation({
   setMoveLocation,
   setSelectLocation,
   setSafteyAgree,
+  handleUserLocation,
 }) {
   const handleLocation = () => {
     setMoveLocation(false);
     setSelectLocation(true);
+    handleUserLocation();
   };
   return (
     <MoveToLocation>
