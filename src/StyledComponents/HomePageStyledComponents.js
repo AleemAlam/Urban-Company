@@ -323,6 +323,8 @@ export const TwoContainer = styled.div`
 
 export const StyledFooter = styled.div`
   background-color: black;
+  z-index: 3;
+  position: relative;
   margin: 0;
   color: #999;
   & .linkMenu {

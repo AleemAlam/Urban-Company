@@ -2,7 +2,7 @@ import React from "react";
 import { StyleNavigationBarCont } from "../../StyledComponents/AcServiceAndRepairStyle";
 import { StickyNavigationBarBtn } from "./StickyNavigationBarBtn";
 
-const tabStyle = { borderBottom: "3px solid black" };
+const tabStyle = { borderBottom: "3px solid black",color: "black" };
 const noStyle = { borderBottom: "none" };
 
 export const NavigationBarSticky = () => {

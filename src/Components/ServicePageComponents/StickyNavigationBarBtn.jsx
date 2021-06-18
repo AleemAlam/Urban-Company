@@ -22,6 +22,13 @@ const StyleStickyNavBtn = styled.div`
     Roboto, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   height: 40px;
+  font-weight: 500;
+  opacity: 9;
+  :hover{
+    color: black;
+  }
+    
+  
 `;
 
 
