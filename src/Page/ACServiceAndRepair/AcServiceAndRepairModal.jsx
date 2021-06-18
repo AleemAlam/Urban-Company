@@ -131,9 +131,9 @@ export default function AcServiceAndRepairModal() {
         />
       ) : null}
 
-      {/* {payment ? (
+      {payment ? (
         <Payment setSelectTime={setSelectTime} setPayment={setPayment} />
-      ) : null} */}
+      ) : null}
     </>
   );
 }
