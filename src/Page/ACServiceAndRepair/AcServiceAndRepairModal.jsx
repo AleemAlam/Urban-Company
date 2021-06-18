@@ -9,6 +9,7 @@ import MoveLocation from "./MoveLocation";
 import SelectLocation from "./SelectLocation";
 import SelectTime from "./SelectTime";
 import Payment from "./Payment";
+import { useHistory } from "react-router";
 
 // npm install npm@latest -g
 // rm -rf node_modules && npm install
@@ -24,6 +25,8 @@ export default function AcServiceAndRepairModal() {
   const [selectLocation, setSelectLocation] = useState(false);
   const [selectTime, setSelectTime] = useState(false);
   const [payment, setPayment] = useState(false);
+
+  const history = useHistory();
 
   const handleCount = (num) => {
     setCount(count + num);
@@ -48,7 +51,12 @@ export default function AcServiceAndRepairModal() {
         <Heading>
           <p></p>
           <p>AC Service and Repair</p>
-          <p style={{ marginRight: "30px" }}>✖</p>
+          <p
+            style={{ marginRight: "30px" }}
+            onClick={() => history.push("/ac-service-repair")}
+          >
+            ✖
+          </p>
         </Heading>
         <Container
           style={{
