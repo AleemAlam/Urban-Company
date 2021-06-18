@@ -1302,11 +1302,10 @@ export const MakePayment = styled.div`
 
   .paymentType,
   .paymentSummary {
-    border: 1px solid;
     width: 40%;
     height: 100%;
   }
-
+  .paymentType,
   .paymentSummary {
     h3 {
       font-weight: 500;
@@ -1335,9 +1334,56 @@ export const MakePayment = styled.div`
     }
   }
 
-  .insurance{
+  .insurance {
     width: 100%;
     height: auto;
-    
+    border: 1px solid #228d27;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px auto;
+    background: rgba(34, 141, 39, 0.12);
+    margin: 30px auto;
+    h3 {
+      width: 70%;
+      color: #228d27;
+    }
+    p {
+      width: 8%;
+      color: #228d27;
+      font-size: 24px;
+    }
+  }
+
+  .conditions {
+    font-size: 14px;
+    color: #999;
+    line-height: 1.6;
+
+    a {
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      color: #212121;
+      border-bottom: 1px dashed #4179ea;
+    }
+  }
+`;
+
+export const PayUsingDetail = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  height: 85px;
+  box-shadow: 0px 1px 1px 0px grey;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+
+  h3 {
+    font-size: 20px;
+    font-weight: 500;
   }
 `;
