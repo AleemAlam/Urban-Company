@@ -2,8 +2,8 @@ import { StyleHowItWorksCont,HIWHeaderHeading } from "../../StyledComponents/AcS
 
 export const HowItworksHeader = () => {
     return (
-        <StyleHowItWorksCont>
-            <HIWHeaderHeading>How It Works</HIWHeaderHeading>
+        <StyleHowItWorksCont >
+            <HIWHeaderHeading id="how it works">How It Works</HIWHeaderHeading>
         </StyleHowItWorksCont>
     )
 }
