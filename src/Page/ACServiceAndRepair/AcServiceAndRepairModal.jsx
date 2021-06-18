@@ -9,7 +9,12 @@ import MoveLocation from "./MoveLocation";
 import SelectLocation from "./SelectLocation";
 import SelectTime from "./SelectTime";
 import Payment from "./Payment";
+
 import { useHistory } from "react-router";
+
+
+import axios from "axios";
+import { useEffect } from "react";
 
 // npm install npm@latest -g
 // rm -rf node_modules && npm install
@@ -26,12 +31,40 @@ export default function AcServiceAndRepairModal() {
   const [selectTime, setSelectTime] = useState(false);
   const [payment, setPayment] = useState(false);
 
+
   const history = useHistory();
+
+
+  const [userLocation, setUserLocation] = useState({
+    longitude: "",
+    latitude: "",
+  });
 
   const handleCount = (num) => {
     setCount(count + num);
   };
 
+  const handleUserLocation = () => {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(getCoordinates);
+    } else {
+      alert("Geolocation is not supported by this browser.");
+    }
+  };
+
+  const getCoordinates = (position) => {
+    const { longitude, latitude } = position.coords;
+    setUserLocation({ longitude, latitude });
+    // axios
+    //   .get(
+    //     `https://apis.mapmyindia.com/advancedmaps/v1/6hm1qanekr738vwho6stcqgyo47wrt4w/rev_geocode?lat=${latitude}&lng=${longitude}`
+    //   )
+    //   .then((res) => {
+    //     setAddress(res.data.results[0]);
+    //   })
+    //   .catch(console.error);
+  };
+  console.log(userLocation);
   return (
     <>
       <div
@@ -120,6 +153,7 @@ export default function AcServiceAndRepairModal() {
           setSafteyAgree={setSafteyAgree}
           setMoveLocation={setMoveLocation}
           setSelectLocation={setSelectLocation}
+          handleUserLocation={handleUserLocation}
         />
       ) : null}
 
@@ -128,6 +162,7 @@ export default function AcServiceAndRepairModal() {
           setMoveLocation={setMoveLocation}
           setSelectLocation={setSelectLocation}
           setSelectTime={setSelectTime}
+          userLocation={userLocation}
         />
       ) : null}
 

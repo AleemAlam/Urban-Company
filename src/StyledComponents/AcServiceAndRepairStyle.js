@@ -28,17 +28,17 @@ export const StyleBackgroundImage = styled.img`
 export const StyleNavigationBarCont = styled.div`
   box-sizing: border-box;
   width: 41%;
-
-  height: 75px;
+  height: 62px;
   background-color: #ffffff;
   padding: 0px 30px;
   position: sticky;
   position: -webkit-sticky;
   top: 7.5%;
   display: flex;
+  flex-direction: row;
   z-index: 5;
   box-shadow: 0 4px 12px 0 #ddd;
-  margin-left: 20%;
+  margin-left: 17%;
 `;
 
 export const StyleHowItWorksCont = styled(StyleNavigationBarCont)`
@@ -46,10 +46,12 @@ export const StyleHowItWorksCont = styled(StyleNavigationBarCont)`
   height: 95px;
   margin: 0 32px;
   z-index: 1;
-  margin-top: 20px;
   box-shadow: none;
   margin: auto;
   margin-right: 39%;
+  margin-top: 30px;
+  padding-left: 12px;
+  margin-left: 17%;
 `;
 export const StyleHIWMainCont = styled(StyleHowItWorksCont)`
   height: auto;
@@ -65,6 +67,7 @@ export const StyleAcServiceInCont = styled(StyleHowItWorksCont)`
   position: static;
   height: 130px;
   padding: 24px 60px;
+  padding-left: 19px;
   margin-top: 40px;
   background-color: #ffffff;
   text-align: left;
@@ -74,7 +77,7 @@ export const StyleAcServiceInCont = styled(StyleHowItWorksCont)`
     Roboto, Helvetica, Arial, sans-serif;
   margin: 40px 39% auto 11%;
   width: 41%;
-  margin-left: 20%;
+  margin-left: 17%;
   h2 {
     font-size: 22px;
     font-weight: bold;
@@ -89,17 +92,20 @@ export const StyleAcServiceInCont = styled(StyleHowItWorksCont)`
 `;
 
 export const StyleTechnicians = styled(StyleAcServiceInCont)`
+box-sizing: border-box;
   line-height: 1;
   height: 100px;
   margin: 40px 39% 0.1% 11%;
   width: 41%;
-  margin-left: 20%;
+  margin-left: 17%;
+  padding-left: 37px;
 `;
 
 export const StyleReviewsCont = styled(StyleAcServiceInCont)`
   margin-top: 1px;
   margin-bottom: 1px;
   height: auto;
+  padding-left: 37px;
 
   ul,
   li {
@@ -119,7 +125,7 @@ export const StyleReviewsCont = styled(StyleAcServiceInCont)`
     box-sizing: border-box;
     padding-top: 2px;
     height: 40px;
-    width: 46px;
+    width: 53px;
     border-radius: 50%;
     border: 1px solid #e2e2e2;
     text-align: center;
@@ -264,7 +270,7 @@ export const StyleHIWTextCont = styled(StyleHowItWorksCont)`
   margin-top: 1.5%;
 `;
 export const StyleHIWLogoCont = styled(StyleHIWTextCont)`
-  width: 6%;
+  width: 7%;
   background-color: none;
   height: 40px;
   border-radius: 50%;
@@ -283,7 +289,7 @@ export const StyleHIWTextContHeading = styled.h4`
 
 export const StyleHIWTextContParagraph = styled.p`
   font-size: 15px;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 1.5;
   letter-spacing: normal;
   color: #757575;
@@ -306,7 +312,7 @@ export const StyleHIWTextContBorderLine = styled.div`
   height: 27px;
   width: 0.3%;
   background-color: #e2e2e2;
-  margin-left: 5.8%;
+  margin-left: 6.9%;
 `;
 export const StyleBackgroundImageTopNav = styled(StyleNavigationBarCont)`
   background-color: transparent;
@@ -318,6 +324,7 @@ export const StyleBackgroundImageTopNav = styled(StyleNavigationBarCont)`
   column-gap: 10px;
   flex-direction: row;
   font-size: 15.2px;
+  font-weight: 500;
 `;
 export const StyleWhiteColorDiv = styled.div`
   color: #ddd;
@@ -326,6 +333,7 @@ export const StyleBackgroundImageheadingH1 = styled(StyleBackgroundImageTopNav)`
   margin-top: 90px;
   z-index: 3;
   color: #fff;
+  font-weight:900;
   font-size: 19px;
   font-family: axiforma-regular, -apple-system, BlinkMacSystemFont, Segoe UI,
     Roboto, Helvetica, Arial, sans-serif;
@@ -347,7 +355,7 @@ export const StyleServiceCard = styled(StyleBackgroundImageTopNav)`
   max-width: 363.3px;
   min-width: 363.3px;
   box-sizing: border-box;
-  margin: 12.5vh auto 121px 63%;
+  margin: 28vh auto 121px 59.7%;
   background-image: linear-gradient(130deg, #642b73, #c6426e);
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
@@ -403,7 +411,7 @@ export const StyleRatingCardCont = styled(StyleServiceCard)`
   background-image: none;
   min-height: 121px;
   max-height: 121px;
-  margin-top: 316px;
+  margin-top: 444px;
   margin-bottom: 0px;
   border-radius: 4px;
   box-shadow: 0 20px 20px 0 rgb(0 0 0 / 10%);
@@ -445,11 +453,11 @@ export const StyleRatingCardCont = styled(StyleServiceCard)`
 export const StyleCarosuleDiv = styled.div`
   box-sizing: border-box;
   background-color: transparent;
-  width: 61%;
+  width: 50%;
   height: auto;
   margin-top: 2.5%;
   margin-bottom: 2.5%;
-  margin-left: 5.5%;
+  margin-left: 12.5%;
 `;
 export const StyleCarosuleNavDiv = styled.div`
   box-sizing: border-box;
