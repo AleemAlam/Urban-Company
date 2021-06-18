@@ -2,6 +2,8 @@ import {
   USER_LOGIN_FAILURE,
   USER_LOGIN_REQUEST,
   USER_LOGIN_SUCCESS,
+  USER_LOGOUT_REQUEST,
+  USER_LOGOUT_SUCCESS,
 } from "./actionType";
 
 const initState = {
@@ -36,6 +38,19 @@ export const authReducer = (state = initState, { type, payload }) => {
         user: {},
         isAuth: false,
         isError: true,
+      };
+    case USER_LOGOUT_REQUEST:
+      return {
+        ...state,
+        isLoading: true,
+      };
+    case USER_LOGOUT_SUCCESS:
+      return {
+        ...state,
+        isLoading: false,
+        user: {},
+        isAuth: false,
+        isError: false,
       };
     default:
       return state;

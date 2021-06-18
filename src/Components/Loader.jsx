@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-export default function Loader(transparent) {
+export default function Loader({ transparent }) {
   return (
     <LoaderContainer transparent={transparent}>
       <div className="outer">
