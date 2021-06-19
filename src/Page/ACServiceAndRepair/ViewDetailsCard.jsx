@@ -23,12 +23,19 @@ export default function ViewDetailsCard({
           <>
             <div className="closeDetails">
               <p onClick={() => setShowDetails(false)}>✖</p>
-              <video preload="auto" controls="play/stop" autoplay>
-                <source
-                  src="blob:https://www.urbancompany.com/a615022d-de87-4e2c-9407-f929b35ff885"
-                  video="web/mp4"
-                />
-              </video>
+              {/* <video preload="auto" controls="play/stop" autoplay>
+                <source src="demo" video="web/mp4" />
+              </video> */}
+
+              <iframe
+                width="750"
+                height="500"
+                src="https://www.youtube.com/embed/t_6cB6HCGzw"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
               {/* <img src="" alt="" /> */}
             </div>
 
@@ -42,7 +49,7 @@ export default function ViewDetailsCard({
                   573k ratings
                 </p>
                 <p>
-                  ₹599 <del>₹699</del>
+                  ₹599 <del>₹899</del>
                   <span> ⓘ</span>
                 </p>
                 <p>45 min</p>
@@ -482,7 +489,7 @@ export default function ViewDetailsCard({
                       marginLeft: "-30px",
                     }}
                   >
-                    ★ 5.0
+                    ★ 4.9
                   </h3>
                 </div>
               </div>
@@ -530,7 +537,7 @@ export default function ViewDetailsCard({
                       marginLeft: "-30px",
                     }}
                   >
-                    ★ 5.0
+                    ★ 4.7
                   </h3>
                 </div>
               </div>
@@ -578,7 +585,7 @@ export default function ViewDetailsCard({
                       marginLeft: "-30px",
                     }}
                   >
-                    ★ 5.0
+                    ★ 4.9
                   </h3>
                 </div>
               </div>

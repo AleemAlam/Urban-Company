@@ -92,7 +92,7 @@ export const StyleAcServiceInCont = styled(StyleHowItWorksCont)`
 `;
 
 export const StyleTechnicians = styled(StyleAcServiceInCont)`
-box-sizing: border-box;
+  box-sizing: border-box;
   line-height: 1;
   height: 100px;
   margin: 40px 39% 0.1% 11%;
@@ -333,7 +333,7 @@ export const StyleBackgroundImageheadingH1 = styled(StyleBackgroundImageTopNav)`
   margin-top: 90px;
   z-index: 3;
   color: #fff;
-  font-weight:900;
+  font-weight: 900;
   font-size: 19px;
   font-family: axiforma-regular, -apple-system, BlinkMacSystemFont, Segoe UI,
     Roboto, Helvetica, Arial, sans-serif;
@@ -411,7 +411,7 @@ export const StyleRatingCardCont = styled(StyleServiceCard)`
   background-image: none;
   min-height: 121px;
   max-height: 121px;
-  margin-top: 444px;
+  margin-top: 490px;
   margin-bottom: 0px;
   border-radius: 4px;
   box-shadow: 0 20px 20px 0 rgb(0 0 0 / 10%);

@@ -151,7 +151,7 @@ export const PackageDetailsCards = styled.div`
   }
 
   /* Availables video or Image only */
-  .menuData video {
+  .menuData iframe {
     width: 85%;
     height: 200px;
     margin: 20px 7.5% auto 7.5%;
@@ -251,9 +251,9 @@ export const ViewDetailsCards = styled.div`
     cursor: pointer;
   }
 
-  .closeDetails > video {
+  .closeDetails > iframe {
     width: 88%;
-    height: 100%;
+    height: 400px;
     margin: 5vh auto 5vh 0;
   }
 
@@ -795,7 +795,7 @@ export const CartModel = styled.div`
 
     button {
       width: 48%;
-      height: 8vh;
+      height: 70px;
       border-radius: 5px;
       border: 1px solid #dbdbdb;
       outline: none;
@@ -995,7 +995,12 @@ export const SelectTheLocation = styled.div`
   .liveMap {
     width: 70%;
     height: 100%;
-    background: yellow;
+    /* background: yellow; */
+
+    iframe {
+      width: 100%;
+      height: 100%;
+    }
   }
   .location-form {
     width: 30%;

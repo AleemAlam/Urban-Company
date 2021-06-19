@@ -1,5 +1,64 @@
 import React, { useState } from "react";
-import { Date, PayUsingDetail, Timing } from "../../StyledComponents/Modal";
+import { useDispatch, useSelector } from "react-redux";
+import { AddToCart } from "../../Redux/app/action";
+import {
+  AddButton,
+  Date,
+  PayUsingDetail,
+  Timing,
+} from "../../StyledComponents/Modal";
+import { saveData } from "../../utils/Storage";
+import { BsChevronDown } from "react-icons/bs";
+import { BsChevronUp } from "react-icons/bs";
+
+export function AddButtons({ data }) {
+  const [count, setCount] = useState(0);
+
+  const handleCount = (num) => {
+    setCount(count + num);
+  };
+
+  const dispatch = useDispatch();
+  const cart = useSelector((state) => state.app.cart);
+
+  console.log(cart);
+
+  const handleToStorage = () => {
+    // saveData("cart", data);
+    dispatch(AddToCart(data));
+    saveData("count", count);
+  };
+  return (
+    <AddButton>
+      {count === 0 ? (
+        <button
+          className="addToCartItem"
+          onClick={() => {
+            setCount(1);
+            handleToStorage();
+          }}
+        >
+          ADD
+          <strong
+            style={{
+              width: "20px",
+              background: "#EFF1FF",
+              marginLeft: "10px",
+            }}
+          >
+            +
+          </strong>
+        </button>
+      ) : (
+        <div className="addedToCartItem">
+          <button onClick={() => handleCount(-1)}>-</button>
+          <button>{count}</button>
+          <button onClick={() => handleCount(1)}>+</button>
+        </div>
+      )}
+    </AddButton>
+  );
+}
 
 export function TimingComponent({ e }) {
   const [selectTiming, setSelectTiming] = useState(false);
@@ -50,7 +109,7 @@ export function PayUsingDetails({ e, setSelectPayment }) {
         />
         <h3 style={{ width: "75%" }}>{e.type}</h3>
         <p style={{ marginRight: "20px", fontSize: "20px", color: "#757575" }}>
-          {details ? e.arrow2 : e.arrow1}
+          {details ? <BsChevronUp /> : <BsChevronDown />}
         </p>
       </PayUsingDetail>
       <div>

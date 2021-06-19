@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { useHistory } from "react-router";
 import { MakePayment } from "../../StyledComponents/Modal";
 import { PayUsingDetails } from "./MiniComponents";
+import { BsChevronDown } from "react-icons/bs";
+import { BsChevronUp } from "react-icons/bs";
 
 export default function Payment({ setSelectTime, setPayment }) {
   const [selectPayment, setSelectPayment] = useState(false);
@@ -24,8 +26,8 @@ export default function Payment({ setSelectTime, setPayment }) {
     {
       img: "https://img.icons8.com/dotty/80/000000/wallet-app.png",
       type: "Wallet",
-      arrow1: "&#8744;",
-      arrow2: "^",
+      arrow1: "BsChevronDown",
+      arrow2: "BsChevronUp",
     },
 
     {
@@ -46,7 +48,7 @@ export default function Payment({ setSelectTime, setPayment }) {
     if (selectPayment) {
       setPayment(false);
       alert("Congratulations Your service has been booked successfully");
-      history.push("/ac-service-repair");
+      history.push("/");
     } else {
       alert("Please select the payment method");
     }
