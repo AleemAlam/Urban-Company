@@ -12,9 +12,8 @@ import Payment from "./Payment";
 
 import { useHistory } from "react-router";
 
-
-import axios from "axios";
-import { useEffect } from "react";
+// import axios from "axios";
+// import { useEffect } from "react";
 
 // npm install npm@latest -g
 // rm -rf node_modules && npm install
@@ -31,9 +30,7 @@ export default function AcServiceAndRepairModal() {
   const [selectTime, setSelectTime] = useState(false);
   const [payment, setPayment] = useState(false);
 
-
   const history = useHistory();
-
 
   const [userLocation, setUserLocation] = useState({
     longitude: "",
@@ -65,6 +62,9 @@ export default function AcServiceAndRepairModal() {
     //   .catch(console.error);
   };
   console.log(userLocation);
+
+  const price = 599;
+  const inCart = 1;
   return (
     <>
       <div
@@ -121,12 +121,12 @@ export default function AcServiceAndRepairModal() {
       !payment ? (
         <CartNote>
           <div className="cartCoupon">
-            <h4>Click to save ₹00 on final bill</h4>
+            <h4>Click to save ₹100 on final bill</h4>
             <h4>❯</h4>
           </div>
           <div className="cartDetails" onClick={() => setSafty(true)}>
             <h4>
-              <span>0</span> ₹000
+              <span>{inCart}</span> ₹{price}
             </h4>
             <h4>Continue</h4>
           </div>
