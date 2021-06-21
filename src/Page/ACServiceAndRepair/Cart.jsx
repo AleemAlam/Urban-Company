@@ -1,12 +1,11 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import {
-  AddButton,
   CartModel,
   FrequntlyAdded,
   FrequntlyAddedProduct,
-  ItemsInCart,
 } from "../../StyledComponents/Modal";
-import { AddButtons } from "./MiniComponents";
+import { AddButtons, ServicesInCart } from "./MiniComponents";
 
 export default function Cart({
   count,
@@ -20,6 +19,15 @@ export default function Cart({
     setMoveLocation(true);
     setSafteyAgree(false);
   };
+
+  const cart = useSelector((state) => state.app.cart);
+
+  const price = cart.map((e) => e.price).reduce((a, b) => a + b);
+
+  const safteyFee = 49;
+
+  const total = price + safteyFee;
+
   return (
     <CartModel>
       <div className="header">
@@ -32,44 +40,20 @@ export default function Cart({
           &#129120;
         </p>
         <p>AC Service and Repair</p>
-        <p onClick={() => setSafteyAgree(false)}>✖</p>
+        <p onClick={() => {setSafteyAgree(false); localStorage.removeItem("cart");}}>✖</p>
       </div>
       <div className="cart">
-        <ItemsInCart className="cartItem">
-          <div>
-            <h4>Split AC service</h4>
-            <ul>
-              <li>Offer is valid on same booking and same place</li>
-              <li>Recommended if your last service was done a year ago</li>
-              <li>Our Powerjet AC Servicing ensures 2X faster cooling</li>
-            </ul>
-            <p>₹599</p>
-          </div>
-
-          <AddButton className="button">
-            {count === 0 ? (
-              <button className="addToCartItem" onClick={() => setCount(1)}>
-                ADD
-                <strong
-                  style={{
-                    width: "20px",
-                    background: "#EFF1FF",
-                    marginLeft: "10px",
-                  }}
-                >
-                  +
-                </strong>
-              </button>
-            ) : (
-              <div className="addedToCartItem">
-                <button onClick={() => handleCount(-1)}>-</button>
-                <button>{count}</button>
-                <button onClick={() => handleCount(1)}>+</button>
-              </div>
-            )}
-          </AddButton>
-          {/* <AddButtons /> */}
-        </ItemsInCart>
+        {cart.map((e, i) => {
+          return (
+            <ServicesInCart
+              key={i}
+              e={e}
+              count={count}
+              setCount={setCount}
+              handleCount={handleCount}
+            />
+          );
+        })}
 
         <div className="bottomBorder"></div>
 
@@ -160,11 +144,11 @@ export default function Cart({
         <div className="total">
           <div>
             <p>Item total</p>
-            <p>₹599</p>
+            <p>₹{price}</p>
           </div>
           <div>
             <p>Safety & Partner Welfare Fees</p>
-            <p>₹100</p>
+            <p>₹{safteyFee}</p>
           </div>
           <img
             src="https://res.cloudinary.com/urbanclap/image/upload/t_high_res_portfolio_new,q_auto:low,f_auto/images/growth/luminosity/1619510980301-e7891f.png"
@@ -172,7 +156,7 @@ export default function Cart({
           />
           <div>
             <p style={{ fontWeight: "500", color: "#212121" }}>Total</p>
-            <p style={{ fontWeight: "500", color: "#212121" }}>₹699</p>
+            <p style={{ fontWeight: "500", color: "#212121" }}>₹ {total}</p>
           </div>
         </div>
 
@@ -192,7 +176,7 @@ export default function Cart({
           </p>
         </div>
         <div>
-          <button onClick={handlePay}>No, I will pay ₹699</button>
+          <button onClick={handlePay}>No, I will pay ₹{total}</button>
           <button>View UC Plus Membership</button>
         </div>
       </div>

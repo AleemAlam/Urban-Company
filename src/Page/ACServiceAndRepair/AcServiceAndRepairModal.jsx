@@ -11,6 +11,7 @@ import SelectTime from "./SelectTime";
 import Payment from "./Payment";
 
 import { useHistory } from "react-router";
+import { useSelector } from "react-redux";
 
 // import axios from "axios";
 // import { useEffect } from "react";
@@ -63,8 +64,13 @@ export default function AcServiceAndRepairModal() {
   };
   console.log(userLocation);
 
-  const price = 599;
-  const inCart = 1;
+  const cart = useSelector((state) => state.app.cart);
+
+  //const check = cart.map((e) => e.price).reduce((a, b) => a + b);
+
+  //console.log(check);
+
+  const inCart = cart.length;
   return (
     <>
       <div
@@ -112,7 +118,7 @@ export default function AcServiceAndRepairModal() {
           />
         </Container>
       </div>
-      {count !== 0 &&
+      {cart.length !== 0 &&
       !safty &&
       !safteyAgree &&
       !moveLocation &&
@@ -126,7 +132,8 @@ export default function AcServiceAndRepairModal() {
           </div>
           <div className="cartDetails" onClick={() => setSafty(true)}>
             <h4>
-              <span>{inCart}</span> ₹{price}
+              <span>{inCart}</span> ₹
+              {cart.map((e) => e.price).reduce((a, b) => a + b)}
             </h4>
             <h4>Continue</h4>
           </div>

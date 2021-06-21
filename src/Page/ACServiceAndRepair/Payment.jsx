@@ -4,6 +4,7 @@ import { MakePayment } from "../../StyledComponents/Modal";
 import { PayUsingDetails } from "./MiniComponents";
 import { BsChevronDown } from "react-icons/bs";
 import { BsChevronUp } from "react-icons/bs";
+import { useSelector } from "react-redux";
 
 export default function Payment({ setSelectTime, setPayment }) {
   const [selectPayment, setSelectPayment] = useState(false);
@@ -49,13 +50,18 @@ export default function Payment({ setSelectTime, setPayment }) {
       setPayment(false);
       alert("Congratulations Your service has been booked successfully");
       history.push("/");
+      localStorage.removeItem("cart");
     } else {
       alert("Please select the payment method");
     }
   };
 
-  const price = 399;
   const SafteyFee = 49;
+
+  const cart = useSelector((state) => state.app.cart);
+
+  const price = cart.map((e) => e.price).reduce((a, b) => a + b);
+
   return (
     <MakePayment>
       <div className="header">
@@ -68,7 +74,14 @@ export default function Payment({ setSelectTime, setPayment }) {
           &#129120;
         </p>
         <p>AC Service and Repair</p>
-        <p onClick={() => setPayment(false)}>✖</p>
+        <p
+          onClick={() => {
+            setPayment(false);
+            localStorage.removeItem("cart");
+          }}
+        >
+          ✖
+        </p>
       </div>
       <div className="containt">
         {/* PAYMENT MAKING METHOD ^ */}

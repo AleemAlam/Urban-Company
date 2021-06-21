@@ -24,7 +24,7 @@ export default function MoveLocation({
           &#129120;
         </p>
         <p>AC Service and Repair</p>
-        <p onClick={() => setMoveLocation(false)}>✖</p>
+        <p onClick={() => {setMoveLocation(false); localStorage.removeItem("cart");}}>✖</p>
       </div>
       <div className="containt">
         <h2>Where do you want the service?</h2>
