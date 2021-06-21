@@ -22,7 +22,14 @@ export default function SelectLocation({
           &#129120;
         </p>
         <p>AC Service and Repair</p>
-        <p onClick={() => setSelectLocation(false)}>✖</p>
+        <p
+          onClick={() => {
+            setSelectLocation(false);
+            localStorage.removeItem("cart");
+          }}
+        >
+          ✖
+        </p>
       </div>
       <div className="location-data">
         <div className="liveMap">

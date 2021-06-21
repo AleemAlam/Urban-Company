@@ -1,5 +1,5 @@
 import React from "react";
-import {  SelectTiming } from "../../StyledComponents/Modal";
+import { SelectTiming } from "../../StyledComponents/Modal";
 import DateComponent, { TimingComponent } from "./MiniComponents";
 
 export default function SelectTime({
@@ -8,10 +8,10 @@ export default function SelectTime({
   setPayment,
 }) {
   const date = [
-    { day: "Today", date: "19" },
-    { day: "Tomorrow", date: "20" },
-    { day: "Monday", date: "21" },
-    { day: "Tuesday", date: "22" },
+    { day: "Tomorrow", date: "22" },
+    { day: "Tuesday", date: "23" },
+    { day: "Wednesday", date: "24" },
+    { day: "Thursday", date: "25" },
   ];
 
   const time = [
@@ -58,7 +58,14 @@ export default function SelectTime({
           &#129120;
         </p>
         <p>AC Service and Repair</p>
-        <p onClick={() => setSelectTime(false)}>✖</p>
+        <p
+          onClick={() => {
+            setSelectTime(false);
+            localStorage.removeItem("cart");
+          }}
+        >
+          ✖
+        </p>
       </div>
       <div className="content">
         <h4>When would you like Urban Company to serve you?</h4>

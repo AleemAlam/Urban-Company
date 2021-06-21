@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import {
   AddButton,
   FrequentlyAskedQue,
@@ -7,6 +7,35 @@ import {
   UCPromise,
   ViewDetailsCards,
 } from "../../StyledComponents/Modal";
+import { FAQComponents } from "./MiniComponents";
+
+const faqInitState = [
+  {
+    question: "How long will it take to repair my appliance?",
+    answer:
+      "Repair time depends on factors such as cause of the issue &availability of spare parts. Our professionals will ensure it is repaired in the shortest time possible.",
+  },
+  {
+    question: "Will I have to provide anything?",
+    answer:
+      "Our professionals carry all required tools with them. However you do have to ensure that your electricity connection is working.",
+  },
+  {
+    question: "What if the same issue occurs again?",
+    answer:
+      "Incase the same issue occurs again, we'll be happy to revisit. Please check out our UC warranty section to know more.",
+  },
+  {
+    question: "How can I be sure that genuine products are being used?",
+    answer:
+      "We value your trust in Urban Company and hence we ensure all spare parts meet our high quality standards. Please check our rate card for more details.",
+  },
+  {
+    question: "What if my appliance gets damaged during the repair?",
+    answer:
+      "Although this is highly unlikely, in the rare case that this might happen, your appliance will be covered under our Damage Protection Plan. Please check out UC Warranty section to know more.",
+  },
+];
 
 export default function ViewDetailsCard({
   showDetails,
@@ -15,7 +44,6 @@ export default function ViewDetailsCard({
   setCount,
   handleCount,
 }) {
-  const [faq, setFaq] = useState(false);
   return (
     <ViewDetailsCards>
       <div>
@@ -228,131 +256,10 @@ export default function ViewDetailsCard({
 
             <FrequentlyAskedQue>
               <h2>Frequently asked questions</h2>
-              <div className="question">
-                <div
-                  style={{ display: "flex", justifyContent: "space-between" }}
-                  onClick={() => setFaq(!faq)}
-                >
-                  <p>How long will it take to repair my appliance?</p>
-                  <p>{faq ? "❮" : "❯"}</p>
-                </div>
-                {faq ? (
-                  <p
-                    style={{
-                      marginTop: "-5px",
-                      fontSize: "14px",
-                      color: "#757575",
-                      fontWeight: "400",
-                      lineHeight: "1.5",
-                    }}
-                  >
-                    Repair time depends on factors such as cause of the issue &
-                    availability of spare parts. Our professionals will ensure
-                    it is repaired in the shortest time possible.
-                  </p>
-                ) : null}
-              </div>
 
-              <div className="question">
-                <div
-                  style={{ display: "flex", justifyContent: "space-between" }}
-                  onClick={() => setFaq(!faq)}
-                >
-                  <p>Will I have to provide anything?</p>
-                  <p>{faq ? "❮" : "❯"}</p>
-                </div>
-                {faq ? (
-                  <p
-                    style={{
-                      marginTop: "-5px",
-                      fontSize: "14px",
-                      color: "#757575",
-                      fontWeight: "400",
-                      lineHeight: "1.5",
-                    }}
-                  >
-                    Our professionals carry all required tools with them.
-                    However you do have to ensure that your electricity
-                    connection is working.
-                  </p>
-                ) : null}
-              </div>
-
-              <div className="question">
-                <div
-                  style={{ display: "flex", justifyContent: "space-between" }}
-                  onClick={() => setFaq(!faq)}
-                >
-                  <p>What if the same issue occurs again?</p>
-                  <p>{faq ? "❮" : "❯"}</p>
-                </div>
-                {faq ? (
-                  <p
-                    style={{
-                      marginTop: "-5px",
-                      fontSize: "14px",
-                      color: "#757575",
-                      fontWeight: "400",
-                      lineHeight: "1.5",
-                    }}
-                  >
-                    Incase the same issue occurs again, we'll be happy to
-                    revisit. Please check out our UC warranty section to know
-                    more.
-                  </p>
-                ) : null}
-              </div>
-
-              <div className="question">
-                <div
-                  style={{ display: "flex", justifyContent: "space-between" }}
-                  onClick={() => setFaq(!faq)}
-                >
-                  <p>How can I be sure that genuine products are being used?</p>
-                  <p>{faq ? "❮" : "❯"}</p>
-                </div>
-                {faq ? (
-                  <p
-                    style={{
-                      marginTop: "-5px",
-                      fontSize: "14px",
-                      color: "#757575",
-                      fontWeight: "400",
-                      lineHeight: "1.5",
-                    }}
-                  >
-                    We value your trust in Urban Company and hence we ensure all
-                    spare parts meet our high quality standards. Please check
-                    our rate card for more details.
-                  </p>
-                ) : null}
-              </div>
-
-              <div className="question">
-                <div
-                  style={{ display: "flex", justifyContent: "space-between" }}
-                  onClick={() => setFaq(!faq)}
-                >
-                  <p>What if my appliance gets damaged during the repair?</p>
-                  <p>{faq ? "❮" : "❯"}</p>
-                </div>
-                {faq ? (
-                  <p
-                    style={{
-                      marginTop: "-5px",
-                      fontSize: "14px",
-                      color: "#757575",
-                      fontWeight: "400",
-                      lineHeight: "1.5",
-                    }}
-                  >
-                    Although this is highly unlikely, in the rare case that this
-                    might happen, your appliance will be covered under our
-                    Damage Protection Plan. Please check out UC Warranty section
-                    to know more.
-                  </p>
-                ) : null}
-              </div>
+              {faqInitState.map((e, i) => {
+                return <FAQComponents {...e} />;
+              })}
             </FrequentlyAskedQue>
             <ReviewPastMonth>
               <h2>Review in the past month</h2>

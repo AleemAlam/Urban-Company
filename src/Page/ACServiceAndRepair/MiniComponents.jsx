@@ -4,10 +4,11 @@ import { AddToCart } from "../../Redux/app/action";
 import {
   AddButton,
   Date,
+  ItemsInCart,
   PayUsingDetail,
   Timing,
 } from "../../StyledComponents/Modal";
-import { saveData } from "../../utils/Storage";
+
 import { BsChevronDown } from "react-icons/bs";
 import { BsChevronUp } from "react-icons/bs";
 
@@ -25,8 +26,8 @@ export function AddButtons({ data }) {
 
   const handleToStorage = () => {
     // saveData("cart", data);
-    dispatch(AddToCart(data));
-    saveData("count", count);
+    dispatch(AddToCart({ ...data, qty: count }));
+    // saveData("count", count);
   };
   return (
     <AddButton>
@@ -165,5 +166,82 @@ export function PayUsingDetails({ e, setSelectPayment }) {
         ) : null}
       </div>
     </>
+  );
+}
+
+export function ServicesInCart({ e, count = 1, setCount, handleCount }) {
+  // const cart = useSelector((state) => state.app.cart);
+
+  return (
+    <ItemsInCart className="cartItem">
+      <div>
+        <h4>{e.name}</h4>
+        <ul>
+          {e.offer.map((el, ind) => {
+            return <li key={ind}>{el}</li>;
+          })}
+        </ul>
+        <p>₹ {e.price}</p>
+      </div>
+
+      <AddButton className="button">
+        {/* {count === 0 ? (
+          <button className="addToCartItem" onClick={() => setCount(1)}>
+            ADD
+            <strong
+              style={{
+                width: "20px",
+                background: "#EFF1FF",
+                marginLeft: "10px",
+              }}
+            >
+              +
+            </strong>
+          </button>
+        ) : (
+          <div className="addedToCartItem">
+            <button onClick={() => handleCount(-1)}>-</button>
+            <button>{count}</button>
+            <button onClick={() => handleCount(1)}>+</button>
+          </div>
+        )} */}
+
+        <div className="addedToCartItem">
+          <button onClick={() => handleCount(-1)}>-</button>
+          <button>{1}</button>
+          <button onClick={() => handleCount(1)}>+</button>
+        </div>
+      </AddButton>
+      {/* <AddButtons /> */}
+    </ItemsInCart>
+  );
+}
+
+export function FAQComponents({ question, answer }) {
+  const [faq, setFaq] = useState(false);
+
+  return (
+    <div className="question">
+      <div
+        style={{ display: "flex", justifyContent: "space-between" }}
+        onClick={() => setFaq(!faq)}
+      >
+        <p>{question}</p>
+        <p>{faq ? "❮" : "❯"}</p>
+      </div>
+      {faq ? (
+        <p
+          style={{
+            marginTop: "-5px",
+            fontSize: "14px",
+            color: "#757575",
+            fontWeight: "400",
+            lineHeight: "1.5",
+          }}
+        >
+          {answer}
+        </p>
+      ) : null}
+    </div>
   );
 }

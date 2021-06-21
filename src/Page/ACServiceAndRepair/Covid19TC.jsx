@@ -17,7 +17,14 @@ export default function Covid19TC({ setSefty, setSafteyAgree }) {
       <div className="header">
         <p onClick={() => setSefty(false)}>&#129120;</p>
         <p>AC Service and Repair</p>
-        <p onClick={() => setSefty(false)}>✖</p>
+        <p
+          onClick={() => {
+            setSefty(false);
+            localStorage.removeItem("cart");
+          }}
+        >
+          ✖
+        </p>
       </div>
 
       {/* This below div is used for Men's hair and salon */}
